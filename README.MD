@@ -1,4 +1,4 @@
-# Deep Seek Grants Crawler
+# Grants Crawler
 
 This project is an AI-powered web crawler built with Python that extracts grant and funding opportunity data from **fundsforngos.org** using asynchronous programming with Crawl4AI. It utilizes a language model-based extraction strategy to intelligently parse grant information and saves the collected data to both CSV and JSON formats.
 

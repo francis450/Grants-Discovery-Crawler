@@ -1,5 +1,5 @@
 """
-Site profile for Funds for NGOs (eufundingportal.eu).
+Site profile for EU Funding Portal (eufundingportal.eu).
 
 This profile implements the crawling logic specific to the eufundingportal.eu website,
 including its URL structure, pagination format, and end-of-results detection.
@@ -15,21 +15,21 @@ class EUFundingPortalProfile(BaseSiteProfile):
     Profile for crawling EU Funding Portal website.
 
     Site characteristics:
-    - URL structure: Category and tag pages
+    - URL structure: Tag and category pages
     - Pagination: Path-based (/page/2/, /page/3/, etc.)
-    - CSS selector: article.post, article.entry
-    - End detection: "No Results Found" text in HTML
+    - CSS selector: li.alm-item (Ajax Load More plugin items)
+    - End detection: Empty page or missing grant items
     """
 
     # Site metadata
     site_name = "EU Funding Portal"
     site_url = "https://eufundingportal.eu/"
-    description = "Comprehensive database of funding opportunities for NGOs worldwide"
+    description = "EU funding opportunities portal with education and NGO grant listings"
 
     # Scraping configuration
     base_urls = [
         "https://eufundingportal.eu/tag/education-grants/",
-        "https://eufundingportal.eu/ngo-grants/"
+        "https://eufundingportal.eu/ngo-grants/",
     ]
 
     css_selector = "li.alm-item"
@@ -39,12 +39,12 @@ class EUFundingPortalProfile(BaseSiteProfile):
         """
         Construct URL for a specific page.
 
-        EU Funding Portal uses path-based pagination:  # CHANGE THIS
-        - Page 1: https://eufundingportal.eu/tag/education-grants/  # CHANGE THIS
-        - Page 2: https://eufundingportal.eu/tag/education-grants/page/2/  # CHANGE THIS
+        EU Funding Portal uses path-based pagination:
+        - Page 1: https://eufundingportal.eu/tag/education-grants/
+        - Page 2: https://eufundingportal.eu/tag/education-grants/page/2/
 
         Args:
-            base_url: The category or tag URL
+            base_url: The tag or category URL
             page_number: Page number (1-indexed)
 
         Returns:
@@ -56,9 +56,9 @@ class EUFundingPortalProfile(BaseSiteProfile):
 
     async def detect_end_of_results(self, crawler: AsyncWebCrawler, url: str, session_id: str) -> bool:
         """
-        Detect if we've reached the end of results.
+        Detect if we've reached the end of results on EU Funding Portal.
 
-        FundsForNGOs displays a "No Results Found" message when there are no more grants.
+        Checks for "No Results Found", empty content, or 404-like responses.
 
         Args:
             crawler: The web crawler instance
@@ -66,7 +66,7 @@ class EUFundingPortalProfile(BaseSiteProfile):
             session_id: Session identifier
 
         Returns:
-            bool: True if "No Results Found" message is found, False otherwise
+            bool: True if no more results are available
         """
         try:
             # Fetch the page without any CSS selector or extraction strategy
@@ -96,10 +96,10 @@ class EUFundingPortalProfile(BaseSiteProfile):
         info = super().get_site_info()
         info.update({
             "categories_crawled": [
-                "Education Grants",  # UPDATE THESE
+                "Education Grants",
                 "NGO Grants",
             ],
             "pagination_format": "/page/{N}/",
-            "end_detection_method": "Text search for 'No Results Found'",
+            "end_detection_method": "Text search for 'No Results Found' or empty content",
         })
         return info

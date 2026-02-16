@@ -1,5 +1,6 @@
 import csv
 import json
+import requests
 
 from models.grant import Grant
 
@@ -29,11 +30,13 @@ def save_grants_to_csv(grants: list, filename: str):
         writer = csv.DictWriter(file, fieldnames=fieldnames)
         writer.writeheader()
 
-        # Handle list fields (like thematic_areas) by converting to JSON strings
+        # Handle list fields by converting to JSON strings
         for grant in grants:
             grant_row = grant.copy()
             if isinstance(grant_row.get("thematic_areas"), list):
                 grant_row["thematic_areas"] = json.dumps(grant_row["thematic_areas"])
+            if isinstance(grant_row.get("matching_themes"), list):
+                grant_row["matching_themes"] = json.dumps(grant_row["matching_themes"])
             writer.writerow(grant_row)
     print(f"Saved {len(grants)} grants to '{filename}'.")
 

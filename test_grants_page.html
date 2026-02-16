@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Grants Page - Validation Dataset</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .grant-item {
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .grant-item h2 {
+            color: #2c3e50;
+            margin-top: 0;
+        }
+        .grant-meta {
+            color: #7f8c8d;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        .grant-meta span {
+            margin-right: 15px;
+        }
+        .grant-description {
+            line-height: 1.6;
+            color: #34495e;
+        }
+        .expected-result {
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 10px;
+            margin-top: 10px;
+            font-size: 12px;
+        }
+        .expected-result.fail {
+            background: #ffebee;
+            border-left-color: #f44336;
+        }
+        .tag {
+            display: inline-block;
+            background: #3498db;
+            color: white;
+            padding: 3px 10px;
+            border-radius: 3px;
+            font-size: 12px;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Test Grants Database - Validation Dataset</h1>
+    <p><strong>Purpose:</strong> This page contains 10 test grants (5 should PASS, 5 should FAIL) to validate the grant filtering system.</p>
+
+    <!-- GRANT 1: SHOULD PASS - Perfect Match -->
+    <article class="grant-item">
+        <h2>Digital Literacy Equipment Grant for African Schools</h2>
+        <div class="grant-meta">
+            <span><strong>Deadline:</strong> June 30, 2026</span>
+            <span><strong>Amount:</strong> $50,000 - $200,000</span>
+            <span><strong>Organization:</strong> Tech for Africa Foundation</span>
+        </div>
+        <div class="grant-description">
+            <p>This grant supports nonprofit organizations working to provide refurbished computers and tablets to
+            underserved schools in Kenya and other African countries. Funding can be used for sourcing old IT equipment,
+            refurbishment costs, distribution logistics, and digital literacy training for teachers.</p>
+
+            <p><strong>Geographic Focus:</strong> Kenya, Uganda, Tanzania, Rwanda</p>
+            <p><strong>Eligibility:</strong> Registered nonprofit organizations (NGOs, CBOs)</p>
+            <p><strong>Thematic Areas:</strong> <span class="tag">Education Technology</span> <span class="tag">E-waste Management</span>
+            <span class="tag">Digital Literacy</span> <span class="tag">Circular Economy</span></p>
+
+            <p><strong>Application URL:</strong> https://example.com/grant1</p>
+        </div>
+        <div class="expected-result">
+            ✅ <strong>Expected Result: PASS</strong> - Perfect match: refurbished IT for African schools, nonprofit, children, digital gap
+        </div>
+    </article>
+
+    <!-- GRANT 2: SHOULD PASS - Strong Match -->
+    <article class="grant-item">
+        <h2>Computer Lab Setup for Rural Schools in Developing Countries</h2>
+        <div class="grant-meta">
+            <span><strong>Deadline:</strong> August 15, 2026</span>
+            <span><strong>Amount:</strong> $25,000 - $100,000</span>
+            <span><strong>Organization:</strong> Global Education Initiative</span>
+        </div>
+        <div class="grant-description">
+            <p>Funding to establish computer labs in schools located in rural and underserved areas of Africa and Asia.
+            This grant covers hardware acquisition (new or refurbished), installation, basic networking, and initial
+            teacher training programs for children aged 6-18.</p>
+
+            <p><strong>Geographic Focus:</strong> Sub-Saharan Africa, South Asia</p>
+            <p><strong>Eligibility:</strong> NGOs, charitable organizations, educational institutions</p>
+            <p><strong>Thematic Areas:</strong> <span class="tag">Technology Education</span> <span class="tag">Youth Empowerment</span></p>
+
+            <p><strong>Application URL:</strong> https://example.com/grant2</p>
+        </div>
+        <div class="expected-result">
+            ✅ <strong>Expected Result: PASS</strong> - Strong match: computer labs for children in Africa, nonprofits eligible
+        </div>
+    </article>
+
+    <!-- GRANT 3: SHOULD PASS - Good Match -->
+    <article class="grant-item">
+        <h2>E-Waste Recycling and Technology Access Program</h2>
+        <div class="grant-meta">
+            <span><strong>Deadline:</strong> September 30, 2026</span>
+            <span><strong>Amount:</strong> $75,000 - $250,000</span>
+            <span><strong>Organization:</strong> Green Tech Alliance</span>
+        </div>
+        <div class="grant-description">
+            <p>This program supports organizations that collect and refurbish electronic waste, transforming discarded
+            devices into functional equipment for schools and community centers. Priority given to projects serving
+            youth in Africa and other developing regions.</p>
+
+            <p><strong>Geographic Focus:</strong> Global South, with emphasis on Africa</p>
+            <p><strong>Eligibility:</strong> Nonprofit organizations working on e-waste and education</p>
+            <p><strong>Thematic Areas:</strong> <span class="tag">E-Waste</span> <span class="tag">Circular Economy</span>
+            <span class="tag">Environmental Conservation</span></p>
+
+            <p><strong>Application URL:</strong> https://example.com/grant3</p>
+        </div>
+        <div class="expected-result">
+            ✅ <strong>Expected Result: PASS</strong> - Good match: e-waste refurbishment for schools in Africa
+        </div>
+    </article>
+
+    <!-- GRANT 4: SHOULD PASS - Relevant with adaptation -->
+    <article class="grant-item">
+        <h2>STEM Education Initiative for Underserved Youth</h2>
+        <div class="grant-meta">
+            <span><strong>Deadline:</strong> July 20, 2026</span>
+            <span><strong>Amount:</strong> $30,000 - $150,000</span>
+            <span><strong>Organization:</strong> Youth STEM Foundation</span>
+        </div>
+        <div class="grant-description">
+            <p>Grants to nonprofit organizations developing STEM education programs for children in underserved communities
+            across Africa. Funding can cover educational materials, technology equipment, instructor training, and
+            program delivery costs for schools serving low-income families.</p>
+
+            <p><strong>Geographic Focus:</strong> Kenya, Nigeria, Ghana, South Africa</p>
+            <p><strong>Eligibility:</strong> Community-based organizations and NGOs</p>
+            <p><strong>Thematic Areas:</strong> <span class="tag">STEM Education</span> <span class="tag">Technology</span>
+            <span class="tag">Youth Development</span></p>
+
+            <p><strong>Application URL:</strong> https://example.com/grant4</p>
+        </div>
+        <div class="expected-result">
+            ✅ <strong>Expected Result: PASS</strong> - Relevant: STEM/tech education for African children, can fund equipment
+        </div>
+    </article>
+
+    <!-- GRANT 5: SHOULD PASS - Borderline but relevant -->
+    <article class="grant-item">
+        <h2>Technology Infrastructure for African Educational Institutions</h2>
+        <div class="grant-meta">
+            <span><strong>Deadline:</strong> October 1, 2026</span>
+            <span><strong>Amount:</strong> $100,000 - $500,000</span>
+            <span><strong>Organization:</strong> African Education Fund</span>
+        </div>
+        <div class="grant-description">
+            <p>Large-scale grants supporting the deployment of technology infrastructure in schools across East Africa.
+            Projects may include computer equipment procurement, internet connectivity, maintenance programs, and
+            capacity building for technical staff serving primary and secondary schools.</p>
+
+            <p><strong>Geographic Focus:</strong> East Africa (Kenya, Tanzania, Uganda, Ethiopia)</p>
+            <p><strong>Eligibility:</strong> Nonprofit organizations and educational consortiums</p>
+            <p><strong>Thematic Areas:</strong> <span class="tag">Education Infrastructure</span> <span class="tag">Technology</span></p>
+
+            <p><strong>Application URL:</strong> https://example.com/grant5</p>
+        </div>
+        <div class="expected-result">
+            ✅ <strong>Expected Result: PASS</strong> - Relevant: technology equipment for schools in Africa
+        </div>
+    </article>
+
+    <!-- GRANT 6: SHOULD FAIL - Competition -->
+    <article class="grant-item">
+        <h2>Innovation Challenge: Best Tech Solution for African Education</h2>
+        <div class="grant-meta">
+            <span><strong>Deadline:</strong> May 15, 2026</span>
+            <span><strong>Amount:</strong> $25,000 prize</span>
+            <span><strong>Organization:</strong> Tech Innovation Awards</span>
+        </div>
+        <div class="grant-description">
+            <p>Annual competition awarding prizes to the most innovative technology solutions addressing educational
+            challenges in Africa. Winners receive cash prizes and recognition. Open to nonprofits, startups, and
+            individual innovators.</p>
+
+            <p><strong>Geographic Focus:</strong> Africa</p>
+            <p><strong>Eligibility:</strong> All organizations and individuals</p>
+            <p><strong>Thematic Areas:</strong> <span class="tag">Technology</span> <span class="tag">Education</span>
+            <span class="tag">Innovation</span></p>
+
+            <p><strong>Application URL:</strong> https://example.com/grant6</p>
+        </div>
+        <div class="expected-result fail">
+            ❌ <strong>Expected Result: FAIL</strong> - Reason: This is a competition/award, not a grant
+        </div>
+    </article>
+
+    <!-- GRANT 7: SHOULD FAIL - For-profit only -->
+    <article class="grant-item">
+        <h2>Technology Startup Accelerator for African Entrepreneurs</h2>
+        <div class="grant-meta">
+            <span><strong>Deadline:</strong> April 30, 2026</span>
+            <span><strong>Amount:</strong> $50,000 - $200,000</span>
+            <span><strong>Organization:</strong> Venture Capital Africa</span>
+        </div>
+        <div class="grant-description">
+            <p>Investment funding for early-stage technology companies developing education technology solutions
+            in Africa. Funding includes equity investment, mentorship, and market access support for for-profit startups.</p>
+
+            <p><strong>Geographic Focus:</strong> Sub-Saharan Africa</p>
+            <p><strong>Eligibility:</strong> For-profit companies and startups only</p>
+            <p><strong>Thematic Areas:</strong> <span class="tag">EdTech</span> <span class="tag">Entrepreneurship</span></p>
+
+            <p><strong>Application URL:</strong> https://example.com/grant7</p>
+        </div>
+        <div class="expected-result fail">
+            ❌ <strong>Expected Result: FAIL</strong> - Reason: For-profit only, nonprofits not eligible
+        </div>
+    </article>
+
+    <!-- GRANT 8: SHOULD FAIL - Wrong geographic focus -->
+    <article class="grant-item">
+        <h2>Digital Literacy Program for European Schools</h2>
+        <div class="grant-meta">
+            <span><strong>Deadline:</strong> December 31, 2026</span>
+            <span><strong>Amount:</strong> €40,000 - €150,000</span>
+            <span><strong>Organization:</strong> European Education Network</span>
+        </div>
+        <div class="grant-description">
+            <p>Grants to nonprofit organizations providing computer equipment and digital literacy training to schools
+            in Eastern Europe. Focus on refurbished technology and sustainable IT practices for children in rural areas.</p>
+
+            <p><strong>Geographic Focus:</strong> Poland, Romania, Bulgaria, Hungary</p>
+            <p><strong>Eligibility:</strong> Registered NGOs in EU member states</p>
+            <p><strong>Thematic Areas:</strong> <span class="tag">Digital Literacy</span> <span class="tag">Education</span>
+            <span class="tag">Refurbished Technology</span></p>
+
+            <p><strong>Application URL:</strong> https://example.com/grant8</p>
+        </div>
+        <div class="expected-result fail">
+            ❌ <strong>Expected Result: FAIL</strong> - Reason: Wrong geographic focus (Europe, not Africa)
+        </div>
+    </article>
+
+    <!-- GRANT 9: SHOULD FAIL - Expired deadline -->
+    <article class="grant-item">
+        <h2>Computer Donation Program for Kenyan Schools</h2>
+        <div class="grant-meta">
+            <span><strong>Deadline:</strong> December 1, 2024</span>
+            <span><strong>Amount:</strong> $20,000 - $80,000</span>
+            <span><strong>Organization:</strong> Kenya Tech Initiative</span>
+        </div>
+        <div class="grant-description">
+            <p>Perfect grant for providing refurbished computers to schools in Kenya! Supports collection, refurbishment,
+            and distribution of IT equipment to underserved schools. Nonprofit organizations eligible.</p>
+
+            <p><strong>Geographic Focus:</strong> Kenya</p>
+            <p><strong>Eligibility:</strong> Nonprofit organizations</p>
+            <p><strong>Thematic Areas:</strong> <span class="tag">Technology</span> <span class="tag">Education</span>
+            <span class="tag">E-waste</span></p>
+
+            <p><strong>Application URL:</strong> https://example.com/grant9</p>
+        </div>
+        <div class="expected-result fail">
+            ❌ <strong>Expected Result: FAIL</strong> - Reason: Deadline has passed (December 2024)
+        </div>
+    </article>
+
+    <!-- GRANT 10: SHOULD FAIL - Not about children/schools -->
+    <article class="grant-item">
+        <h2>E-Waste Management Infrastructure for African Cities</h2>
+        <div class="grant-meta">
+            <span><strong>Deadline:</strong> November 15, 2026</span>
+            <span><strong>Amount:</strong> $150,000 - $600,000</span>
+            <span><strong>Organization:</strong> Urban Sustainability Fund</span>
+        </div>
+        <div class="grant-description">
+            <p>Large grants for municipal governments and NGOs to establish e-waste collection and recycling facilities
+            in African cities. Focus on building industrial-scale recycling infrastructure, not educational programs.
+            Recovered materials sold commercially.</p>
+
+            <p><strong>Geographic Focus:</strong> Major African cities</p>
+            <p><strong>Eligibility:</strong> Municipal governments, large NGOs</p>
+            <p><strong>Thematic Areas:</strong> <span class="tag">E-Waste</span> <span class="tag">Circular Economy</span>
+            <span class="tag">Urban Infrastructure</span></p>
+
+            <p><strong>Application URL:</strong> https://example.com/grant10</p>
+        </div>
+        <div class="expected-result fail">
+            ❌ <strong>Expected Result: FAIL</strong> - Reason: Not about children/schools/education - industrial recycling only
+        </div>
+    </article>
+
+    <footer style="margin-top: 40px; padding-top: 20px; border-top: 2px solid #ddd; color: #7f8c8d;">
+        <p><strong>Test Summary:</strong> 5 grants should PASS (scores 60-100), 5 grants should FAIL (rejected by filters)</p>
+        <p><strong>Usage:</strong> Point your crawler to file:///C:/Users/Francis/Desktop/DSG/deepseek-ai-web-crawler/test_grants_page.html</p>
+    </footer>
+</body>
+</html>

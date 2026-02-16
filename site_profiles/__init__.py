@@ -9,14 +9,21 @@ from typing import Dict, List, Type
 from .base_profile import BaseSiteProfile
 from .fundsforngos import FundsForNGOsProfile
 from .eufundingportal import EUFundingPortalProfile
+from .charityexcellence import CharityExcellenceProfile
+from .globalgiving import GlobalGivingProfile
+from .devex import DevExProfile
+from .reliefweb import ReliefWebProfile
+from .localtest import LocalTestProfile
 
 # Registry of all available site profiles
 AVAILABLE_PROFILES: Dict[str, Type[BaseSiteProfile]] = {
     "fundsforngos": FundsForNGOsProfile,
     "eufundingportal": EUFundingPortalProfile,
-    # Add more profiles here as they are implemented:
-    # "grants_gov": GrantsGovProfile,
-    # "globalgiving": GlobalGivingProfile,
+    "charityexcellence": CharityExcellenceProfile,
+    "globalgiving": GlobalGivingProfile,
+    "devex": DevExProfile,
+    "reliefweb": ReliefWebProfile,
+    "localtest": LocalTestProfile,
 }
 
 

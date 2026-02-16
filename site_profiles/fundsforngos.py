@@ -33,12 +33,11 @@ class FundsForNGOsProfile(BaseSiteProfile):
         "https://www2.fundsforngos.org/tag/funding-opportunities-and-resources-in-kenya/",
         "https://www2.fundsforngos.org/category/information-technology/",
         "https://www2.fundsforngos.org/category/science-and-technology/",
+        "https://www2.fundsforngos.org/category/youth-adolescents/",
+        # Companies-focused URLs (some allow nonprofits/social enterprises):
         "https://fundsforcompanies.fundsforngos.org/area/latest-grants-and-resources-for-education/",
         "https://fundsforcompanies.fundsforngos.org/area/latest-grants-and-resources-for-environment-and-conservation-and-climate-change/",
-        "https://fundsforcompanies.fundsforngos.org/area/latest-grants-and-resources-for-research/",
         "https://fundsforcompanies.fundsforngos.org/area/latest-grants-and-resources-for-information-technology-for-development/",
-        "https://www2.fundsforngos.org/category/youth-adolescents/",
-        "https://www2.fundsforngos.org/"
     ]
 
     css_selector = "article.post, article.entry"
@@ -111,6 +110,7 @@ class FundsForNGOsProfile(BaseSiteProfile):
                 "Kenya (geographic focus)",
                 "Information Technology",
                 "Science and Technology",
+                "Youth and Adolescents",
             ],
             "pagination_format": "/page/{N}/",
             "end_detection_method": "Text search for 'No Results Found'",

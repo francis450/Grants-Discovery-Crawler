@@ -1,0 +1,114 @@
+[
+  {
+    "title": "CFAs: Deployment and Management of the Oky App in Zambia",
+    "funding_organization": "United Nations International Children’s Emergency Fund (UNICEF)",
+    "grant_amount": null,
+    "deadline": "05-Sep-2025",
+    "geographic_focus": "Zambia",
+    "thematic_areas": [
+      "children",
+      "child protection",
+      "adolescent girls",
+      "technology"
+    ],
+    "eligibility_criteria": null,
+    "description": "The United Nations International Children’s Emergency Fund is inviting expressions of interest for the adaptation, deployment, and management of the Oky app in Zambia, with a specific focus on child protection and empowering adolescent girls. The initiative targets …",
+    "application_url": "https://www2.fundsforngos.org/children/cfas-deployment-and-management-of-the-oky-app-in-zambia/",
+    "category": "children",
+    "date_posted": null,
+    "source_website": "Funds for NGOs",
+    "relevance_score": 65,
+    "relevance_reasoning": "Meets all minimum requirements (nonprofits eligible, not a competition, focuses on children, Zambia in Sub-Saharan Africa, relates to technology for adolescents), but requires adaptation: Zambia-specific app deployment vs. Kenya-focused hardware for schools.",
+    "how_it_helps": "Not applicable - grant is for Oky app management in Zambia, not IT hardware distribution.",
+    "matching_themes": [
+      "children",
+      "technology"
+    ],
+    "is_relevant_preliminary": true
+  },
+  {
+    "title": "RFPs: NGO Programs Benefitting Refugees 2025 (Ethiopia, Kenya, South Sudan)",
+    "funding_organization": "Bureau of Population, Refugees and Migration (PRM)",
+    "grant_amount": null,
+    "deadline": "17-Jan-2025",
+    "geographic_focus": "Ethiopia, Kenya, South Sudan",
+    "thematic_areas": [
+      "education",
+      "health",
+      "protection",
+      "WASH",
+      "refugees"
+    ],
+    "eligibility_criteria": null,
+    "description": "The Bureau of Population, Refugees and Migration (PRM) seeks concept notes focusing on various sectors such as education, health, protection and WASH. Program Area Proposed program concept notes must align with one or more of the following program areas: …",
+    "application_url": "https://www2.fundsforngos.org/latest-funds-for-ngos/rfps-ngo-programs-benefitting-refugees-2025-ethiopia-kenya-south-sudan/",
+    "category": "children",
+    "source_website": "Funds for NGOs",
+    "date_posted": null,
+    "relevance_score": 70,
+    "relevance_reasoning": "Meets all minimum requirements (NGOs accepted, not a contest, education focus including children/refugees, Kenya included, relates to technology education/digital literacy via education sector proposals). Good match but requires adaptation to refugee beneficiaries.",
+    "how_it_helps": "Submit concept note proposing refurbishment and distribution of IT equipment to schools serving refugee children in Kenya, with digital literacy and technology education programs.",
+    "matching_themes": [
+      "education",
+      "refugees",
+      "Kenya"
+    ],
+    "is_relevant_preliminary": true
+  },
+  {
+    "title": "UNICEF seeking the Next Blue Unicorn EdTech Tools to Bridge Global Learning Gaps",
+    "funding_organization": "UNICEF Global Learning Innovation Hub",
+    "grant_amount": "up to $150,000",
+    "deadline": "Ongoing Opportunity",
+    "geographic_focus": "Global",
+    "thematic_areas": [
+      "EdTech",
+      "education",
+      "learning"
+    ],
+    "eligibility_criteria": null,
+    "description": "The UNICEF Global Learning Innovation Hub has announced a groundbreaking portfolio initiative called the \"Blue Unicorn Farm,\" which seeks innovative EdTech solutions to address the global learning crisis.",
+    "application_url": "https://www2.fundsforngos.org/latest-funds-for-ngos/unicef-seeking-the-next-blue-unicorn-edtech-tools-to-bridge-global-learning-gaps/",
+    "category": "children",
+    "source_website": "Funds for NGOs",
+    "date_posted": null,
+    "relevance_score": 78,
+    "relevance_reasoning": "Meets all minimum requirements: open to nonprofits (eligibility none), not a competition (portfolio initiative), focuses on education/learning for children/students, global scope includes developing countries/Africa, relates to digital literacy/technology education via EdTech. Strong but not perfect as not hardware-specific or Africa-exclusive.",
+    "how_it_helps": "Prepare and submit an application positioning refurbished IT equipment as an innovative EdTech solution for bridging digital gaps in underserved African schools, emphasizing circular economy and digital literacy impact.",
+    "matching_themes": [
+      "EdTech",
+      "education",
+      "learning",
+      "digital literacy",
+      "technology education",
+      "digital divide"
+    ],
+    "is_relevant_preliminary": true
+  },
+  {
+    "title": "CFPs: Innovation & High Impact in addressing the most Burning Issues in Online Child Safety",
+    "funding_organization": "Safe Online",
+    "grant_amount": "USD 5 Million",
+    "deadline": "15-Sep-24",
+    "geographic_focus": "Global",
+    "thematic_areas": [
+      "online child safety",
+      "digital safety"
+    ],
+    "eligibility_criteria": null,
+    "description": "Safe Online is excited to announce a new USD 5 Million Global Open Call for Proposals to continue laying the groundwork for a safe internet globally, in line with the latest data and evidence from the field, technology developments and relevant frameworks addressing digital",
+    "application_url": "https://www2.fundsforngos.org/latest-funds-for-ngos/cfps-innovation-high-impact-in-addressing-the-most-burning-issues-in-online-child-safety/",
+    "category": "Children",
+    "date_posted": null,
+    "source_website": "Funds for NGOs",
+    "relevance_score": 65,
+    "relevance_reasoning": "Meets all minimum requirements (nonprofits eligible, not a competition, focuses on children, global scope includes Africa/Kenya, relates to digital literacy via online safety). Good match but requires adaptation to emphasize child online safety in tech education.",
+    "how_it_helps": "Adapt proposal to integrate online safety training, pre-installed safety software/filters on refurbished devices, and digital safety curricula for schools in Kenya.",
+    "matching_themes": [
+      "digital literacy",
+      "technology education",
+      "digital divide"
+    ],
+    "is_relevant_preliminary": true
+  }
+]
