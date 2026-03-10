@@ -8,7 +8,7 @@ from crawl4ai import AsyncWebCrawler
 from playwright.async_api import async_playwright
 from dotenv import load_dotenv
 
-from config import ENABLED_SITES, REQUIRED_KEYS, MAX_PAGES, MIN_RELEVANCE_SCORE
+from config import ENABLED_SITES, REQUIRED_KEYS, MAX_PAGES, MIN_RELEVANCE_SCORE, EARLY_STOP_ON_ALL_DUPLICATES, MAX_POSTING_AGE_DAYS
 from site_profiles import get_profiles_by_names, AVAILABLE_PROFILES
 from site_profiles.base_api_profile import BaseAPIProfile
 from site_profiles.base_playwright_profile import BasePlaywrightProfile
@@ -32,6 +32,7 @@ from utils.scraper_utils import (
     get_browser_config,
     get_llm_strategy,
     is_deadline_valid,
+    is_posting_fresh,
 )
 from utils.xai_utils import analyze_grant_relevance_xai
 from utils.logging_utils import setup_logger, logger
@@ -198,6 +199,12 @@ async def crawl_grants(sites_to_run: Optional[List[str]] = None, only_api: bool 
                             st.record_scored(grant.get("title", ""), score, hih, accepted=False, reason_rejected="deadline_expired")
                             continue
 
+                        # Stale posting check: no deadline + posted too long ago
+                        if not dl and not is_posting_fresh(grant.get("date_posted")):
+                            logger.info(f"⏰ Skipping ({score}): no deadline, posted {grant.get('date_posted')} (>{MAX_POSTING_AGE_DAYS}d ago) — {grant.get('title')}")
+                            st.record_scored(grant.get("title", ""), score, hih, accepted=False, reason_rejected="stale_posting")
+                            continue
+
                         logger.info(f"✅ RELEVANT ({score}): {grant.get('title')}")
                         st.record_scored(grant.get("title", ""), score, hih, accepted=True)
                         insert_grant(grant, run_id)
@@ -284,6 +291,12 @@ async def crawl_grants(sites_to_run: Optional[List[str]] = None, only_api: bool 
                                     st.record_scored(title, score, hih, accepted=False, reason_rejected="deadline_expired")
                                     continue
 
+                                # Stale posting check: no deadline + posted too long ago
+                                if not dl and not is_posting_fresh(grant.get("date_posted")):
+                                    logger.info(f"⏰ Skipping '{title}': no deadline, posted {grant.get('date_posted')} (>{MAX_POSTING_AGE_DAYS}d ago).")
+                                    st.record_scored(title, score, hih, accepted=False, reason_rejected="stale_posting")
+                                    continue
+
                                 if grant_exists(
                                     grant.get("title"),
                                     grant.get("application_url"),
@@ -345,7 +358,7 @@ async def crawl_grants(sites_to_run: Optional[List[str]] = None, only_api: bool 
 
                         while page_number <= MAX_PAGES:
                             # Fetch and process data from the current page
-                            grants, no_results_found, grants_found_on_page = await fetch_and_process_page(
+                            grants, no_results_found, grants_found_on_page, all_were_duplicates = await fetch_and_process_page(
                                 crawler,
                                 page_number,
                                 base_url,
@@ -370,6 +383,14 @@ async def crawl_grants(sites_to_run: Optional[List[str]] = None, only_api: bool 
                             # Stop if no grants were found on the page at all
                             if not grants_found_on_page:
                                 logger.info(f"No grants found on page {page_number} of {base_url}.")
+                                break
+
+                            # Early stop: entire page was already-known grants — deeper pages will be too
+                            if all_were_duplicates and EARLY_STOP_ON_ALL_DUPLICATES:
+                                logger.info(
+                                    f"Early stop: all grants on page {page_number} of {base_url} "
+                                    f"already in database. Skipping remaining pages."
+                                )
                                 break
 
                             # If grants were found but all filtered out, continue to next page

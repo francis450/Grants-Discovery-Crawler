@@ -49,6 +49,7 @@ EXCEL_COLUMNS = [
     "funding_organization",
     "grant_amount",
     "deadline",
+    "deadline_review",
     "geographic_focus",
     "thematic_areas",
     "eligibility_criteria",
@@ -62,6 +63,7 @@ EXCEL_HEADERS = [
     "funding_organization",
     "grant_amount",
     "deadline",
+    "deadline_review",
     "geographic_focus",
     "thematic_areas",
     "eligibility_criteria",
@@ -505,6 +507,12 @@ def sync_db_to_excel(sheet_name: Optional[str] = None) -> int:
 
 def _format_field(grant: dict, field: str) -> str:
     """Format a grant field for Excel output."""
+    if field == "deadline_review":
+        deadline = grant.get("deadline")
+        if not deadline or str(deadline).strip().lower() in ("", "tbd", "null", "none"):
+            return "⚠ No deadline found — verify before applying"
+        return ""
+
     value = grant.get(field)
     if value is None:
         if field == "deadline":

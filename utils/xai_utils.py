@@ -107,13 +107,18 @@ CRITICAL SCORING RULES:
 - If you cannot write a specific, realistic plan in 'how_it_helps', you MUST set how_it_helps to 'Not applicable' AND score below 50.
 - Do NOT inflate scores for grants that only loosely match keywords. The score must reflect whether this grant can REALISTICALLY fund collecting, refurbishing, or distributing IT equipment to African schools.
 
+DEADLINE EXTRACTION: Look for any deadline, closing date, or "apply by" date in the
+title or description above. Return it as "YYYY-MM-DD" or a readable date string.
+If applications are rolling/ongoing, return "Rolling". If none is found, return null.
+
 Respond with ONLY a JSON object (no markdown):
 {{
   "is_relevant": true or false,
   "score": number 0-100,
   "reasoning": "Brief explanation",
   "how_it_helps": "Specific action plan or 'Not applicable'",
-  "matching_themes": ["list", "of", "themes"]
+  "matching_themes": ["list", "of", "themes"],
+  "deadline": "YYYY-MM-DD or readable date, Rolling, or null"
 }}"""
 
     try:

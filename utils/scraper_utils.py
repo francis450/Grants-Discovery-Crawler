@@ -16,7 +16,7 @@ from crawl4ai import (
 
 from models.grant import Grant
 from utils.data_utils import is_complete_grant, is_duplicate_grant, is_how_it_helps_valid
-from config import MIN_DEADLINE_DAYS, MIN_RELEVANCE_SCORE
+from config import MIN_DEADLINE_DAYS, MIN_RELEVANCE_SCORE, MAX_POSTING_AGE_DAYS
 from utils.logging_utils import logger, MetricsLogger
 
 # Initialize detailed metrics logger
@@ -199,6 +199,20 @@ def is_deadline_valid(deadline_str: str, min_days: int = MIN_DEADLINE_DAYS) -> b
         return False
 
     return True
+
+
+def is_posting_fresh(date_posted_str: str, max_age_days: int = MAX_POSTING_AGE_DAYS) -> bool:
+    """
+    Returns False if the grant was posted more than max_age_days ago.
+    Only meaningful when the deadline field is null — used as a staleness proxy.
+    Returns True (pass) when date_posted is missing or unparseable.
+    """
+    if not max_age_days or not date_posted_str:
+        return True
+    posted = parse_date(date_posted_str)
+    if not posted:
+        return True
+    return (datetime.now() - posted).days <= max_age_days
 
 
 def get_browser_config(headless: bool = True) -> BrowserConfig:
@@ -502,29 +516,30 @@ async def fetch_and_process_page(
                 ctx.items = len(extracted_data)
         else:
              logger.error(f"Error fetching page {page_number} (Manual Groq): {result.error_message}")
-             return [], False, False
+             return [], False, False, False
     else:
         # Standard Crawl4AI extraction
         if not (result.success and result.extracted_content):
             logger.error(f"Error fetching page {page_number}: {result.error_message}")
-            return [], False, False
-        
+            return [], False, False, False
+
         try:
             extracted_data = json.loads(result.extracted_content)
         except json.JSONDecodeError:
              logger.error(f"Error decoding JSON content from page {page_number}")
-             return [], False, False
+             return [], False, False, False
 
     if not extracted_data:
         logger.warning(f"No grants found on page {page_number} of {base_url}.")
-        return [], False, False
+        return [], False, False, False
 
     # After parsing extracted content
     logger.debug(f"Extracted data: {extracted_data}")
 
     # Process grants
     complete_grants = []
-    
+    duplicate_count = 0  # Track grants already known (for early-stop signal)
+
     # Record total fetched for site tracker
     if site_metrics:
         site_metrics.record_fetched(len(extracted_data))
@@ -532,7 +547,7 @@ async def fetch_and_process_page(
     # Log number of grants found before processing
     with metrics_logger.measure("process_loop", site=site_profile.site_name, url=url) as loop_ctx:
         loop_ctx.items = len(extracted_data)
-        
+
         for grant in extracted_data:
             # Debugging: Print each grant to understand its structure
             logger.debug(f"Processing grant: {grant}")
@@ -548,6 +563,7 @@ async def fetch_and_process_page(
 
             if is_duplicate_grant(grant.get("title"), seen_titles):
                 logger.debug(f"Duplicate grant '{grant.get('title')}' found. Skipping.")
+                duplicate_count += 1
                 if site_metrics:
                     site_metrics.record_filtered("duplicate_in_run")
                 continue  # Skip duplicate grants
@@ -559,6 +575,18 @@ async def fetch_and_process_page(
                 if site_metrics:
                     site_metrics.record_filtered("deadline_expired")
                 continue
+
+            # Stale posting check: no deadline + posted too long ago → likely expired
+            if not deadline:
+                date_posted = grant.get("date_posted")
+                if not is_posting_fresh(date_posted):
+                    logger.info(
+                        f"⏰ Skipping '{grant.get('title')}': no deadline, "
+                        f"posted {date_posted} (>{MAX_POSTING_AGE_DAYS}d ago)."
+                    )
+                    if site_metrics:
+                        site_metrics.record_filtered("stale_posting")
+                    continue
 
             # Check preliminary relevance
             # If is_relevant_preliminary is explicitly False, we skip.
@@ -646,9 +674,12 @@ async def fetch_and_process_page(
     # Track if we found any grants on the page (even if filtered out)
     grants_found_on_page = len(extracted_data) > 0
 
+    # Signal early stop when every extracted grant was already known to the DB/run
+    all_were_duplicates = grants_found_on_page and (duplicate_count == len(extracted_data))
+
     if not complete_grants:
         logger.info(f"No complete grants found on page {page_number}.")
-        return [], False, grants_found_on_page
+        return [], False, grants_found_on_page, all_were_duplicates
 
     logger.info(f"Extracted {len(complete_grants)} grants from page {page_number}.")
-    return complete_grants, False, grants_found_on_page  # Continue crawling
+    return complete_grants, False, grants_found_on_page, all_were_duplicates

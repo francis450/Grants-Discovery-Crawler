@@ -79,6 +79,22 @@ DB_PATH = "grants.db"
 DEDUP_SIMILARITY_THRESHOLD = 0.85
 
 # ============================================================================
+# EARLY STOP CONFIGURATION
+# ============================================================================
+# Stop paginating a URL when an entire page consists of already-known grants.
+# Most listing sites sort newest-first, so an all-duplicate page means no new
+# content remains on deeper pages — saves LLM extraction calls.
+EARLY_STOP_ON_ALL_DUPLICATES = True
+
+# ============================================================================
+# STALE POSTING FILTER
+# ============================================================================
+# When a grant has no extractable deadline, fall back to posting date as a proxy.
+# Grants posted more than this many days ago with no deadline are rejected as
+# likely expired. Set to 0 to disable.
+MAX_POSTING_AGE_DAYS = 60
+
+# ============================================================================
 # EXCEL ONLINE CONFIGURATION (Microsoft Graph API)
 # ============================================================================
 # The crawler appends new grants to a shared Excel workbook hosted on
