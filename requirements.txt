@@ -1,4 +1,6 @@
 Crawl4AI==0.4.247
+playwright>=1.40.0
+playwright-stealth>=1.0.6,<2.0.0
 python-dotenv==1.0.1
 pydantic==2.10.6
 ollama>=0.4.0

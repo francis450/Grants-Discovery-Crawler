@@ -15,9 +15,9 @@ class EUFundingPortalProfile(BaseSiteProfile):
     Profile for crawling EU Funding Portal website.
 
     Site characteristics:
-    - URL structure: Tag and category pages
+    - URL structure: Tag and category pages (standard WordPress)
     - Pagination: Path-based (/page/2/, /page/3/, etc.)
-    - CSS selector: li.alm-item (Ajax Load More plugin items)
+    - CSS selector: article.post (standard WordPress post articles)
     - End detection: Empty page or missing grant items
     """
 
@@ -32,7 +32,7 @@ class EUFundingPortalProfile(BaseSiteProfile):
         "https://eufundingportal.eu/ngo-grants/",
     ]
 
-    css_selector = "li.alm-item"
+    css_selector = "article.post"  # Standard WordPress post articles
     pagination_type = "path"  # Uses /page/N/ format
 
     def get_page_url(self, base_url: str, page_number: int) -> str:

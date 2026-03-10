@@ -1,4 +1,7 @@
 # config.py
+import os
+from dotenv import load_dotenv
+load_dotenv()
 
 # ============================================================================
 # SITE PROFILES CONFIGURATION
@@ -6,12 +9,16 @@
 # List of site profiles to crawl (profiles are defined in site_profiles/)
 # Available profiles: "fundsforngos" (more to be added)
 ENABLED_SITES = [
+    "grants_gov",  # API-based (Fast)
     "fundsforngos",
     "eufundingportal",
     "charityexcellence",
     "globalgiving",
     "devex",
-    "reliefweb",
+    "ictworks",  # disabled for devaid test
+    "developmentaid",
+    "eceuropa",  # EU Funding & Tenders Portal API
+    "instrumentl",  # Instrumentl grant browse (Playwright, card-based)
     # "localtest",
 ]
 
@@ -50,7 +57,7 @@ MIN_DEADLINE_DAYS = 3  # Skip grants with less than 3 days to apply
 # Updated scoring: 90-100=Perfect, 75-89=Strong, 60-74=Good, 50-59=Marginal, <50=Not relevant
 # Recommended: Start with 60 to capture direct, strong, and adaptable matches
 # You can lower to 55 temporarily to see what marginal grants look like, then adjust
-MIN_RELEVANCE_SCORE = 60  # Only include grants scoring 60 or above
+MIN_RELEVANCE_SCORE = 70  # Only include grants scoring 70 or above
 
 # ============================================================================
 # LLM PROVIDER CONFIGURATION
@@ -72,11 +79,55 @@ DB_PATH = "grants.db"
 DEDUP_SIMILARITY_THRESHOLD = 0.85
 
 # ============================================================================
-# EXCEL ONLINE CONFIGURATION (OneDrive Sync)
+# EXCEL ONLINE CONFIGURATION (Microsoft Graph API)
 # ============================================================================
-# Path to the shared Excel file in your OneDrive-synced folder.
-# The crawler appends new grants to the specified sheet.
-# Set to None to disable Excel export.
-EXCEL_OUTPUT_PATH = "https://netorgft5302216-my.sharepoint.com/personal/daniela_v_dragonsino_com/Documents/TOH NON-PROFIT/Grant_Tracker_Database.xlsx"  # e.g. r"C:\Users\Francis\OneDrive\Shared\GrantsReview.xlsx"
+# The crawler appends new grants to a shared Excel workbook hosted on
+# SharePoint / OneDrive for Business via the Microsoft Graph API.
+#
+# SETUP:
+#   1. Register an app in Azure Portal → App Registrations
+#   2. Grant API permission: Microsoft Graph → Application → Files.ReadWrite.All
+#   3. Grant admin consent
+#   4. Create a client secret and store the values in your .env file:
+#        AZURE_TENANT_ID=<your-tenant-id>
+#        AZURE_CLIENT_ID=<your-app-client-id>
+#        AZURE_CLIENT_SECRET=<your-client-secret>
+#   5. Set EXCEL_SHAREPOINT_URL below to the SharePoint URL of the Excel file.
+#      Set to None to disable Excel export.
+
+AZURE_TENANT_ID = os.getenv("AZURE_TENANT_ID", "")
+AZURE_CLIENT_ID = os.getenv("AZURE_CLIENT_ID", "")
+AZURE_CLIENT_SECRET = os.getenv("AZURE_CLIENT_SECRET", "")
+
+# Full SharePoint / OneDrive URL to the shared Excel workbook
+# Set to None to disable Graph API and use local file instead
+EXCEL_SHAREPOINT_URL = None
 EXCEL_SHEET_NAME = "From Automation"
+
+# Legacy local-file path (if you prefer local OneDrive sync instead of Graph API)
+EXCEL_OUTPUT_PATH = r"C:\Users\Francis\Documents\Grants\Grant_Tracker_Database.xlsx"
+
+# ============================================================================
+# PLAYWRIGHT CONFIGURATION (for JS-heavy sites)
+# ============================================================================
+# Sites that fail with Crawl4AI's default rendering (React SPAs, anti-bot sites)
+# are fetched using direct Playwright with stealth. These settings control that path.
+PLAYWRIGHT_HEADLESS = False           # Set False for visual debugging
+PLAYWRIGHT_DEFAULT_TIMEOUT = 30000   # ms — max wait for selectors/navigation
+PLAYWRIGHT_STEALTH = True            # Enable anti-detection (user agent, webdriver flag, etc.)
+
+# ============================================================================
+# CHARITY EXCELLENCE CONFIGURATION (login-gated site)
+# ============================================================================
+# Credentials loaded from .env — register free at:
+# https://myaccount.charityexcellence.co.uk/Account/Register
+CE_EMAIL = os.getenv("CHARITY_EXCELLENCE_EMAIL", "")
+CE_PASSWORD = os.getenv("CHARITY_EXCELLENCE_PASSWORD", "")
+
+# Filter presets for the Charity Excellence Funding Finder search.
+# Values are the option codes from their multi-select dropdowns.
+CE_REGION = "1"                      # "1" = International, "2" = UK
+CE_REGION_PARTS = ["H", "I"]         # H=International, I=Africa
+CE_SECTOR_TYPES = ["876", "869", "860", "862"]  # Education, Tech, Humanitarian, Buildings & Equipment
+CE_PEOPLE_GROUPS = []                # e.g. ["897", "872"] for Community Groups, Small Charities
 

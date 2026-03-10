@@ -7,13 +7,18 @@ for accessing them.
 
 from typing import Dict, List, Type
 from .base_profile import BaseSiteProfile
+from .base_playwright_profile import BasePlaywrightProfile
 from .fundsforngos import FundsForNGOsProfile
 from .eufundingportal import EUFundingPortalProfile
 from .charityexcellence import CharityExcellenceProfile
 from .globalgiving import GlobalGivingProfile
 from .devex import DevExProfile
-from .reliefweb import ReliefWebProfile
+from .ictworks import ICTworksProfile
 from .localtest import LocalTestProfile
+from .grants_gov_api import GrantsGovAPIProfile
+from .developmentaid import DevelopmentAidProfile
+from .eceuropa import ECEuropaProfile
+from .instrumentl import InstrumentlProfile
 
 # Registry of all available site profiles
 AVAILABLE_PROFILES: Dict[str, Type[BaseSiteProfile]] = {
@@ -22,8 +27,12 @@ AVAILABLE_PROFILES: Dict[str, Type[BaseSiteProfile]] = {
     "charityexcellence": CharityExcellenceProfile,
     "globalgiving": GlobalGivingProfile,
     "devex": DevExProfile,
-    "reliefweb": ReliefWebProfile,
+    "ictworks": ICTworksProfile,
     "localtest": LocalTestProfile,
+    "grants_gov": GrantsGovAPIProfile,
+    "developmentaid": DevelopmentAidProfile,
+    "eceuropa": ECEuropaProfile,
+    "instrumentl": InstrumentlProfile,
 }
 
 
@@ -112,6 +121,7 @@ def get_profiles_by_names(site_names: List[str]) -> List[BaseSiteProfile]:
 # Export main classes and functions
 __all__ = [
     "BaseSiteProfile",
+    "BasePlaywrightProfile",
     "FundsForNGOsProfile",
     "AVAILABLE_PROFILES",
     "get_profile",

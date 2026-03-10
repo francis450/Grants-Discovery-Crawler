@@ -96,9 +96,16 @@ MINIMUM REQUIREMENTS (at least 3 of 5 must be met for is_relevant=true):
 
 SCORING GUIDE:
 - 90-100: Perfect match (directly funds IT equipment for African schools)
-- 75-89: Strong match (education + technology + Africa)
-- 60-74: Good match (meets requirements with some adaptation needed)
-- Below 60: Not relevant (missing key requirements)
+- 75-89: Strong match (education + technology + Africa, with clear path to fund our work)
+- 70-79: Good match (meets requirements with some adaptation needed, but a plausible path exists)
+- 50-69: Weak match (tangentially related but no realistic path to fund our specific mission)
+- Below 50: Not relevant (missing key requirements)
+
+CRITICAL SCORING RULES:
+- If the grant's geographic focus EXCLUDES Africa entirely (e.g. only EU, only US, only Western Balkans), score below 50.
+- If the grant is purely research/academic with no operational funding for equipment or programs, score below 60.
+- If you cannot write a specific, realistic plan in 'how_it_helps', you MUST set how_it_helps to 'Not applicable' AND score below 50.
+- Do NOT inflate scores for grants that only loosely match keywords. The score must reflect whether this grant can REALISTICALLY fund collecting, refurbishing, or distributing IT equipment to African schools.
 
 Respond with ONLY a JSON object (no markdown):
 {{

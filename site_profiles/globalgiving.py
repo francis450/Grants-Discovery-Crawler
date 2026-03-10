@@ -1,25 +1,23 @@
 """
-Site profile for GlobalGiving (globalgiving.org).
+Site profile for GlobalGiving (globalgiving.org) — Playwright version.
 
-GlobalGiving connects nonprofits, donors, and companies in nearly every country.
-Their projects page lists fundraising and grant opportunities relevant to education
-and technology in developing countries.
+GlobalGiving is a React SPA.  The previous Crawl4AI profile falsely detected
+"end of results" on every page because the initial HTML is nearly empty
+(< 300 chars) before React hydrates.  This profile waits for the project
+cards to render before extracting.
 """
 
-from typing import List
-from crawl4ai import AsyncWebCrawler, CrawlerRunConfig, CacheMode
-from .base_profile import BaseSiteProfile
+import re
+from typing import List, Optional
+from playwright.async_api import Page
+
+from config import PLAYWRIGHT_DEFAULT_TIMEOUT
+from .base_playwright_profile import BasePlaywrightProfile
 
 
-class GlobalGivingProfile(BaseSiteProfile):
+class GlobalGivingProfile(BasePlaywrightProfile):
     """
-    Profile for crawling GlobalGiving project listings.
-
-    Site characteristics:
-    - URL structure: Search/browse pages with theme and country filters
-    - Pagination: Query-based (?page=N) or nextPage parameter
-    - CSS selector: Project card elements
-    - End detection: No project cards found or "no results" message
+    Playwright-based profile for GlobalGiving project listings.
     """
 
     # Site metadata
@@ -27,86 +25,104 @@ class GlobalGivingProfile(BaseSiteProfile):
     site_url = "https://www.globalgiving.org"
     description = "Global crowdfunding and grants platform for nonprofits"
 
-    # Scraping configuration — filter by themes and regions relevant to the mission
+    # Scraping configuration
     base_urls = [
-        # Education projects in Africa
         "https://www.globalgiving.org/search/?size=25&nextPage=1&sortField=sortorder&selectedThemes=edu&selectedCountries=KE,TZ,UG,NG,GH,ZA,ET,RW,MW,SN",
-        # Technology projects in Africa
         "https://www.globalgiving.org/search/?size=25&nextPage=1&sortField=sortorder&selectedThemes=tech&selectedCountries=KE,TZ,UG,NG,GH,ZA,ET,RW,MW,SN",
-        # Children/youth projects in Africa
         "https://www.globalgiving.org/search/?size=25&nextPage=1&sortField=sortorder&selectedThemes=children&selectedCountries=KE,TZ,UG,NG,GH,ZA,ET,RW,MW,SN",
     ]
 
-    css_selector = "div.project-card, div.search-result-item, article.project-listing"
-    pagination_type = "query"  # Uses nextPage=N parameter
+    css_selector = (
+        "div.project-card, div.search-result-item, article.project-listing, "
+        "div[class*='project-card'], div[class*='ProjectCard']"
+    )
+    pagination_type = "query"
 
     def get_page_url(self, base_url: str, page_number: int) -> str:
-        """
-        Construct URL for a specific page.
-
-        GlobalGiving uses nextPage query parameter for pagination.
-
-        Args:
-            base_url: The search URL with filters
-            page_number: Page number (1-indexed)
-
-        Returns:
-            str: Full URL for the specified page
-        """
         if page_number == 1:
             return base_url
-        # Replace nextPage=1 with the correct page number
         if "nextPage=" in base_url:
-            import re
             return re.sub(r"nextPage=\d+", f"nextPage={page_number}", base_url)
         return f"{base_url}&nextPage={page_number}"
 
-    async def detect_end_of_results(self, crawler: AsyncWebCrawler, url: str, session_id: str) -> bool:
-        """
-        Detect if we've reached the end of results.
+    # ------------------------------------------------------------------
+    # Playwright hooks
+    # ------------------------------------------------------------------
 
-        Args:
-            crawler: The web crawler instance
-            url: The URL to check
-            session_id: Session identifier
-
-        Returns:
-            bool: True if no more results are available
-        """
+    async def fetch_page_content(self, page: Page, url: str) -> Optional[str]:
+        """Navigate and wait for React project cards to hydrate."""
         try:
-            result = await crawler.arun(
-                url=url,
-                config=CrawlerRunConfig(
-                    cache_mode=CacheMode.BYPASS,
-                    session_id=session_id,
-                ),
+            response = await page.goto(
+                url,
+                wait_until="domcontentloaded",
+                timeout=PLAYWRIGHT_DEFAULT_TIMEOUT,
             )
 
-            if result.success:
-                html = result.cleaned_html
-                if "no projects found" in html.lower():
-                    return True
-                if "no results" in html.lower():
-                    return True
-                if "0 projects" in html.lower():
-                    return True
-                # Very short page likely means no content
-                if len(html.strip()) < 300:
-                    return True
-            else:
-                print(f"Error fetching GlobalGiving page: {result.error_message}")
-                return True
+            if response and response.status >= 400:
+                return None
 
-            return False
+            # Wait for project cards to render
+            card_selectors = [
+                "div.project-card",
+                "div[class*='project-card']",
+                "div[class*='ProjectCard']",
+                "div.search-result-item",
+                "article.project-listing",
+                "main",
+            ]
+
+            for selector in card_selectors:
+                try:
+                    await page.wait_for_selector(selector, timeout=12000)
+                    break
+                except Exception:
+                    continue
+
+            # Wait for network to settle (React data fetching)
+            try:
+                await page.wait_for_load_state("networkidle", timeout=15000)
+            except Exception:
+                pass
+
+            # Scroll down to trigger lazy-loaded cards
+            await page.evaluate("window.scrollTo(0, document.body.scrollHeight)")
+            await page.wait_for_timeout(2000)
+
+            return await page.content()
 
         except Exception as e:
-            print(f"Error in detect_end_of_results: {str(e)}")
-            return False
+            from utils.logging_utils import logger
+            logger.error(f"[GlobalGiving] fetch_page_content failed: {e}")
+            return None
+
+    async def detect_end_of_results_pw(self, page: Page, url: str) -> bool:
+        """Count rendered project cards — 0 means we're past the last page."""
+        card_selectors = [
+            "div.project-card",
+            "div[class*='project-card']",
+            "div[class*='ProjectCard']",
+            "div.search-result-item",
+        ]
+        for sel in card_selectors:
+            elements = await page.query_selector_all(sel)
+            if elements:
+                return False
+
+        body_text = await page.inner_text("body")
+        lower = body_text.lower()
+        if any(phrase in lower for phrase in [
+            "no projects found",
+            "no results",
+            "0 projects",
+        ]):
+            return True
+
+        return True  # No cards rendered at all
 
     def get_site_info(self) -> dict:
-        """Get detailed information about this site profile."""
         info = super().get_site_info()
         info.update({
+            "rendering": "Playwright (React SPA)",
             "categories_crawled": [
                 "Education (Africa)",
                 "Technology (Africa)",
@@ -114,6 +130,5 @@ class GlobalGivingProfile(BaseSiteProfile):
             ],
             "target_countries": "KE, TZ, UG, NG, GH, ZA, ET, RW, MW, SN",
             "pagination_format": "?nextPage={N}",
-            "end_detection_method": "Text search for 'no projects found' or empty results",
         })
         return info

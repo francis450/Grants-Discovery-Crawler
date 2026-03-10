@@ -5,6 +5,18 @@ import requests
 from models.grant import Grant
 
 
+def is_how_it_helps_valid(how_it_helps) -> bool:
+    """Check if the how_it_helps field indicates genuine relevance.
+
+    If the LLM itself says 'Not applicable', the grant doesn't actually help
+    the mission, regardless of the numeric score it assigned.
+    """
+    if not how_it_helps or not isinstance(how_it_helps, str):
+        return True  # Don't reject if the field is missing
+    lower = how_it_helps.strip().lower()
+    return not lower.startswith("not applicable")
+
+
 def is_duplicate_grant(grant_title: str, seen_titles: set) -> bool:
     """Check if a grant title has already been processed."""
     if grant_title is None:
@@ -27,7 +39,7 @@ def save_grants_to_csv(grants: list, filename: str):
     fieldnames = Grant.model_fields.keys()
 
     with open(filename, mode="w", newline="", encoding="utf-8") as file:
-        writer = csv.DictWriter(file, fieldnames=fieldnames)
+        writer = csv.DictWriter(file, fieldnames=fieldnames, extrasaction="ignore")
         writer.writeheader()
 
         # Handle list fields by converting to JSON strings

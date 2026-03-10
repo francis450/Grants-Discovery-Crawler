@@ -31,6 +31,7 @@ class FundsForNGOsProfile(BaseSiteProfile):
         "https://www2.fundsforngos.org/category/children/",
         "https://www2.fundsforngos.org/category/education/",
         "https://www2.fundsforngos.org/tag/funding-opportunities-and-resources-in-kenya/",
+        "https://www2.fundsforngos.org/tag/funding-opportunities-and-resources-in-kenya/",
         "https://www2.fundsforngos.org/category/information-technology/",
         "https://www2.fundsforngos.org/category/science-and-technology/",
         "https://www2.fundsforngos.org/category/youth-adolescents/",

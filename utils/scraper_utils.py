@@ -3,19 +3,7 @@ import os
 from datetime import datetime, timedelta
 from typing import Dict, List, Optional, Set, Tuple
 
-try:
-    import ollama
-    OLLAMA_AVAILABLE = True
-except ImportError:
-    OLLAMA_AVAILABLE = False
-
-# Import Gemini relevance analyzer
-from utils.gemini_utils import analyze_grant_relevance_gemini, GEMINI_AVAILABLE
-
-# Import Groq relevance analyzer
-from utils.groq_utils import analyze_grant_relevance_groq, GROQ_AVAILABLE
-
-# Import xAI relevance analyzer
+# Import xAI relevance analyzer (sole LLM provider)
 from utils.xai_utils import analyze_grant_relevance_xai, XAI_AVAILABLE
 
 from crawl4ai import (
@@ -27,9 +15,12 @@ from crawl4ai import (
 )
 
 from models.grant import Grant
-from utils.data_utils import is_complete_grant, is_duplicate_grant
-from config import MIN_DEADLINE_DAYS, RELEVANCE_PROVIDER, MIN_RELEVANCE_SCORE
+from utils.data_utils import is_complete_grant, is_duplicate_grant, is_how_it_helps_valid
+from config import MIN_DEADLINE_DAYS, MIN_RELEVANCE_SCORE
+from utils.logging_utils import logger, MetricsLogger
 
+# Initialize detailed metrics logger
+metrics_logger = MetricsLogger()
 
 async def analyze_grant_relevance_local(grant_data: dict) -> Optional[Dict]:
     """
@@ -84,9 +75,16 @@ MINIMUM REQUIREMENTS (at least 3 of 5 must be met for is_relevant=true):
 
 SCORING GUIDE:
 - 90-100: Perfect match (directly funds IT equipment for African schools)
-- 75-89: Strong match (education + technology + Africa)
-- 60-74: Good match (meets requirements with some adaptation needed)
-- Below 60: Not relevant (missing key requirements)
+- 75-89: Strong match (education + technology + Africa, with clear path to fund our work)
+- 70-79: Good match (meets requirements with some adaptation needed, but a plausible path exists)
+- 50-69: Weak match (tangentially related but no realistic path to fund our specific mission)
+- Below 50: Not relevant (missing key requirements)
+
+CRITICAL SCORING RULES:
+- If the grant's geographic focus EXCLUDES Africa entirely (e.g. only EU, only US, only Western Balkans), score below 50.
+- If the grant is purely research/academic with no operational funding for equipment or programs, score below 60.
+- If you cannot write a specific, realistic plan in 'how_it_helps', you MUST set how_it_helps to 'Not applicable' AND score below 50.
+- Do NOT inflate scores for grants that only loosely match keywords. The score must reflect whether this grant can REALISTICALLY fund collecting, refurbishing, or distributing IT equipment to African schools.
 
 Respond with ONLY a JSON object (no markdown, no explanation outside JSON):
 {{
@@ -203,9 +201,12 @@ def is_deadline_valid(deadline_str: str, min_days: int = MIN_DEADLINE_DAYS) -> b
     return True
 
 
-def get_browser_config() -> BrowserConfig:
+def get_browser_config(headless: bool = True) -> BrowserConfig:
     """
     Returns the browser configuration for the crawler.
+
+    Args:
+        headless (bool): Whether to run the browser in headless mode. Defaults to True.
 
     Returns:
         BrowserConfig: The configuration settings for the browser.
@@ -213,7 +214,7 @@ def get_browser_config() -> BrowserConfig:
     # https://docs.crawl4ai.com/core/browser-crawler-config/
     return BrowserConfig(
         browser_type="chromium",  # Type of browser to simulate
-        headless=True,  # Run headless for faster automated crawling
+        headless=headless,  # Run headless for faster automated crawling
         verbose=True,  # Enable verbose logging
     )
 
@@ -243,64 +244,24 @@ def get_llm_strategy() -> LLMExtractionStrategy:
         "If any field is not available, set it to null."
     )
 
-    # 0. Check for xAI (Grok) - PRIMARY configuration
+    # xAI Grok — sole LLM provider
     xai_key = os.getenv("XAI_API_KEY")
-    if xai_key:
-        print("[LLM Strategy] Using xAI Grok (grok-4-1-fast-reasoning) for extraction.")
-        return LLMExtractionStrategy(
-            provider="xai/grok-4-1-fast-reasoning",
-            api_token=xai_key,
-            schema=Grant.model_json_schema(),
-            extraction_type="schema",
-            chunk_token_threshold=8000,
-            instruction=instruction,
-            input_format="markdown",
-            verbose=True,
+    if not xai_key:
+        raise RuntimeError(
+            "XAI_API_KEY is not set. This crawler requires an xAI API key. "
+            "Set it in your .env file: XAI_API_KEY=<your-key>"
         )
 
-    # 1. Check for Local LLM flag (Ollama)
-    # Set USE_LOCAL_LLM=true in your .env or environment
-    if os.getenv("USE_LOCAL_LLM", "false").lower() == "true":
-        print("[LLM Strategy] Using Local Ollama (llama3.1) for extraction.")
-        return LLMExtractionStrategy(
-            provider="ollama/llama3.1",
-            api_token="ollama",
-            schema=Grant.model_json_schema(),
-            extraction_type="schema",
-            chunk_token_threshold=2000,
-            instruction=instruction,
-            input_format="markdown",
-            verbose=True,
-        )
-
-    # 2. Check for Gemini API key as it has higher rate limits
-    gemini_key = os.getenv("GEMINI_API_KEY")
-    if gemini_key:
-        print("[LLM Strategy] Using Gemini (gemini-1.5-flash) for extraction.")
-        return LLMExtractionStrategy(
-            provider="gemini/gemini-1.5-flash-latest",
-            api_token=gemini_key,
-            schema=Grant.model_json_schema(),
-            extraction_type="schema",
-            chunk_token_threshold=8000,
-            instruction=instruction,
-            input_format="markdown",
-            verbose=True,
-        )
-
-    # 3. Fallback to Groq
-    print("[LLM Strategy] Using Groq (llama-3.1-8b-instant) for extraction.")
+    print("[LLM Strategy] Using xAI Grok (grok-4-1-fast-reasoning) for extraction.")
     return LLMExtractionStrategy(
-        provider="groq/llama-3.1-8b-instant",  # Smaller model with higher rate limits
-        api_token=os.getenv("GROQ_API_KEY"),  # From .env file
-        schema=Grant.model_json_schema(),  # JSON schema of the data model
-        extraction_type="schema",  # Type of extraction to perform
-        chunk_token_threshold=800,  # Drastically reduced chunk size to respect 6k TPM limit
-        overlap=50, # Add overlap to ensure context preservation
-        word_count_threshold=20, # Filter out small blocks
-        instruction=instruction,  # Instructions for the LLM
-        input_format="markdown",  # Format of the input content
-        verbose=True,  # Enable verbose logging
+        provider="xai/grok-4-1-fast-reasoning",
+        api_token=xai_key,
+        schema=Grant.model_json_schema(),
+        extraction_type="schema",
+        chunk_token_threshold=8000,
+        instruction=instruction,
+        input_format="markdown",
+        verbose=True,
     )
 
 
@@ -319,6 +280,7 @@ def get_relevance_strategy() -> LLMExtractionStrategy:
         reasoning: str = Field(description="Brief explanation of the relevance assessment")
         how_it_helps: str = Field(description="Specific, actionable explanation of HOW this grant helps acquire/provide/maintain IT equipment for children in African schools")
         matching_themes: List[str] = Field(description="List of matching themes from the grant")
+        deadline: Optional[str] = Field(default=None, description="Application deadline date (e.g. '2026-03-15', 'March 15, 2026', 'Rolling'). Extract from the page if available.")
 
     return LLMExtractionStrategy(
         provider="xai/grok-4-1-fast-reasoning",
@@ -362,12 +324,22 @@ def get_relevance_strategy() -> LLMExtractionStrategy:
             "Based on this, analyze the provided grant. In your reasoning, first state whether it meets the minimum requirements. "
             "Then, explain how well it aligns with the core mission and ideal themes. "
             "Assign a score from 0-100, where 90-100 is a perfect match, 75-89 is a strong match, "
-            "60-74 is a good match, and below 60 is not relevant. "
+            "70-79 is a good match with a plausible path, 50-69 is a weak/tangential match, and below 50 is not relevant. "
             "Be critical: if a grant is for 'environmental' projects but doesn't mention technology or e-waste, it's a weak match. "
             "If it's for 'education' but doesn't mention technology, it's a weak match. "
+            "If the grant's geographic focus EXCLUDES Africa entirely (e.g. only EU, only US, only Western Balkans), score below 50. "
+            "If the grant is purely research/academic with no operational funding, score below 60. "
             "The 'how_it_helps' field MUST be a concrete, actionable plan for using this specific grant to achieve the mission, "
             "not a generic statement. For example: 'This grant could fund the refurbishment of 50 laptops, which would then be "
-            "deployed to a school in Kenya to set up a new computer lab.' Be specific."
+            "deployed to a school in Kenya to set up a new computer lab.' Be specific. "
+            "If you CANNOT write a realistic, specific plan, set how_it_helps to 'Not applicable' AND score below 50. "
+            "Do NOT inflate scores for grants that only loosely match keywords — the score must reflect whether this grant "
+            "can REALISTICALLY fund collecting, refurbishing, or distributing IT equipment to African schools.\n\n"
+            "DEADLINE EXTRACTION: You MUST extract the application deadline from the page content. "
+            "Look for phrases like 'deadline', 'apply by', 'applications close', 'submissions due', 'closing date', etc. "
+            "Return the deadline in a standard date format (e.g. '2026-03-15' or 'March 15, 2026'). "
+            "If the grant has rolling/ongoing applications, return 'Rolling'. "
+            "If no deadline is found anywhere on the page, return null."
         ),  # Instructions for the LLM
         input_format="html",  # The input from the grant details page
         verbose=True,  # Enable verbose logging
@@ -462,6 +434,7 @@ async def fetch_and_process_page(
     session_id: str,
     required_keys: List[str],
     seen_titles: Set[str],
+    site_metrics=None,  # Optional SiteMetrics from site_tracker
 ) -> Tuple[List[dict], bool, bool]:
     """
     Fetches and processes a single page of grant data.
@@ -484,7 +457,7 @@ async def fetch_and_process_page(
     """
     # Use site profile to construct the page URL
     url = site_profile.get_page_url(base_url, page_number)
-    print(f"Loading page {page_number}...")
+    logger.info(f"Loading page {page_number}...")
 
     # Use site profile to check if we've reached the end of results
     no_results = await site_profile.detect_end_of_results(crawler, url, session_id)
@@ -492,14 +465,14 @@ async def fetch_and_process_page(
         return [], True, False  # No more results, signal to stop crawling
 
     # Debug LLM strategy
-    print(f"[DEBUG] llm_strategy type: {type(llm_strategy)}")
+    logger.debug(f"llm_strategy type: {type(llm_strategy)}")
     provider = getattr(llm_strategy, 'provider', 'NOT_FOUND')
-    print(f"[DEBUG] llm_strategy provider: {provider}")
+    logger.debug(f"llm_strategy provider: {provider}")
 
     # Check if we should use manual Groq extraction
     # Check for both "groq" string and if the provider itself is "groq"
     use_manual_groq = "groq" in str(provider).lower()
-    print(f"[DEBUG] Using Manual Groq Extraction: {use_manual_groq}")
+    logger.debug(f"Using Manual Groq Extraction: {use_manual_groq}")
     
     config = CrawlerRunConfig(
         cache_mode=CacheMode.BYPASS,  # Do not use cached data
@@ -509,124 +482,173 @@ async def fetch_and_process_page(
     )
 
     # Fetch page content
-    result = await crawler.arun(
-        url=url,
-        config=config,
-    )
+    with metrics_logger.measure("fetch_page", site=site_profile.site_name, url=url) as ctx:
+        result = await crawler.arun(
+            url=url,
+            config=config,
+        )
+        if not result.success:
+            ctx.status = "ERROR"
+            ctx.error = result.error_message
 
     extracted_data = []
 
     if use_manual_groq:
         if result.success and result.cleaned_html:
             from utils.groq_utils import extract_grants_from_html_groq
-            print(f"[MANUAL GROQ] Extracting grants sequentially to respect rate limits...")
-            extracted_data = await extract_grants_from_html_groq(result.cleaned_html)
+            logger.info("Extracting grants sequentially to respect rate limits...")
+            with metrics_logger.measure("extract_groq_manual", site=site_profile.site_name, url=url) as ctx:
+                extracted_data = await extract_grants_from_html_groq(result.cleaned_html)
+                ctx.items = len(extracted_data)
         else:
-             print(f"Error fetching page {page_number} (Manual Groq): {result.error_message}")
+             logger.error(f"Error fetching page {page_number} (Manual Groq): {result.error_message}")
              return [], False, False
     else:
         # Standard Crawl4AI extraction
         if not (result.success and result.extracted_content):
-            print(f"Error fetching page {page_number}: {result.error_message}")
+            logger.error(f"Error fetching page {page_number}: {result.error_message}")
             return [], False, False
         
         try:
             extracted_data = json.loads(result.extracted_content)
         except json.JSONDecodeError:
-             print(f"Error decoding JSON content from page {page_number}")
+             logger.error(f"Error decoding JSON content from page {page_number}")
              return [], False, False
 
     if not extracted_data:
-        print(f"No grants found on page {page_number} of {base_url}.")
+        logger.warning(f"No grants found on page {page_number} of {base_url}.")
         return [], False, False
 
     # After parsing extracted content
-    print("Extracted data:", extracted_data)
+    logger.debug(f"Extracted data: {extracted_data}")
 
     # Process grants
     complete_grants = []
-    for grant in extracted_data:
-        # Debugging: Print each grant to understand its structure
-        print("Processing grant:", grant)
+    
+    # Record total fetched for site tracker
+    if site_metrics:
+        site_metrics.record_fetched(len(extracted_data))
 
-        # Ignore the 'error' key if it's False
-        if grant.get("error") is False:
-            grant.pop("error", None)  # Remove the 'error' key if it's False
+    # Log number of grants found before processing
+    with metrics_logger.measure("process_loop", site=site_profile.site_name, url=url) as loop_ctx:
+        loop_ctx.items = len(extracted_data)
+        
+        for grant in extracted_data:
+            # Debugging: Print each grant to understand its structure
+            logger.debug(f"Processing grant: {grant}")
 
-        if not is_complete_grant(grant, required_keys):
-            continue  # Skip incomplete grants
+            # Ignore the 'error' key if it's False
+            if grant.get("error") is False:
+                grant.pop("error", None)  # Remove the 'error' key if it's False
 
-        if is_duplicate_grant(grant.get("title"), seen_titles):
-            print(f"Duplicate grant '{grant.get('title')}' found. Skipping.")
-            continue  # Skip duplicate grants
+            if not is_complete_grant(grant, required_keys):
+                if site_metrics:
+                    site_metrics.record_filtered("incomplete")
+                continue  # Skip incomplete grants
 
-        # Check deadline
-        if not is_deadline_valid(grant.get("deadline")):
-            print(f"Skipping '{grant.get('title')}': Deadline passed or too soon ({grant.get('deadline')})")
-            continue
+            if is_duplicate_grant(grant.get("title"), seen_titles):
+                logger.debug(f"Duplicate grant '{grant.get('title')}' found. Skipping.")
+                if site_metrics:
+                    site_metrics.record_filtered("duplicate_in_run")
+                continue  # Skip duplicate grants
 
-        # Check preliminary relevance
-        # If is_relevant_preliminary is explicitly False, we skip.
-        # If it's None (LLM didn't return it), we proceed to be safe.
-        if grant.get("is_relevant_preliminary") is False:
-             print(f"Skipping '{grant.get('title')}': Not relevant based on preliminary check.")
-             continue
-
-        # Analyze grant relevance using configured LLM provider
-        # Stage 2: Deep analysis — fetch full grant page when URL is available
-        grant_url = grant.get("application_url")
-        print(f"Analyzing relevance for: {grant['title']} (using {RELEVANCE_PROVIDER})")
-
-        relevance_analysis = None
-        if grant_url:
-            # Full-page analysis: fetches the complete grant page for deeper scoring
-            relevance_analysis = await analyze_grant_relevance(crawler, grant_url, session_id)
-
-        # Fallback to provider-specific analysis with listing-page data if full-page fails
-        if not relevance_analysis:
-            if RELEVANCE_PROVIDER == "gemini":
-                relevance_analysis = await analyze_grant_relevance_gemini(grant)
-            elif RELEVANCE_PROVIDER == "groq":
-                relevance_analysis = await analyze_grant_relevance_groq(grant)
-            elif RELEVANCE_PROVIDER == "xai":
-                relevance_analysis = await analyze_grant_relevance_xai(grant)
-            else:  # Default to ollama
-                relevance_analysis = await analyze_grant_relevance_local(grant)
-        if relevance_analysis:
-            print(
-                f"  Score: {relevance_analysis.get('score', 0)}/100 | "
-                f"Relevant: {relevance_analysis.get('is_relevant', False)}"
-            )
-            print(f"  Reasoning: {relevance_analysis.get('reasoning', 'N/A')}")
-            print(f"  How it helps: {relevance_analysis.get('how_it_helps', 'N/A')}")
-
-            # Use numeric score threshold instead of binary is_relevant flag
-            score = relevance_analysis.get("score", 0)
-            if score < MIN_RELEVANCE_SCORE:
-                print(f"  ✗ Skipping - score {score} below threshold {MIN_RELEVANCE_SCORE}")
+            # Pre-deep-analysis deadline check (listing-page deadline, if available)
+            deadline = grant.get("deadline")
+            if deadline and not is_deadline_valid(deadline):
+                logger.debug(f"Skipping '{grant.get('title')}': deadline '{deadline}' is in the past or too soon.")
+                if site_metrics:
+                    site_metrics.record_filtered("deadline_expired")
                 continue
 
-            # Add relevance metadata to the grant
-            grant["relevance_score"] = relevance_analysis.get("score", 0)
-            grant["relevance_reasoning"] = relevance_analysis.get("reasoning", "")
-            grant["how_it_helps"] = relevance_analysis.get("how_it_helps", "")
-            grant["matching_themes"] = relevance_analysis.get("matching_themes", [])
-        else:
-            print(f"  Warning: Could not analyze relevance, including by default")
+            # Check preliminary relevance
+            # If is_relevant_preliminary is explicitly False, we skip.
+            # If it's None (LLM didn't return it), we proceed to be safe.
+            if grant.get("is_relevant_preliminary") is False:
+                 logger.debug(f"Skipping '{grant.get('title')}': Not relevant based on preliminary check.")
+                 if site_metrics:
+                     site_metrics.record_filtered("preliminary_irrelevant")
+                 continue
 
-        # Add source website metadata
-        grant["source_website"] = site_profile.site_name
+            # Analyze grant relevance using configured LLM provider
+            grant_url = grant.get("application_url")
+            logger.info(f"Analyzing relevance for: {grant.get('title', 'Unknown')} (using {RELEVANCE_PROVIDER})")
 
-        # Add grant to the list
-        seen_titles.add(grant["title"])
-        complete_grants.append(grant)
+            if site_metrics:
+                site_metrics.record_sent_to_scoring()
+
+            relevance_analysis = None
+            
+            with metrics_logger.measure("analyze_relevance", site=site_profile.site_name, url=grant_url or "N/A") as rel_ctx:
+                if grant_url:
+                    # Full-page analysis: fetches the complete grant page for deeper scoring
+                    relevance_analysis = await analyze_grant_relevance(crawler, grant_url, session_id)
+
+                # Fallback to xAI analysis with listing-page data if full-page fails
+                if not relevance_analysis:
+                    relevance_analysis = await analyze_grant_relevance_xai(grant)
+                
+                if relevance_analysis:
+                    rel_ctx.status = "SUCCESS"
+                else:
+                    rel_ctx.status = "FAILED"
+                    rel_ctx.error = "No analysis returned"
+
+            if relevance_analysis:
+                # Normalize field names: score→relevance_score, reasoning→relevance_reasoning
+                if "score" in relevance_analysis and "relevance_score" not in relevance_analysis:
+                    relevance_analysis["relevance_score"] = int(relevance_analysis.pop("score", 0))
+                if "reasoning" in relevance_analysis and "relevance_reasoning" not in relevance_analysis:
+                    relevance_analysis["relevance_reasoning"] = relevance_analysis.pop("reasoning", "")
+                
+                # Merge analysis results into grant object
+                grant.update(relevance_analysis)
+                
+                # Check score against threshold
+                score = grant.get("relevance_score", grant.get("score", 0))
+                hih = grant.get("how_it_helps", "")
+                title = grant.get("title", "")
+
+                if score >= MIN_RELEVANCE_SCORE:
+                    # Reject if the LLM admits the grant doesn't help the mission
+                    if not is_how_it_helps_valid(hih):
+                        logger.info(f" \u2717 Skipping - score {score} but how_it_helps='Not applicable'")
+                        if site_metrics:
+                            site_metrics.record_scored(title, score, hih, accepted=False, reason_rejected="how_it_helps_invalid")
+                        continue
+
+                    # Post-deep-analysis deadline check (may now have deadline from full page)
+                    deep_deadline = grant.get("deadline")
+                    if deep_deadline and deep_deadline.lower() not in ("rolling", "ongoing", "open", "continuous", "no deadline"):
+                        if not is_deadline_valid(deep_deadline):
+                            logger.info(f" ✗ Skipping - score {score} but deadline '{deep_deadline}' is in the past or too soon")
+                            if site_metrics:
+                                site_metrics.record_scored(title, score, hih, accepted=False, reason_rejected="deadline_expired")
+                            continue
+
+                    logger.info(f" ✓ Relevant grant found! Score: {score}/100 - {title}")
+                    if site_metrics:
+                        site_metrics.record_scored(title, score, hih, accepted=True)
+                    
+                    # Add source website metadata
+                    grant["source_website"] = site_profile.site_name
+                    seen_titles.add(grant["title"])
+                    
+                    complete_grants.append(grant)
+                else:
+                    logger.info(f" ✗ Skipping - score {score} below threshold ({MIN_RELEVANCE_SCORE})")
+                    if site_metrics:
+                        site_metrics.record_scored(title, score, hih, accepted=False, reason_rejected="low_score")
+            else:
+                logger.warning(f"Could not analyze relevance for '{grant.get('title')}'. Skipping.")
+                if site_metrics:
+                    site_metrics.record_filtered("analysis_failed")
 
     # Track if we found any grants on the page (even if filtered out)
     grants_found_on_page = len(extracted_data) > 0
 
     if not complete_grants:
-        print(f"No complete grants found on page {page_number}.")
+        logger.info(f"No complete grants found on page {page_number}.")
         return [], False, grants_found_on_page
 
-    print(f"Extracted {len(complete_grants)} grants from page {page_number}.")
+    logger.info(f"Extracted {len(complete_grants)} grants from page {page_number}.")
     return complete_grants, False, grants_found_on_page  # Continue crawling
