@@ -111,6 +111,7 @@ class CharityExcellenceProfile(BasePlaywrightProfile):
             logger.info("[CharityExcellence] Opening Funding Finder …")
             await page.goto(FINDER_URL, wait_until="networkidle", timeout=PLAYWRIGHT_DEFAULT_TIMEOUT)
             await page.wait_for_timeout(2000)
+            await self._dismiss_modals(page)
 
             # 3. Set filters & search
             await self._set_filters_and_search(page)
@@ -209,6 +210,25 @@ class CharityExcellenceProfile(BasePlaywrightProfile):
     # Private helpers
     # =========================================================================
 
+    async def _dismiss_modals(self, page: Page) -> None:
+        """Force-close any open Bootstrap modals that might block clicks."""
+        await page.evaluate("""
+        () => {
+            // Bootstrap 3: remove 'in' class and hide all open modals
+            document.querySelectorAll('.modal.in, .modal.show').forEach(m => {
+                m.classList.remove('in', 'show');
+                m.style.display = 'none';
+            });
+            // Remove modal backdrop
+            document.querySelectorAll('.modal-backdrop').forEach(b => b.remove());
+            // Restore body scroll
+            document.body.classList.remove('modal-open');
+            document.body.style.overflow = '';
+            document.body.style.paddingRight = '';
+        }
+        """)
+        await page.wait_for_timeout(300)
+
     async def _login(self, page: Page) -> bool:
         """Authenticate and return True on success."""
         logger.info("[CharityExcellence] Logging in …")
@@ -284,6 +304,9 @@ class CharityExcellenceProfile(BasePlaywrightProfile):
         )
 
         await page.wait_for_timeout(500)
+
+        # Dismiss any help modal before clicking (modal intercepts pointer events)
+        await self._dismiss_modals(page)
 
         # Click Search (#btnserarch — note the typo is in their source code)
         await page.click("#btnserarch")

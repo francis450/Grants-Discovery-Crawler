@@ -153,6 +153,10 @@ async def extract_grants_from_html(
 
         result = llm_strategy.extract(url="", ix=0, html=content)
         if result:
+            if isinstance(result, list):
+                return result
+            if isinstance(result, dict):
+                return [result]
             data = json.loads(result)
             if isinstance(data, list):
                 return data

@@ -1,778 +1,120 @@
 [
   {
-    "title": "AJA Foundation Grants",
-    "description": "The AJA Foundation is dedicated to addressing fundamental human rights by providing global support for initiatives focused on clean water, education, and healthcare. Through substantial investments, including over $3 million in clean water projects and $4 million in educational programs, the foundation aims to create equitable opportunities for disadvantaged communities. Their commitment helps improve health outcomes, educational access, and economic mobility, ensuring that access to essential resources is not determined by one's background.",
-    "application_url": "https://www.instrumentl.com/grants/aja-foundation-grants",
-    "funding_organization": "AJA Foundation",
-    "grant_amount": "",
-    "deadline": "Rolling deadline",
+    "title": "School Education: STEM Education Centres",
+    "funding_organization": "43353764",
+    "grant_amount": "See opportunity",
+    "deadline": null,
+    "geographic_focus": "EU / International",
     "thematic_areas": [
-      "Human & Social Services",
-      "Health Care Access & Delivery",
-      "Rural Health Care"
+      "EU Funding"
     ],
-    "geographic_focus": "Africa",
-    "source_website": "Instrumentl",
+    "eligibility_criteria": "Programme: 43353764 | Call: ERASMUS-EDU-2026-POL-EXP",
+    "description": "School Education: STEM Education Centres",
+    "application_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/ERASMUS-EDU-2026-POL-EXP-T05-SCHOOL-STEM.json",
+    "date_posted": "",
+    "category": "EU Grant",
+    "source_website": "EC Europa Funding & Tenders",
+    "is_relevant_preliminary": true,
     "is_relevant": true,
-    "how_it_helps": "Apply by framing the program as an educational initiative providing refurbished IT equipment to rural Kenyan schools to enhance digital literacy and access for underserved children, directly aligning with their $4M+ investments in education.",
+    "how_it_helps": "Form partnerships with EU schools/organizations under Erasmus+ to co-develop STEM Education Centres in Kenyan schools, incorporating refurbished IT equipment for digital literacy and tech education programs.",
     "matching_themes": [
-      "Education",
-      "Africa",
-      "Human & Social Services"
-    ],
-    "relevance_score": 75,
-    "relevance_reasoning": "Strong match for education funding in Africa; supports educational access for disadvantaged communities, with plausible framing of tech distribution as education equipment/digital literacy, though no explicit tech focus."
-  },
-  {
-    "title": "Creag Foundation Grant",
-    "description": "The Creag Foundation, established in 2009 in Woodinville, Washington, provides funding to innovative 501(c)(3) nonprofit organizations addressing social issues. Focused on smaller organizations, the foundation seeks to support those with unique approaches to improve the human condition. Eligible applicants must have held 501(c)(3) status for at least one year and present a new or previously unaddressed solution to societal challenges. Applications are by invitation only, encouraging creativity and passion in charitable work.",
-    "application_url": "https://www.instrumentl.com/grants/creag-foundation-grant",
-    "funding_organization": "Creag Foundation",
-    "grant_amount": "",
-    "deadline": "Rolling deadline",
-    "thematic_areas": [
-      "Environment",
-      "Diseases & Conditions",
-      "Human & Social Services"
-    ],
-    "geographic_focus": "Africa",
-    "source_website": "Instrumentl",
-    "is_relevant": true,
-    "how_it_helps": "Pursue invitation by emailing foundation with passionate pitch on innovative e-waste refurbishment for digital literacy in Kenyan schools, tying to Environment (circular economy) and Human & Social Services (closing digital divide for underserved youth). Use grant for refurbishing/distributing devices to schools.",
-    "matching_themes": [
-      "Environment",
-      "Human & Social Services"
-    ],
-    "relevance_score": 75,
-    "relevance_reasoning": "Meets 4/5 min requirements (nonprofits, not competition, Africa focus, relates to e-waste/recycling and digital divide via Environment and Human & Social Services). Invitation-only for smaller innovative orgs fits new org with unique approach, but lacks direct education/children focus and 1-year 501(c)(3) may be borderline."
-  },
-  {
-    "title": "Draper Richards Kaplan Foundation Grants",
-    "description": "The Draper Richards Kaplan Foundation provides grants to early-stage social entrepreneurs working on scalable solutions to pressing social and environmental issues. By supporting organizations with innovative approaches and proven impact, they aim to uplift underserved communities globally. The foundation offers operational support, funding of up to $300,000 over three years, and fosters a collaborative community among its portfolio organizations. They focus on candidates demonstrating measurable impact and sustainable growth potential.",
-    "application_url": "https://www.instrumentl.com/grants/draper-richards-kaplan-foundation-grants",
-    "funding_organization": "Draper Richards Kaplan Foundation",
-    "grant_amount": "Up to US $300,000",
-    "deadline": "Rolling deadline",
-    "thematic_areas": [
-      "Education",
-      "Social Justice / Human Rights",
-      "Energy"
-    ],
-    "geographic_focus": "Africa",
-    "source_website": "Instrumentl",
-    "is_relevant": true,
-    "how_it_helps": "Apply as early-stage social entrepreneur emphasizing scalable refurbishment/distribution of IT equipment to underserved Kenyan schools; use up to $300k for operations, leverage support for proven impact metrics like devices deployed and literacy gains.",
-    "matching_themes": [
-      "Education"
-    ],
-    "relevance_score": 85,
-    "relevance_reasoning": "Strong match for early-stage nonprofits in education with scalable impact in Africa; innovative e-waste to digital literacy model fits perfectly despite new org status."
-  },
-  {
-    "title": "Global Impact Cash Grants",
-    "description": "The Global Impact Cash Grants by Cisco Systems Foundation support innovative early-stage solutions aimed at addressing significant social problems. Targeting nonprofit and nongovernmental organizations, these grants focus on four key sectors: crisis response, education, economic empowerment, and climate regeneration. Eligible organizations must demonstrate alignment with these areas, particularly serving underserved communities. The foundation seeks to leverage technology for impactful solutions, ensuring sustainability and community resilience through strategic investments.",
-    "application_url": "https://www.instrumentl.com/grants/global-impact-grants",
-    "funding_organization": "Cisco Systems Foundation",
-    "grant_amount": "Up to US $75,000",
-    "deadline": "Rolling deadline",
-    "thematic_areas": [
-      "Economic Services & Development",
-      "Entrepreneurship",
-      "Disaster Relief / Humanitarian Aid"
-    ],
-    "geographic_focus": "Africa",
-    "source_website": "Instrumentl",
-    "is_relevant": true,
-    "how_it_helps": "Submit application emphasizing innovative use of refurbished IT equipment to bridge digital divide in Kenyan schools, leveraging Cisco's tech focus for sustainable education impact; highlight circular economy for climate alignment.",
-    "matching_themes": [
-      "education",
-      "climate regeneration",
-      "economic empowerment"
-    ],
-    "relevance_score": 85,
-    "relevance_reasoning": "Strong match: Targets early-stage nonprofits in education using technology for underserved communities in Africa; aligns with digital literacy, tech education, e-waste/circular economy via climate regeneration; suitable for new org."
-  },
-  {
-    "title": "Google Ad Grants",
-    "description": "Google Ad Grants empowers nonprofits by providing $10,000 monthly for in-kind advertising, enabling them to reach potential donors and volunteers through Google search ads. This program enhances visibility for organizations by showcasing their missions to those searching for nonprofits. By utilizing effective campaign tools, nonprofits can create impactful text-based ads, ensuring their messages resonate with a wider audience. This initiative not only raises awareness but also fosters community engagement and support for charitable causes.",
-    "application_url": "https://www.instrumentl.com/grants/google-ad-grants",
-    "funding_organization": "Google",
-    "grant_amount": "US $10,000  in in-kind support",
-    "deadline": "Rolling deadline",
-    "thematic_areas": [
-      "All fields of work"
-    ],
-    "geographic_focus": "Africa",
-    "source_website": "Instrumentl",
-    "is_relevant": true,
-    "how_it_helps": "Run targeted Google Ads campaigns on keywords like 'donate laptops Kenya schools', 'e-waste recycling Africa', 'digital literacy programs underserved areas' to attract corporate equipment donors, refurbishing volunteers, and cash supporters for distribution to African schools.",
-    "matching_themes": [
-      "digital literacy",
-      "technology education",
-      "digital divide",
       "STEM education",
-      "capacity building"
+      "technology education",
+      "schools"
     ],
     "relevance_score": 75,
-    "relevance_reasoning": "Meets 3/5 minimum requirements (nonprofits, not a contest, Africa focus); provides in-kind ads to boost visibility for new org, enabling donor/volunteer recruitment to support IT distribution; strong indirect path but not direct equipment funding."
+    "relevance_reasoning": "Meets minimum requirements (nonprofits likely eligible, not a contest, focuses on school education/STEM, international geographic scope, relates to STEM/technology education). Strong match for STEM centres potentially including tech equipment/digital literacy in international contexts, though EU partnership likely needed for new org."
   },
   {
-    "title": "Hansen Family Foundation Grant",
-    "description": "The Hansen Family Foundation Grant seeks to empower organizations that uphold the American values of life, liberty, and the pursuit of happiness. Focused on diverse causes like children, education, animals, environmental conservation, humanitarian efforts, and arts, the foundation is committed to supporting initiatives that create positive change. Eligible applicants must be 501(c)(3) nonprofits, while political campaigns and organizations with high budgets or overheads are ineligible. This grant fosters impactful contributions to society.",
-    "application_url": "https://www.instrumentl.com/grants/w-t-hansen-family-foundation-grant",
-    "funding_organization": "Hansen Family Foundation",
+    "title": "Tony Robbins Foundation Grant",
+    "description": "The Tony Robbins Foundation Grant aims to empower individuals and organizations to improve the lives of marginalized communities, including youth, seniors, and the homeless. By providing financial support to aligned nonprofits, the foundation seeks to create impactful changes globally. Eligible organizations must be 501(c)(3) nonprofits or recognized international entities, with a mission statement that resonates with the foundation's goals. The foundation does not fund personal projects or startups.",
+    "application_url": "https://www.instrumentl.com/grants/tony-robbins-foundation-grant",
+    "funding_organization": "Anthony Robbins Foundation (The Tony Robbins Foundation)",
     "grant_amount": "",
-    "deadline": "",
+    "deadline": null,
     "thematic_areas": [
-      "Youth Services",
-      "Animal Welfare - General",
-      "Renewable/Sustainable Energy"
+      "Youth Development & Leadership",
+      "Senior Services",
+      "Basic Human Needs"
     ],
     "geographic_focus": "Africa",
     "source_website": "Instrumentl",
     "is_relevant": true,
-    "how_it_helps": "Frame application under 'Youth Services' for providing refurbished IT to underserved Kenyan schools to promote digital literacy and education, emphasizing circular economy/e-waste management under 'Renewable/Sustainable Energy' to empower children and close digital divide.",
+    "how_it_helps": "Frame application around 'Youth Development & Leadership' by emphasizing how refurbished IT equipment builds digital skills, leadership, and opportunities for marginalized youth in African schools, aligning with empowering marginalized communities.",
     "matching_themes": [
-      "Youth Services",
-      "Renewable/Sustainable Energy"
-    ],
-    "relevance_score": 82,
-    "relevance_reasoning": "Meets 4+ min requirements: accepts nonprofits, not a contest, focuses on children/youth/education, Africa geographic focus, relates to e-waste/recycling and sustainable practices under Renewable/Sustainable Energy theme. Strong alignment with youth services and sustainability for refurbished tech distribution to African schools, plausible for new org with low overhead."
-  },
-  {
-    "title": "Lawrence Foundation Grant",
-    "description": "The Lawrence Foundation is a private family foundation established in 2000, dedicated to granting funds for environmental and human services causes. Eligible organizations include 501(c)(3) nonprofits and public schools, with grants typically ranging from $5,000 to $10,000. The foundation supports unrestricted grants for various projects, including disaster relief and environmental programs, but does not fund individuals or for-profit entities. Applications are evaluated based on alignment with the foundation's priorities.",
-    "application_url": "https://www.instrumentl.com/grants/lawrence-foundation-grant",
-    "funding_organization": "Lawrence Foundation",
-    "grant_amount": "US $5,000 - US $10,000",
-    "deadline": "",
-    "thematic_areas": [
-      "Community Services",
-      "Environmental Conservation",
-      "Ecology"
-    ],
-    "geographic_focus": "Africa",
-    "source_website": "Instrumentl",
-    "is_relevant": true,
-    "how_it_helps": "Apply framing project as e-waste recycling and circular economy initiative that supports human services by providing refurbished IT to underserved African schools, requesting $5k-10k for refurbishing equipment destined for Kenyan schools.",
-    "matching_themes": [
-      "Community Services",
-      "Environmental Conservation",
-      "Ecology"
-    ],
-    "relevance_score": 78,
-    "relevance_reasoning": "Meets 4/5 minimum requirements (accepts nonprofits, not a contest, Africa focus, relates to e-waste/recycling). Aligns with environmental conservation (e-waste/circular economy) and community services (school distributions), suitable for new org with small grants."
-  },
-  {
-    "title": "Bess Spiva Timmons Foundation Grants",
-    "description": "The Bess Spiva Timmons Foundation, established in 1967, supports not-for-profit organizations with IRS 501(c)(3) designation, prioritizing smaller, grassroots groups. Grants generally range from one to five thousand dollars, focusing on education, health, medical research, arts, and social services benefiting minority groups. Note that the foundation does not fund individuals, for-profit ventures, or major capital projects, and it has a limit on the number of grant proposals it accepts annually.",
-    "application_url": "https://www.instrumentl.com/grants/bess-spiva-timmons-foundation-grant-programme",
-    "funding_organization": "Bess Spiva Timmons Foundation",
-    "grant_amount": "US $1,000 - US $5,000",
-    "deadline": "",
-    "thematic_areas": [
-      "Education",
-      "Health & Medicine",
-      "Art & Culture"
-    ],
-    "geographic_focus": "Africa",
-    "source_website": "Instrumentl",
-    "is_relevant": true,
-    "how_it_helps": "Prepare a concise proposal emphasizing education impact via refurbished IT for Kenyan schools; request $3-5k for refurb supplies, minor shipping, or initial computer lab setup in underserved areas.",
-    "matching_themes": [
-      "Education"
-    ],
-    "relevance_score": 75,
-    "relevance_reasoning": "Strong alignment with education theme and Africa focus; prioritizes small grassroots nonprofits suitable for new org. IT equipment distribution can be framed as education supplies for digital literacy, though no explicit tech mention."
-  },
-  {
-    "title": "Tomberg & Brecher Charitable Funds Grant",
-    "description": "The Tomberg Family Philanthropies supports impactful programs in education, health, environment, and poverty alleviation, focusing on projects that empower communities for sustainable change. They exclusively fund 501(c)(3) nonprofit organizations in the U.S. and seek innovative initiatives that maximize limited resources. Note that grants typically do not cover ongoing operational costs or projects run by religious organizations. Applications for the current funding cycle are open until September 8, 2025.",
-    "application_url": "https://www.instrumentl.com/grants/tomberg-brecher-charitable-funds-grant",
-    "funding_organization": "Tomberg Family Philanthropies",
-    "grant_amount": "US $5,000 - US $20,000",
-    "deadline": "",
-    "thematic_areas": [
-      "Education",
-      "Poverty Alleviation & Services",
-      "Health & Medicine"
-    ],
-    "geographic_focus": "Africa",
-    "source_website": "Instrumentl",
-    "is_relevant": true,
-    "how_it_helps": "Submit application by Sept 8, 2025, for a project funding the refurbishment and distribution of donated IT equipment to Kenyan schools, framing it as an innovative, sustainable education initiative closing the digital divide and promoting circular economy.",
-    "matching_themes": [
-      "Education",
-      "Poverty Alleviation & Services"
-    ],
-    "relevance_score": 82,
-    "relevance_reasoning": "Strong match: Funds U.S. 501(c)(3) nonprofits for education and poverty alleviation in Africa; innovative refurbishment of IT for schools aligns with maximizing resources, though not explicitly tech-focused and avoids ongoing ops costs."
-  },
-  {
-    "title": "Gupta Family Foundation Grant",
-    "description": "The Gupta Family Foundation Grant aims to empower disadvantaged individuals by providing financial support to organizations that foster self-reliance. Headquartered in Herndon, Virginia, the foundation offers grants ranging from $5,000 to over $250,000, prioritizing smaller organizations with a strong commitment to their missions. Eligibility typically includes US-based IRS 501(c)(3) entities, with operations extending to countries like India and Kenya. The foundation emphasizes mission alignment and effective resource allocation to ensure maximum impact.",
-    "application_url": "https://www.instrumentl.com/grants/gupta-family-foundation-grant",
-    "funding_organization": "Gupta Family Foundation",
-    "grant_amount": "US $5,000 - US $250,000",
-    "deadline": "",
-    "thematic_areas": [
-      "Disaster Relief / Humanitarian Aid",
-      "Poverty Alleviation & Services",
-      "Human & Social Services"
-    ],
-    "geographic_focus": "Africa",
-    "source_website": "Instrumentl",
-    "is_relevant": true,
-    "how_it_helps": "Apply as US 501(c)(3) with proposal framing refurbished IT distribution to Kenyan schools as poverty alleviation tool, building self-reliance through digital literacy for underserved children; request $10k-50k for refurbishing/shipping initial batch.",
-    "matching_themes": [
-      "Poverty Alleviation & Services",
-      "Human & Social Services"
-    ],
-    "relevance_score": 72,
-    "relevance_reasoning": "Meets 3/5 min requirements (nonprofits, not a contest, Africa/Kenya focus). Good alignment with poverty alleviation via tech access for disadvantaged youth in Kenya, but lacks direct education/tech emphasis; plausible with adaptation for smaller new org."
-  },
-  {
-    "title": "Global Fund for Children Grants: Become a Partner",
-    "description": "The Global Fund for Children invites community-based organizations worldwide to partner in improving the lives of children and youth. They seek dynamic groups aligned with their mission, focusing on grassroots solutions to tackle poverty, injustice, and discrimination. With a commitment to education, gender justice, safety, climate resilience, and youth empowerment, GFC builds strong relationships with potential partners, ensuring mutual growth and impact without requiring formal proposals.",
-    "application_url": "https://www.instrumentl.com/grants/global-fund-for-children-become-a-partner",
-    "funding_organization": "Global Fund for Children",
-    "grant_amount": "",
-    "deadline": "Rolling deadline",
-    "thematic_areas": [
-      "Youth Services",
-      "Child Abuse & Neglect",
-      "Women's Rights & Equality"
-    ],
-    "geographic_focus": "Africa",
-    "source_website": "Instrumentl",
-    "is_relevant": true,
-    "how_it_helps": "Contact GFC to become a partner, showcasing how sourcing/refurbishing IT equipment for Kenyan schools advances their education, youth empowerment, and poverty reduction goals by enabling digital literacy and technology access for underserved children.",
-    "matching_themes": [
-      "Youth Services",
-      "Education",
+      "Youth Development & Leadership",
       "Africa"
     ],
-    "relevance_score": 75,
-    "relevance_reasoning": "Meets 4/5 minimum requirements (accepts nonprofits/CBOs, not a contest, children/youth/education focus, Africa geographic focus). Strong alignment with youth/education in Africa; digital literacy/tech access can be positioned under youth empowerment and education, suitable for new grassroots org with simple partnership process."
+    "relevance_score": 72,
+    "relevance_reasoning": "Meets 4/5 minimum requirements (nonprofits, not a contest, youth focus, Africa geographic focus), but lacks direct relation to technology/digital literacy/e-waste. Youth development theme allows adaptation for tech access in schools; however, new org may face challenges as 'startups' are excluded."
   },
   {
-    "title": "Dr. Scholl Foundation Grants",
-    "description": "The Dr. Scholl Foundation offers grants annually to IRS 501(c)(3) organizations, primarily focusing on U.S. applicants. The foundation supports projects in education, social services, healthcare, civic and cultural initiatives, and environmental efforts. While the grant cycle runs from October 1 to March 1, it encourages innovative solutions to global challenges. Only one application per organization is accepted each year, and funding is limited to one year. Unqualified organizations, including political entities, are ineligible.",
-    "application_url": "https://www.instrumentl.com/grants/dr-scholl-foundation-grants",
-    "funding_organization": "Dr Scholl Foundation",
+    "title": "Looking Out Foundation Grant",
+    "description": "The Looking Out Foundation Grant supports social justice and humanitarian initiatives, having donated nearly $6 million to various causes globally. With an average donation of $25 per campaign, it aids organizations focused on disaster relief, racial justice, and support for marginalized communities. Eligible applicants must be tax-exempt public charities under Section 501(c)(3). The foundation prioritizes diverse funding sources and encourages organizations to adapt to changing needs, with grant allocations ranging from $5,000 to $25,000.",
+    "application_url": "https://www.instrumentl.com/grants/looking-out-foundation-grant-6",
+    "funding_organization": "Looking Out Foundation",
     "grant_amount": "US $5,000 - US $25,000",
-    "deadline": "Full proposal due",
+    "deadline": null,
     "thematic_areas": [
-      "Education",
-      "Environment",
-      "Community Culture & Heritage"
+      "Youth Services",
+      "Epidemiology & Public Health",
+      "Women & Girl Services"
     ],
     "geographic_focus": "Africa",
     "source_website": "Instrumentl",
     "is_relevant": true,
-    "how_it_helps": "Submit one application during Oct 1-Mar 1 cycle proposing funding for sourcing/refurbishing IT equipment from US companies and distributing to Kenyan schools, highlighting digital literacy programs, e-waste circular economy, and closing digital divide in underserved areas.",
+    "how_it_helps": "Apply under Youth Services theme, pitching refurbishment and distribution of IT equipment to rural Kenyan schools as humanitarian aid closing digital divide for marginalized youth, requesting $10k-20k for devices and logistics.",
     "matching_themes": [
-      "Education",
-      "Environment"
-    ],
-    "relevance_score": 82,
-    "relevance_reasoning": "Meets all 5 minimum requirements: accepts nonprofits, not a contest, focuses on education (digital literacy/tech for schools/children), geographic focus on Africa, relates to digital literacy, e-waste/recycling, refurbished tech, digital divide, and STEM. Strong fit for education and environment themes with innovative global solutions; plausible for new US 501(c)(3) despite primarily US applicants."
-  },
-  {
-    "title": "NextWorldNow - Community Investments",
-    "description": "NextWorldNow Community Investments aims to enhance community well-being through targeted funding for development projects. By supporting local initiatives, they ensure measurable social impact while fostering sustainable solutions. Their approach prioritizes direct engagement with communities, minimizing overhead to maximize the flow of resources. With a commitment to accountability and innovation, NWN invites proposals from diverse geographies, focused on long-term benefits for the communities. They believe small changes can lead to significant transformations, addressing unmet global needs.",
-    "application_url": "https://www.instrumentl.com/grants/nextworldnow-community-investments",
-    "funding_organization": "Nextworldnow Community Investments",
-    "grant_amount": "Up to US $10,000",
-    "deadline": "",
-    "thematic_areas": [
-      "Civic Engagement & Education",
-      "Education",
-      "Water Resource Management"
-    ],
-    "geographic_focus": "Africa",
-    "source_website": "Instrumentl",
-    "is_relevant": true,
-    "how_it_helps": "Propose project under 'Education' theme: refurbish donated IT equipment and distribute to rural Kenyan schools, measuring impact via student tech access and digital literacy gains; emphasize low-overhead, community-engaged sustainability and innovation.",
-    "matching_themes": [
-      "Civic Engagement & Education",
-      "Education"
-    ],
-    "relevance_score": 72,
-    "relevance_reasoning": "Meets 4/5 minimum requirements (nonprofits, not a contest, education focus, Africa geography). Education theme aligns with schools/digital literacy, but lacks explicit tech/e-waste focus; adaptation needed to frame as innovative sustainable education project."
-  },
-  {
-    "title": "Dudley T. Dougherty Foundation Grant",
-    "description": "The Dudley T. Dougherty Foundation Grant supports nonprofit charitable organizations recognized under section 501(c)(3) of the IRS Revenue Code. Established in 2002, the foundation aims to empower groups committed to positive change, fostering respect for life and the environment. Their vision emphasizes collaboration for a better future, encouraging applicants to embody these values in their initiatives. With a focus on impactful projects, this grant is an opportunity for organizations striving to make a critical difference in our world.",
-    "application_url": "https://www.instrumentl.com/grants/dudley-t-dougherty-foundation-grant",
-    "funding_organization": "Dudley T Dougherty Foundation Inc",
-    "grant_amount": "",
-    "deadline": "",
-    "thematic_areas": [
-      "Community Services",
-      "Environmental Conservation",
-      "Environment"
-    ],
-    "geographic_focus": "Africa",
-    "source_website": "Instrumentl",
-    "is_relevant": true,
-    "how_it_helps": "Frame application around environmental conservation through e-waste refurbishment and community services by distributing refurbished IT to rural African schools, aligning with foundation's values of positive change, respect for environment, and collaboration for underserved communities.",
-    "matching_themes": [
-      "Community Services",
-      "Environmental Conservation",
-      "Environment"
+      "Youth Services"
     ],
     "relevance_score": 75,
-    "relevance_reasoning": "Meets 4/5 minimum requirements (nonprofits, not a contest, Africa focus, relates to e-waste/recycling via environment themes). Strong environmental fit for e-waste/circular economy and community services for school distribution, but lacks explicit education/youth focus requiring adaptation."
+    "relevance_reasoning": "Meets 4/5 min requirements (nonprofits, not competition, youth focus, Africa geo). Youth Services aligns with children/youth in underserved Africa; frame digital access as support for marginalized communities. Plausible adaptation but no direct tech/education match."
   },
   {
-    "title": "FAWCO Foundation: Development Grants",
-    "description": "The FAWCO Foundation Development Grant funds impactful projects that promote sustainability and immediate assistance to communities. With over 50 years of support, FAWCO clubs nominate grassroots organizations lacking sponsorship. Key focus areas include education, human rights, and global issues, aiming to empower disadvantaged women and children through initiatives like literacy programs, vocational training, and cultural understanding. This grant fosters collaboration and ensures that local charities receive much-needed recognition and support on a global scale.",
-    "application_url": "https://www.instrumentl.com/grants/fawco-foundation-development-grants",
-    "funding_organization": "FAWCO Foundation",
-    "grant_amount": "US $5,000",
-    "deadline": "",
-    "thematic_areas": [
-      "Environmental Education",
-      "Immigration & Refugee Rights",
-      "Diseases & Conditions"
-    ],
-    "geographic_focus": "Africa",
-    "source_website": "Instrumentl",
-    "is_relevant": true,
-    "how_it_helps": "Partner with a FAWCO club to nominate our project for funding to refurbish and distribute IT equipment to Kenyan schools, framing it as environmental education (e-waste management, circular economy) and digital literacy for underserved children to close the digital divide.",
-    "matching_themes": [
-      "Environmental Education"
-    ],
-    "relevance_score": 82,
-    "relevance_reasoning": "Meets all 5 minimum requirements: accepts nonprofits (grassroots orgs), not a competition, focuses on education/children, Africa geographic focus, relates to environmental education/sustainability via e-waste/circular economy and education equipment. Strong fit for new org via club nominations, with plausible adaptation to IT refurbishing for schools."
-  },
-  {
-    "title": "L'Aiglon Foundation: Special Interest Grants",
-    "description": "L'Aiglon Foundation, established in 1982, focuses on supporting projects in education, environment, and the creative arts. The foundation aims to maximize its charitable impact by providing grants to public charities without geographical restrictions. Grant recipients should demonstrate clear objectives and measurable results. However, funding is not available for individuals, start-up costs, debt reduction, or organizations outside the foundation's areas of focus. This approach ensures that support is directed towards impactful initiatives.",
-    "application_url": "https://www.instrumentl.com/grants/l-aiglon-foundation-special-interest-grants",
-    "funding_organization": "L'Aiglon Foundation",
-    "grant_amount": "US $500 - US $7,500",
-    "deadline": "Rolling deadline",
-    "thematic_areas": [
-      "Education",
-      "Environment",
-      "Art & Culture"
-    ],
-    "geographic_focus": "Africa",
-    "source_website": "Instrumentl",
-    "is_relevant": true,
-    "how_it_helps": "Submit proposal for grant to fund refurbishment of 500 laptops from e-waste, distribution to 10 rural Kenyan schools, with metrics on # devices deployed, students trained in digital literacy, and e-waste diverted; track outcomes via pre/post surveys on tech access.",
-    "matching_themes": [
-      "Education",
-      "Environment"
-    ],
-    "relevance_score": 85,
-    "relevance_reasoning": "Strong alignment with Education (digital literacy/tech in schools) and Environment (e-waste refurbishing) themes, Africa focus, accepts nonprofits; all 5 min requirements met; new org viable if project-focused despite no start-up costs."
-  },
-  {
-    "title": "Lemelson Foundation Grant",
-    "description": "The Lemelson Foundation Grant supports initiatives in invention education and entrepreneurship, aiming to empower young inventors and foster innovation. With over $300 million provided since its inception, the Foundation focuses on strengthening ecosystems for invention in the U.S. and developing countries. Organizations interested in aligning with their mission are encouraged to take an eligibility quiz and submit inquiries through their contact form. This commitment is crucial for driving impactful solutions to global challenges.",
-    "application_url": "https://www.instrumentl.com/grants/lemelson-foundation-grant-1",
-    "funding_organization": "The Lemelson Foundation",
+    "title": "The Hitchman Charitable Trust",
+    "description": "The Hitchman Charitable Trust, established by Helen Hitchman's estate in 2014, aims to continue the philanthropic legacy of Robert and Helen Hitchman. It focuses on aiding children in need, cancer research, and supporting marginalized groups. While the Trust has a global reach, particular emphasis is placed on programs assisting children in Africa. Locally, it prioritizes grants for 501(c)(3) organizations in Washington state, especially in the greater Seattle area.",
+    "application_url": "https://www.instrumentl.com/grants/the-hitchman-charitable-trust",
+    "funding_organization": "R And H Hitchman Charitable Trust",
     "grant_amount": "",
-    "deadline": "Rolling deadline",
+    "deadline": null,
     "thematic_areas": [
-      "Entrepreneurship",
-      "STEM / STEAM Education"
+      "Child Welfare Services",
+      "Cancer / Oncology",
+      "Homelessness Services"
     ],
     "geographic_focus": "Africa",
     "source_website": "Instrumentl",
     "is_relevant": true,
-    "how_it_helps": "Complete eligibility quiz and submit inquiry via contact form, proposing a program that uses refurbished IT equipment to establish computer labs in Kenyan schools for invention education workshops, fostering young inventors through hands-on STEM projects and entrepreneurship training.",
+    "how_it_helps": "Frame the project as a child welfare initiative by distributing refurbished IT equipment to schools in underserved Kenyan areas, directly aiding children in need through digital access and education opportunities; submit a proposal highlighting impact on African children's welfare.",
     "matching_themes": [
-      "STEM / STEAM Education",
-      "Entrepreneurship"
-    ],
-    "relevance_score": 75,
-    "relevance_reasoning": "Meets all 5 minimum requirements: accepts nonprofits, not a contest, focuses on youth/education via invention/STEM, targets Africa, relates to STEM education. Strong alignment with STEM/STEAM in Africa, but requires adaptation to frame IT provision as enabling invention ecosystems rather than direct hardware funding."
-  },
-  {
-    "title": "Roche Corporate Donations and Philanthropy (CDP)",
-    "description": "Roche Corporate Donations and Philanthropy (CDP) focuses on impactful projects that foster sustainable development, engage employees, and leverage Roche's expertise. Their philanthropic efforts prioritize humanitarian, educational, environmental, and cultural initiatives, aiming to build stronger communities and support innovative projects. Eligibility is limited to local organizations, while ineligible projects include those with political or religious ties. The foundation strives to create a positive societal impact through collaboration and strategic partnerships.",
-    "application_url": "https://www.instrumentl.com/grants/roche-corporate-donations-and-philanthropy-cdp",
-    "funding_organization": "La Roche, Inc.",
-    "grant_amount": "",
-    "deadline": "Rolling deadline",
-    "thematic_areas": [
-      "Environmental Education",
-      "Disaster Relief / Humanitarian Aid",
-      "Human & Social Services"
-    ],
-    "geographic_focus": "Africa",
-    "source_website": "Instrumentl",
-    "is_relevant": true,
-    "how_it_helps": "Frame project as Environmental Education initiative: partner with Roche for employee volunteering in refurbishing e-waste into school computers, fund distribution to Kenyan rural schools to teach digital literacy and sustainability, leveraging circular economy for positive societal impact.",
-    "matching_themes": [
-      "Environmental Education",
-      "Human & Social Services"
-    ],
-    "relevance_score": 72,
-    "relevance_reasoning": "Meets 4/5 min requirements (nonprofits, not competition, education focus, Africa geo, relates via e-waste/recycling under Environmental Education). Plausible via environmental angle on e-waste/circular economy tied to school tech access, but not direct IT/digital literacy match; new org may fit 'local organizations'."
-  },
-  {
-    "title": "Peter J. King Family Foundation Grant",
-    "description": "The Peter J. King Family Foundation Grant supports organizations dedicated to enhancing children's health, education, and welfare, particularly in economically disadvantaged areas. Priority is given to initiatives in the Saint Paul, Minnesota area, followed by the Twin Cities metro region and Africa. Grants are evaluated based on long-term sustainability and the number of beneficiaries, with a clear emphasis on impactful contributions rather than program funding gifts.",
-    "application_url": "https://www.instrumentl.com/grants/peter-j-king-family-foundation-grant",
-    "funding_organization": "Peter J. King Family Foundation",
-    "grant_amount": "",
-    "deadline": "Rolling deadline",
-    "thematic_areas": [
-      "Children’s Health & Pediatrics",
-      "Early Childhood Development",
-      "Education - Preschool / Early Learning"
-    ],
-    "geographic_focus": "Africa",
-    "source_website": "Instrumentl",
-    "is_relevant": true,
-    "how_it_helps": "Frame application as providing refurbished laptops/tablets to early childhood centers in rural Kenya for digital literacy and tech education, emphasizing long-term sustainability via e-waste repurposing, impact on large numbers of underserved children, and teacher training for preschool tech integration.",
-    "matching_themes": [
-      "Education - Preschool / Early Learning",
-      "Children’s Health & Pediatrics",
-      "Africa"
-    ],
-    "relevance_score": 72,
-    "relevance_reasoning": "Meets 4/5 min requirements (nonprofits, not a contest, children/education focus, Africa included). Good match for education in disadvantaged African areas, but early childhood/preschool themes require adaptation from general school digital literacy; Africa is lower priority after MN focus; plausible for new org as no strict eligibility."
-  },
-  {
-    "title": "Sachs Family Foundation Program Related Investments (PRIs)",
-    "description": "The Sachs Family Foundation offers Program Related Investments (PRIs) to support charitable organizations that enhance the quality of life for disadvantaged individuals. The foundation prioritizes self-sustaining initiatives, focusing on economic and educational opportunities, particularly in low-income communities. Proposals are accepted year-round, with a quick review process typically within 30 days. Additionally, the Foundation funds grants for education, health, and housing, aiming to foster self-supporting projects that can make a significant impact.",
-    "application_url": "https://www.instrumentl.com/grants/sachs-family-foundation-grant",
-    "funding_organization": "Erich & Hannah Sachs Foundation",
-    "grant_amount": "Unspecified amount  in in-kind support",
-    "deadline": "Rolling deadline",
-    "thematic_areas": [
-      "Poverty Alleviation & Services",
-      "Economic Services & Development",
-      "Equitable & Affordable Housing"
-    ],
-    "geographic_focus": "Africa",
-    "source_website": "Instrumentl",
-    "is_relevant": true,
-    "how_it_helps": "Submit PRI proposal for funding a self-sustaining refurbishing hub in Kenya: invest in equipment/tools for e-waste processing, partner with local schools for distribution, generate revenue via corporate recycling contracts to repay investment while providing devices/digital literacy to underserved students.",
-    "matching_themes": [
-      "Poverty Alleviation & Services",
-      "Economic Services & Development"
-    ],
-    "relevance_score": 78,
-    "relevance_reasoning": "Meets 4/5 min requirements (nonprofits, not competition, education focus, Africa geo). Strong fit for educational opportunities in low-income African communities via self-sustaining refurb/tech distribution, though not explicitly tech/digital."
-  },
-  {
-    "title": "SFF: Mission-Aligned Grantmaking - Seed Grants",
-    "description": "The Skees Family Foundation offers mission-aligned Seed Grants to nonprofits focused on job creation and readiness, primarily outside the U.S. These grants, beginning at $2,500 and increasing over three years, aim to support organizations with annual budgets of $250,000 or less. By prioritizing international efforts, the foundation seeks to maximize the impact of its limited resources, fostering growth in community-based organizations dedicated to alleviating poverty and promoting economic development globally.",
-    "application_url": "https://www.instrumentl.com/grants/sff-mission-aligned-grantmaking-seed-grants",
-    "funding_organization": "Skees Family Foundation",
-    "grant_amount": "US $2,500 - US $7,500",
-    "deadline": "Rolling deadline",
-    "thematic_areas": [
-      "Workforce Preparation & Job Readiness",
-      "Economic Services & Development",
-      "Job Creation"
-    ],
-    "geographic_focus": "Africa",
-    "source_website": "Instrumentl",
-    "is_relevant": true,
-    "how_it_helps": "Apply by framing refurbished IT distribution to Kenyan schools as foundational workforce preparation, building digital skills for economic development; request $2,500 seed for initial refurbishment and school computer labs.",
-    "matching_themes": [
-      "Workforce Preparation & Job Readiness",
-      "Economic Services & Development"
+      "Child Welfare Services",
+      "Programs assisting children in Africa"
     ],
     "relevance_score": 70,
-    "relevance_reasoning": "Meets 3/5 minimum requirements (accepts nonprofits, not a contest, Africa focus). Tangential fit via digital literacy for youth leading to job readiness, suitable for new small-budget org, but lacks direct education/tech/children emphasis."
+    "relevance_reasoning": "Meets 4/5 minimum requirements (nonprofits, not a contest, children focus, Africa emphasis), but lacks direct relation to technology, digital literacy, or education equipment; child welfare can be adapted to frame IT distribution as aiding children in need."
   },
   {
-    "title": "Tingari-Silverton Foundation Grant",
-    "description": "The Tingari-Silverton Foundation Grant supports transformational initiatives that align with the United Nations Sustainable Development Goals. Targeted towards Australia-based NGOs and select international organizations, the foundation seeks projects that yield significant social impact. Organizations must demonstrate innovative approaches and measurable outcomes. Notably, grants are not available for individuals or for-profit entities. This opportunity is ideal for those ready to revolutionize their communities through impactful solutions.",
-    "application_url": "https://www.instrumentl.com/grants/tingari-silverton-foundation-grant",
-    "funding_organization": "Tingari-Silverton Foundation",
-    "grant_amount": "",
-    "deadline": "Rolling deadline",
-    "thematic_areas": [
-      "Human & Social Services",
-      "Economic Services & Development",
-      "Literacy"
-    ],
-    "geographic_focus": "Africa",
-    "source_website": "Instrumentl",
-    "is_relevant": true,
-    "how_it_helps": "Frame project as SDG4 (quality education/digital literacy) and SDG12 (sustainable consumption via e-waste refurbishing), propose pilot distributing refurbished IT to Kenyan schools with measurable outcomes like # devices deployed and literacy gains; highlight innovation in circular economy for underserved areas.",
-    "matching_themes": [
-      "Literacy",
-      "Human & Social Services",
-      "Economic Services & Development"
-    ],
-    "relevance_score": 82,
-    "relevance_reasoning": "Meets 5/5 minimum requirements: accepts nonprofits/international orgs, not a contest, literacy theme aligns with education/schools/children, Africa focus, relates to digital literacy and e-waste/circular economy via UN SDGs. Strong fit for innovative tech education in Africa despite new org status."
-  },
-  {
-    "title": "Global Learning Challenge",
-    "description": "The Global Learning Challenge by MIT Solve seeks innovative solutions leveraging technology to bridge educational equity gaps, particularly for communities affected by poverty and displacement. Emphasizing inclusive design, the challenge aims to empower learners with disabilities and equip individuals with essential skills for a rapidly changing world. Special focus is placed on addressing racial disparities in education exacerbated by the pandemic, inviting innovators to apply and contribute to a more equitable future.",
-    "application_url": "https://www.instrumentl.com/grants/global-learning-challenge",
-    "funding_organization": "MIT Solve",
-    "grant_amount": "US $10,000 - US $150,000",
-    "deadline": "",
-    "thematic_areas": [
-      "Education - K through 12",
-      "Learning Disabilities",
-      "Technology Access & Digital Literacy"
-    ],
-    "geographic_focus": "Africa",
-    "source_website": "Instrumentl",
-    "is_relevant": true,
-    "how_it_helps": "Submit application showcasing our e-waste refurbishing model as an innovative tech solution for digital literacy and access in Kenyan schools, targeting underserved children to bridge equity gaps; winners receive prizes, mentorship, and scaling support for distribution.",
-    "matching_themes": [
-      "Education - K through 12",
-      "Technology Access & Digital Literacy"
-    ],
-    "relevance_score": 82,
-    "relevance_reasoning": "Meets 4/5 min requirements (accepts nonprofits, education focus, Africa geo, digital literacy/tech access). Strong thematic alignment with tech access/digital literacy and K-12 education in Africa, despite being a challenge. Plausible for new org as innovative solution; competitive but accessible path to funding/visibility for equipment distribution."
-  },
-  {
-    "title": "The Fairways Foundation Grant",
-    "description": "The FairWays Foundation Grant focuses on funding projects that promote environmental stewardship and conservation efforts. This private foundation supports initiatives that aim to protect natural resources and encourage education within the green industry. By investing in both local and global projects, the foundation emphasizes long-term change through grassroots involvement. Successful applicants must demonstrate a clear strategy and measurable goals, ensuring their projects contribute positively to their communities and the environment.",
-    "application_url": "https://www.instrumentl.com/grants/the-fairways-foundation-grant",
-    "funding_organization": "The FairWays Foundation",
-    "grant_amount": "US $1,000 - US $25,000",
-    "deadline": "",
-    "thematic_areas": [
-      "Environmental Conservation",
-      "Environmental Stewardship",
-      "Environmental Education"
-    ],
-    "geographic_focus": "Africa",
-    "source_website": "Instrumentl",
-    "is_relevant": true,
-    "how_it_helps": "Pitch project as environmental conservation effort: collect/refurbish e-waste (quantify tons diverted from landfills), distribute refurbished devices to Kenyan schools (measurable: # devices, # students trained in digital literacy/sustainability), emphasize long-term community impact and grassroots involvement.",
-    "matching_themes": [
-      "Environmental Conservation",
-      "Environmental Stewardship",
-      "Environmental Education"
-    ],
-    "relevance_score": 75,
-    "relevance_reasoning": "Strong alignment with environmental stewardship via e-waste recycling and circular economy; environmental education through tech access in schools; perfect geographic fit for Africa/Kenya. Meets 4/5 min requirements (1,2,4,5; 3 via education focus). Realistic for new org with clear strategy."
-  },
-  {
-    "title": "Rotary Foundation- District Grants",
-    "description": "The Rotary Foundation's District Grants support small-scale, short-term projects that benefit local and international communities. These grants can fund diverse initiatives, including humanitarian projects, scholarships, youth programs, and vocational training. Districts may allocate up to 50% of their District Designated Fund annually for these grants, providing flexibility for clubs to implement impactful service projects. This funding is given as a lump sum, allowing districts to distribute it among their clubs.",
-    "application_url": "https://www.instrumentl.com/grants/walnut-creek-rotary-club-district-grants",
+    "title": "Rotary Club: Global Grants",
+    "description": "The Rotary Club's Global Grants initiative supports significant international projects that yield sustainable results. By collaborating with local communities, Rotary clubs and districts address pressing needs across various focus areas, including health, education, and economic development. These grants, with budgets ranging from $30,000 to $400,000, enable clubs to implement impactful humanitarian projects, scholarships, and vocational training, ultimately fostering global partnerships and enhancing community welfare.",
+    "application_url": "https://www.instrumentl.com/grants/walnut-creek-rotary-club-global-grants",
     "funding_organization": "The Rotary Foundation Of Rotary International",
-    "grant_amount": "",
-    "deadline": "",
+    "grant_amount": "US $30,000 - US $400,000",
+    "deadline": null,
     "thematic_areas": [
       "Disaster Relief / Humanitarian Aid",
       "Academic Scholarship Programs",
-      "Community Services"
+      "Peacebuilding"
     ],
     "geographic_focus": "Africa",
     "source_website": "Instrumentl",
     "is_relevant": true,
-    "how_it_helps": "Partner with a Rotary club/district focused on Africa (e.g., District 9212 in Kenya) to propose a short-term project: collect/refurbish 100 laptops, distribute to rural Kenyan schools, train teachers on digital literacy. Use lump-sum grant for refurbishing costs, shipping, and setup of computer labs.",
-    "matching_themes": [
-      "Community Services",
-      "Disaster Relief / Humanitarian Aid"
-    ],
-    "relevance_score": 78,
-    "relevance_reasoning": "Meets 4/5 min requirements (accepts nonprofits via Rotary club partnerships, not a competition, focuses on youth/education/vocational training, Africa geographic focus, relates to technology education/digital literacy via community services/youth programs). Flexible small-scale funding suitable for new org with Rotary collaboration; plausible for equipment distribution as humanitarian/community project."
-  },
-  {
-    "title": "Tutator Forward Grant",
-    "description": "The Tutator Forward Grant is a unique initiative by Fondation Tutator that provides customized software solutions to organizations focused on social and environmental impact. Unlike traditional funding, this grant offers tailored software development to enhance operational efficiency and beneficiary management for NGOs and social enterprises. Projects can range from legal aid platforms to nutrition monitoring systems, ensuring scalability and measurable outcomes. Grantees are expected to actively participate in development, with projects typically valued between $75,000 and $1,000,000.",
-    "application_url": "https://www.instrumentl.com/grants/tutator-forward",
-    "funding_organization": "Fondation Tutator",
-    "grant_amount": "US $75,000 - US $1,000,000  in in-kind support",
-    "deadline": "",
-    "thematic_areas": [
-      "Social Justice / Human Rights",
-      "Environment",
-      "Human & Social Services"
-    ],
-    "geographic_focus": "Africa",
-    "source_website": "Instrumentl",
-    "is_relevant": true,
-    "how_it_helps": "Request customized software for inventory tracking of refurbished IT devices, distribution logistics to Kenyan schools, beneficiary management for children, and impact monitoring on digital literacy—improving efficiency for a new org without buying hardware.",
-    "matching_themes": [
-      "Environment",
-      "Human & Social Services"
-    ],
-    "relevance_score": 75,
-    "relevance_reasoning": "Strong match for Africa-focused nonprofits in environment (e-waste/circular economy) and human services; provides operational software to enhance IT equipment management and distribution, though not direct hardware funding."
-  },
-  {
-    "title": "Leave Your Mark Grant",
-    "description": "The Leave Your Mark Grant, offered by International Medical Group (IMG), aims to support global outreach efforts by providing funding to 5 winners: 2 organizations will each receive $3,500, while 3 individuals will get $1,000 each. Open to participants worldwide, applicants must be at least 18 years old. This initiative encourages original essays and videos, promoting social good and community service. Join IMG in making a meaningful impact through your projects!",
-    "application_url": "https://www.instrumentl.com/grants/leave-your-mark-grant",
-    "funding_organization": "International Medical Group Inc.",
-    "grant_amount": "US $1,000 - US $3,500",
-    "deadline": "",
-    "thematic_areas": [
-      "All fields of work"
-    ],
-    "geographic_focus": "Africa",
-    "source_website": "Instrumentl",
-    "is_relevant": true,
-    "how_it_helps": "Submit a compelling original essay and video detailing the organization's mission to source, refurbish, and distribute IT equipment to schools in underserved Kenyan/African areas, emphasizing impact on digital literacy and closing the digital divide; use $3,500 to purchase refurbishing tools or ship devices if selected as one of 2 organizational winners.",
-    "matching_themes": [
-      "digital literacy",
-      "technology education",
-      "e-waste/recycling",
-      "refurbished tech",
-      "digital divide",
-      "schools",
-      "education equipment/supplies"
-    ],
-    "relevance_score": 72,
-    "relevance_reasoning": "Meets minimum requirements: accepts nonprofits (1), Africa geographic focus (4), relates to digital literacy/digital divide/refurbished tech (5). Fails competition rule (2) and specific education focus (3), but accessible essay/video process suits new org; plausible but competitive with small awards."
-  },
-  {
-    "title": "100X Impact Accelerator Grant",
-    "description": "The 100X Impact Accelerator Grant, based at the London School of Economics, seeks to empower social ventures aiming for transformative change. With a focus on innovation in crucial areas like climate, democracy, and well-being, this program supports visionary entrepreneurs with catalytic funding and mentorship. The 12-week hybrid accelerator fosters collaboration among like-minded social entrepreneurs, providing essential resources to scale impactful solutions. Eligible ventures must demonstrate a mission-driven approach and tangible impact, aiming to create scalable, sustainable solutions for global challenges.",
-    "application_url": "https://www.instrumentl.com/grants/100x-impact-accelerator-z667qob",
-    "funding_organization": "London School of Economics",
-    "grant_amount": "£150,000",
-    "deadline": "",
-    "thematic_areas": [
-      "Environment",
-      "Climate Change Resilience & Equity",
-      "Sustainability"
-    ],
-    "geographic_focus": "Africa",
-    "source_website": "Instrumentl",
-    "is_relevant": true,
-    "how_it_helps": "Position the organization as a social venture innovating in sustainability through e-waste refurbishment and circular economy to bridge digital divide in African schools. Apply for the 12-week accelerator to secure catalytic funding, mentorship, and networks to scale sourcing, refurbishing, and distribution of IT equipment to underserved Kenyan schools.",
-    "matching_themes": [
-      "Environment",
-      "Sustainability"
-    ],
-    "relevance_score": 72,
-    "relevance_reasoning": "Meets 4/5 minimum requirements (accepts social ventures likely including nonprofits, not a contest, Africa focus, relates to e-waste/recycling and sustainability). Good match with adaptation: frame e-waste refurbishing as sustainability/circular economy initiative supporting digital access in Africa, though lacks direct education focus."
-  },
-  {
-    "title": "Global D-Prize Competition",
-    "description": "The Global D-Prize Competition aims to alleviate extreme poverty by seeding social impact organizations in low-and-middle income countries. With grants of up to $20,000, it supports entrepreneurs launching new ventures. Applicants are encouraged to distribute existing, evidence-based poverty interventions. The competition targets areas such as health, education, and livelihoods, fostering innovative solutions. D-Prize seeks to make high-impact products universally accessible and believes that social enterprises can effectively address pressing needs in communities.",
-    "application_url": "https://www.instrumentl.com/grants/global-d-prize-competition",
-    "funding_organization": "D-Prize",
-    "grant_amount": "Up to US $20,000",
-    "deadline": "",
-    "thematic_areas": [
-      "Teen Parenthood",
-      "Agricultural Crops",
-      "Soil Science"
-    ],
-    "geographic_focus": "Africa",
-    "source_website": "Instrumentl",
-    "is_relevant": true,
-    "how_it_helps": "Enter the competition with a proposal detailing the launch of our social impact venture to collect, refurbish, and distribute IT equipment to Kenyan schools for digital literacy; allocate up to $20,000 for sourcing devices, refurbishment setup, shipping/logistics, and pilot distribution to underserved rural schools.",
+    "how_it_helps": "Partner with a local Kenyan or international Rotary club/district to co-develop and submit a Global Grant proposal for refurbishing/distributing IT equipment to establish computer labs in underserved schools, promoting digital literacy and closing digital divide under Rotary's Basic Education focus.",
     "matching_themes": [
       "education",
       "Africa",
-      "digital literacy",
-      "technology education",
-      "digital divide"
-    ],
-    "relevance_score": 85,
-    "relevance_reasoning": "Meets 4/5 minimum requirements (#1 accepts nonprofits/social impact orgs, #3 education focus, #4 Africa, #5 relates to digital literacy/technology education/digital divide via innovative poverty interventions); perfect seed funding for new org launching education/tech venture despite competition format."
-  },
-  {
-    "title": "Big G Charitable Foundation Grant",
-    "description": "The Big G Charitable Foundation, founded in 2009 by Mike Galesi, is dedicated to supporting environmental conservation and emergency relief efforts. Inspired by his father, John (Big G), Mike's commitment to helping others drives the foundation's mission to protect the defenseless and promote sustainability. Through grants, the foundation aids qualified non-profit organizations focused on these critical areas, ensuring that both our planet and those in crisis receive the support they need.",
-    "application_url": "https://www.instrumentl.com/grants/big-g-charitable-foundation-grant",
-    "funding_organization": "Big G Charitable Foundation",
-    "grant_amount": "",
-    "deadline": "Rolling deadline",
-    "thematic_areas": [
-      "Human & Social Services",
-      "Diseases & Conditions",
-      "Sustainability"
-    ],
-    "geographic_focus": "Africa",
-    "source_website": "Instrumentl",
-    "is_relevant": true,
-    "how_it_helps": "Frame application as sustainability initiative managing e-waste through collection, refurbishment, and repurposing of IT equipment for circular economy in Africa; highlight distribution to Kenyan schools as human & social services supporting vulnerable children, reducing digital exclusion while promoting environmental conservation.",
-    "matching_themes": [
-      "Sustainability",
-      "Human & Social Services"
-    ],
-    "relevance_score": 70,
-    "relevance_reasoning": "Meets 4/5 min requirements (nonprofits yes, not competition yes, Africa yes, sustainability relates to e-waste/recycling/refurbished tech; lacks explicit children/education focus). Tangential via sustainability (e-waste, circular economy) and human/social services (aid to underserved), with plausible adaptation for new org."
-  },
-  {
-    "title": "MacFarlane Foundation Grantmaking",
-    "description": "The MacFarlane Foundation, established in 2009, is dedicated to enhancing the quality of life for individuals and communities through strategic grantmaking. It supports U.S. public charities focused on education, economic empowerment, climate change, health, and women's well-being. Grants range from $10,000 to $250,000, with a commitment to fostering growth in organizations. The foundation invites proposals annually, ensuring impactful contributions to various causes both domestically and internationally.",
-    "application_url": "https://www.instrumentl.com/grants/macfarlane-foundation-grants",
-    "funding_organization": "Roger I. & Ruth B. MacFarlane Foundation",
-    "grant_amount": "US $10,000 - US $250,000",
-    "deadline": "Rolling deadline",
-    "thematic_areas": [
-      "All fields of work"
-    ],
-    "geographic_focus": "Africa",
-    "source_website": "Instrumentl",
-    "is_relevant": true,
-    "how_it_helps": "Submit annual proposal framing project as education (digital literacy, tech access for school children) and climate action (e-waste refurbishment); request $50k-$100k for refurbishing 500+ devices, distribution to Kenyan schools, and training programs.",
-    "matching_themes": [
-      "digital literacy",
-      "technology education",
-      "e-waste/recycling",
-      "refurbished tech",
-      "digital divide",
-      "STEM education",
-      "schools",
-      "climate action/green technology"
+      "economic development"
     ],
     "relevance_score": 82,
-    "relevance_reasoning": "Strong match: Supports education and climate initiatives internationally in Africa; aligns with digital literacy/STEM under education and e-waste/circular economy under climate; open to growth-stage orgs with annual proposals; U.S. charity requirement may need verification but nonprofits accepted."
-  },
-  {
-    "title": "Moderna Charitable Foundation Grants",
-    "description": "The Moderna Charitable Foundation, established in 2022, aims to enhance public health and healthcare access while fostering scientific education and inclusion in underserved communities. Their initiatives include grant-making to aligned organizations, supporting humanitarian crises, and employee matching for personal causes. The Foundation focuses on building resilient health ecosystems, advancing STEM education, and addressing systemic barriers in communities, all while committed to addressing the ongoing impact of COVID-19.",
-    "application_url": "https://www.instrumentl.com/grants/moderna-charitable-foundation-grants",
-    "funding_organization": "Moderna Charitable Foundation Inc",
-    "grant_amount": "",
-    "deadline": "Rolling deadline",
-    "thematic_areas": [
-      "Health Care Access & Delivery",
-      "Diseases & Conditions",
-      "Epidemiology & Public Health"
-    ],
-    "geographic_focus": "Africa",
-    "source_website": "Instrumentl",
-    "is_relevant": true,
-    "how_it_helps": "Apply under STEM education pillar, proposing refurbishment and distribution of IT equipment to Kenyan schools for digital literacy and technology programs that build scientific skills and address educational barriers in underserved areas.",
-    "matching_themes": [
-      "STEM education",
-      "scientific education",
-      "underserved communities",
-      "Africa"
-    ],
-    "relevance_score": 75,
-    "relevance_reasoning": "Strong match due to STEM education focus, Africa geographic alignment, and support for nonprofits in underserved communities; health themes require adaptation to link digital literacy/STEM via tech access."
-  },
-  {
-    "title": "New Earth Foundation Grant",
-    "description": "The New Earth Foundation Grant aims to support innovative, humanitarian projects that promote sustainability, peace, and community development. Founded by John B. Loveland in 1997, the foundation focuses on assisting smaller 501(c)(3) organizations to create impactful solutions for societal challenges. Grants are awarded to projects that demonstrate innovation, community involvement, and the potential for replication, ensuring a lasting positive impact on both local and global scales.",
-    "application_url": "https://www.instrumentl.com/grants/nef-grant",
-    "funding_organization": "New Earth Foundation Inc.",
-    "grant_amount": "",
-    "deadline": "",
-    "thematic_areas": [
-      "Environmental Justice & Advocacy",
-      "Youth Development & Leadership",
-      "Economic Services & Development"
-    ],
-    "geographic_focus": "Africa",
-    "source_website": "Instrumentl",
-    "is_relevant": true,
-    "how_it_helps": "Frame application as innovative sustainability project refurbishing e-waste into tech for youth digital literacy in Kenyan schools, emphasizing community involvement, replication potential, and impact on environmental justice and youth leadership.",
-    "matching_themes": [
-      "Environmental Justice & Advocacy",
-      "Youth Development & Leadership"
-    ],
-    "relevance_score": 82,
-    "relevance_reasoning": "Meets 4/5 min requirements: accepts nonprofits, not a contest, Africa focus, relates to e-waste/recycling and youth development. Strong alignment with sustainability (circular economy/e-waste), youth empowerment via tech access in schools, and Africa geography; suitable for new/small orgs."
+    "relevance_reasoning": "Meets 4/5 min requirements (nonprofits via Rotary partnership, not competition, education focus, Africa geo, relates to education/tech via Basic Education area). Strong match for education projects in Africa; realistic path through Rotary club collaboration despite new org status."
   }
 ]

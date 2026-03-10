@@ -1,0 +1,1116 @@
+2026-03-10 09:16:29 - GrantCrawler - INFO - Database: 47 grants from previous runs
+2026-03-10 09:16:29 - GrantCrawler - INFO - ================================================================================
+2026-03-10 09:16:29 - GrantCrawler - INFO - GRANT CRAWLER - Multi-Site Configuration
+2026-03-10 09:16:29 - GrantCrawler - INFO - ================================================================================
+2026-03-10 09:16:29 - GrantCrawler - INFO - Enabled sites: 10
+2026-03-10 09:16:29 - GrantCrawler - INFO -   - Grants.gov API (API)
+2026-03-10 09:16:29 - GrantCrawler - INFO -   - Funds for NGOs: 10 URLs
+2026-03-10 09:16:29 - GrantCrawler - INFO -   - EU Funding Portal: 2 URLs
+2026-03-10 09:16:29 - GrantCrawler - INFO -   - Charity Excellence (Playwright)
+2026-03-10 09:16:29 - GrantCrawler - INFO -   - GlobalGiving (Playwright)
+2026-03-10 09:16:29 - GrantCrawler - INFO -   - DevEx Funding (Playwright)
+2026-03-10 09:16:29 - GrantCrawler - INFO -   - ICTworks: 1 URLs
+2026-03-10 09:16:29 - GrantCrawler - INFO -   - DevelopmentAid (Playwright)
+2026-03-10 09:16:29 - GrantCrawler - INFO -   - EC Europa Funding & Tenders (API)
+2026-03-10 09:16:29 - GrantCrawler - INFO -   - Instrumentl (Playwright)
+2026-03-10 09:16:29 - GrantCrawler - INFO - ================================================================================
+
+2026-03-10 09:16:29 - GrantCrawler - INFO - ================================================================================
+2026-03-10 09:16:29 - GrantCrawler - INFO - API: Grants.gov API
+2026-03-10 09:16:29 - GrantCrawler - INFO - ================================================================================
+2026-03-10 09:16:29 - grant_crawler - INFO - Checking 14 targeted search queries against Grants.gov API...
+2026-03-10 09:16:31 - grant_crawler - INFO - [1/14] Query 'technology education Africa' → 50 hits
+2026-03-10 09:16:32 - grant_crawler - INFO - ✅ Found relevant API grant: Cultural Property Agreements Implementation Grants
+2026-03-10 09:16:36 - grant_crawler - INFO - ✅ Found relevant API grant: Community Reentry Settings Initiative
+2026-03-10 09:16:41 - grant_crawler - INFO - ✅ Found relevant API grant: Early Career Research Program (ECRP)
+2026-03-10 09:16:42 - grant_crawler - INFO - ✅ Found relevant API grant: FY 2026 J. Christopher Stevens Virtual Exchange Initiative   (JCSVEI) Program
+2026-03-10 09:16:44 - grant_crawler - INFO - ✅ Found relevant API grant: FY 2026 National Security Language Initiative for Youth (NSLI-Y)
+2026-03-10 09:16:44 - grant_crawler - INFO - ✅ Found relevant API grant: FY 2026 Leaders Lead On-Demand
+2026-03-10 09:16:48 - grant_crawler - INFO - ✅ Found relevant API grant: Securing Convictions from Vetted and Special Unit Operations
+2026-03-10 09:16:49 - grant_crawler - INFO - ✅ Found relevant API grant: Facilitator Training for Victim Offender Dialogue
+2026-03-10 09:16:52 - grant_crawler - INFO - ✅ Found relevant API grant: Next-Generation Geothermal Field Tests and Geothermal Resource Characterization and Confirmation
+2026-03-10 09:17:00 - grant_crawler - INFO - ✅ Found relevant API grant: FY 2026 Community College Administrator Program
+2026-03-10 09:17:01 - grant_crawler - INFO - ✅ Found relevant API grant: Pathways to Enable Secure Open-Source Ecosystems
+2026-03-10 09:17:01 - grant_crawler - INFO - [2/14] Query 'STEM education developing countries digi' → 50 hits
+2026-03-10 09:17:04 - grant_crawler - INFO - [3/14] Query 'computer lab school Africa equipment' → 50 hits
+2026-03-10 09:17:10 - grant_crawler - INFO - [4/14] Query 'electronic waste recycling circular econ' → 50 hits
+2026-03-10 09:17:11 - grant_crawler - INFO - [5/14] Query 'digital divide technology access underse' → 50 hits
+2026-03-10 09:17:13 - grant_crawler - INFO - [6/14] Query 'East Africa education technology infrast' → 50 hits
+2026-03-10 09:17:14 - grant_crawler - INFO - [7/14] Query 'international development information te' → 50 hits
+2026-03-10 09:17:16 - grant_crawler - INFO - [8/14] Query 'education technology international nonpr' → 50 hits
+2026-03-10 09:17:17 - grant_crawler - INFO - [9/14] Query 'digital literacy youth international' → 50 hits
+2026-03-10 09:17:20 - grant_crawler - INFO - ✅ Found relevant API grant: Building EPSCoR-State/National Laboratory Partnerships
+2026-03-10 09:17:28 - grant_crawler - INFO - [10/14] Query 'IT equipment refurbishment donation nonp' → 50 hits
+2026-03-10 09:17:29 - grant_crawler - INFO - [11/14] Query 'renewable energy sustainable technology ' → 50 hits
+2026-03-10 09:17:30 - grant_crawler - INFO - [12/14] Query 'ICT education capacity building developi' → 50 hits
+2026-03-10 09:17:31 - grant_crawler - INFO - [13/14] Query 'e-waste management technology Africa Ken' → 50 hits
+2026-03-10 09:17:32 - grant_crawler - INFO - [14/14] Query 'school computer lab infrastructure devel' → 50 hits
+2026-03-10 09:17:32 - grant_crawler - INFO - ============================================================
+2026-03-10 09:17:32 - grant_crawler - INFO - Grants.gov API fetch summary:
+2026-03-10 09:17:32 - grant_crawler - INFO -   Total search hits:  700
+2026-03-10 09:17:32 - grant_crawler - INFO -   Deduplicated:       608
+2026-03-10 09:17:32 - grant_crawler - INFO -   Fetch failed:       0
+2026-03-10 09:17:32 - grant_crawler - INFO -   Filtered out:       80
+2026-03-10 09:17:32 - grant_crawler - INFO -   Passed to LLM:      12
+2026-03-10 09:17:32 - grant_crawler - INFO - ============================================================
+2026-03-10 09:17:32 - GrantCrawler - INFO - Fetched 12 potential grants from Grants.gov API
+2026-03-10 09:17:32 - GrantCrawler - INFO - Analyzing: Cultural Property Agreements Implementation Grants...
+2026-03-10 09:17:46 - GrantCrawler - INFO - ❌ Low Score (20): Cultural Property Agreements Implementation Grants
+2026-03-10 09:17:46 - GrantCrawler - INFO - Analyzing: Community Reentry Settings Initiative...
+2026-03-10 09:17:50 - GrantCrawler - INFO - ❌ Low Score (0): Community Reentry Settings Initiative
+2026-03-10 09:17:50 - GrantCrawler - INFO - Analyzing: Early Career Research Program (ECRP)...
+2026-03-10 09:17:58 - GrantCrawler - WARNING - Could not analyze relevance for Early Career Research Program (ECRP)
+2026-03-10 09:17:58 - GrantCrawler - INFO - Analyzing: FY 2026 J. Christopher Stevens Virtual Exchange Initiative   (JCSVEI) Program...
+2026-03-10 09:18:18 - GrantCrawler - INFO - ❌ Low Score (35): FY 2026 J. Christopher Stevens Virtual Exchange Initiative   (JCSVEI) Program
+2026-03-10 09:18:18 - GrantCrawler - INFO - Analyzing: FY 2026 National Security Language Initiative for Youth (NSLI-Y)...
+2026-03-10 09:18:30 - GrantCrawler - INFO - ❌ Low Score (25): FY 2026 National Security Language Initiative for Youth (NSLI-Y)
+2026-03-10 09:18:30 - GrantCrawler - INFO - Analyzing: FY 2026 Leaders Lead On-Demand...
+2026-03-10 09:18:41 - GrantCrawler - WARNING - Could not analyze relevance for FY 2026 Leaders Lead On-Demand
+2026-03-10 09:18:41 - GrantCrawler - INFO - Analyzing: Securing Convictions from Vetted and Special Unit Operations...
+2026-03-10 09:18:46 - GrantCrawler - INFO - ❌ Low Score (0): Securing Convictions from Vetted and Special Unit Operations
+2026-03-10 09:18:46 - GrantCrawler - INFO - Analyzing: Facilitator Training for Victim Offender Dialogue...
+2026-03-10 09:18:52 - GrantCrawler - WARNING - Could not analyze relevance for Facilitator Training for Victim Offender Dialogue
+2026-03-10 09:18:52 - GrantCrawler - INFO - Analyzing: Next-Generation Geothermal Field Tests and Geothermal Resource Characterization and Confirmation...
+2026-03-10 09:18:57 - GrantCrawler - WARNING - Could not analyze relevance for Next-Generation Geothermal Field Tests and Geothermal Resource Characterization and Confirmation
+2026-03-10 09:18:57 - GrantCrawler - INFO - Analyzing: FY 2026 Community College Administrator Program...
+2026-03-10 09:19:09 - GrantCrawler - INFO - ❌ Low Score (25): FY 2026 Community College Administrator Program
+2026-03-10 09:19:09 - GrantCrawler - INFO - Analyzing: Pathways to Enable Secure Open-Source Ecosystems...
+2026-03-10 09:19:18 - GrantCrawler - INFO - ❌ Low Score (25): Pathways to Enable Secure Open-Source Ecosystems
+2026-03-10 09:19:18 - GrantCrawler - INFO - Analyzing: Building EPSCoR-State/National Laboratory Partnerships...
+2026-03-10 09:19:25 - GrantCrawler - INFO - ❌ Low Score (0): Building EPSCoR-State/National Laboratory Partnerships
+2026-03-10 09:19:25 - GrantCrawler - INFO - ================================================================================
+2026-03-10 09:19:25 - GrantCrawler - INFO - API: EC Europa Funding & Tenders
+2026-03-10 09:19:25 - GrantCrawler - INFO - ================================================================================
+2026-03-10 09:19:25 - grant_crawler - INFO - [1/13] Searching EU portal: 'education digital Africa' ...
+2026-03-10 09:19:31 - grant_crawler - INFO -   → 103871 total results for 'education digital Africa'
+2026-03-10 09:19:31 - grant_crawler - INFO -   ✅ Pre-filter pass: Digital Education Content: success factors in decision making and use by teacher
+2026-03-10 09:19:31 - grant_crawler - INFO -   ✅ Pre-filter pass: Digital Education: Public-private partnerships for ethical design, development a
+2026-03-10 09:19:34 - grant_crawler - INFO -   ✅ Pre-filter pass: Topic 6: Digital education: Assessment of digital skills and competences
+2026-03-10 09:19:34 - grant_crawler - INFO -   ✅ Pre-filter pass: Digital Transformation of Asian Higher Education
+2026-03-10 09:19:34 - grant_crawler - INFO -   ✅ Pre-filter pass: Digital Transformation in the Western Balkans Education
+2026-03-10 09:19:37 - grant_crawler - INFO -   ✅ Pre-filter pass: Digital Competence Levels Assessment in School Education
+2026-03-10 09:19:43 - grant_crawler - INFO -   ✅ Pre-filter pass: Transforming Professional Higher Education for the Green and Digital Transitions
+2026-03-10 09:19:44 - grant_crawler - INFO - [2/13] Searching EU portal: 'ICT capacity building developing countries' ...
+2026-03-10 09:19:52 - grant_crawler - INFO -   → 112781 total results for 'ICT capacity building developing countries'
+2026-03-10 09:19:57 - grant_crawler - INFO -   ✅ Pre-filter pass: Capacity building in VET in South Mediterranean Countries
+2026-03-10 09:19:57 - grant_crawler - INFO -   ✅ Pre-filter pass: Towards a Europe of Bioeconomy Places
+2026-03-10 09:19:57 - grant_crawler - INFO -   ✅ Pre-filter pass: Scientific analysis and exploitation of space data
+2026-03-10 09:19:57 - grant_crawler - INFO -   ✅ Pre-filter pass: Understanding the forms of local democracy in low-income and low-middle income c
+2026-03-10 09:20:01 - grant_crawler - INFO -   ✅ Pre-filter pass: From lab to market: Strengthening the role of Technology Transfer Offices in bri
+2026-03-10 09:20:14 - grant_crawler - INFO - [3/13] Searching EU portal: 'digital literacy schools Africa' ...
+2026-03-10 09:20:21 - grant_crawler - INFO -   → 92755 total results for 'digital literacy schools Africa'
+2026-03-10 09:20:23 - grant_crawler - INFO -   ✅ Pre-filter pass: Digital and media literacy as drivers for democratic and civic resilience
+2026-03-10 09:20:27 - grant_crawler - INFO -   ✅ Pre-filter pass: Addressing disabilities through the life course to support independent living an
+2026-03-10 09:20:27 - grant_crawler - INFO -   ✅ Pre-filter pass: Behavioural interventions as primary prevention for Non-Communicable Diseases (N
+2026-03-10 09:20:27 - grant_crawler - INFO -   ✅ Pre-filter pass: Building public trust and outreach in the life sciences
+2026-03-10 09:20:31 - grant_crawler - INFO - [4/13] Searching EU portal: 'technology education youth developing' ...
+2026-03-10 09:20:36 - grant_crawler - INFO -   → 102884 total results for 'technology education youth developing'
+2026-03-10 09:21:02 - grant_crawler - INFO - [5/13] Searching EU portal: 'STEM education infrastructure developing countries' ...
+2026-03-10 09:21:20 - grant_crawler - INFO -   → 106626 total results for 'STEM education infrastructure developing countries'
+2026-03-10 09:21:42 - grant_crawler - INFO -   ✅ Pre-filter pass: School Education: STEM Education Centres
+2026-03-10 09:21:58 - grant_crawler - INFO - [6/13] Searching EU portal: 'IT equipment refurbishment circular economy' ...
+2026-03-10 09:22:00 - grant_crawler - INFO -   → 110924 total results for 'IT equipment refurbishment circular economy'
+2026-03-10 09:22:00 - grant_crawler - INFO -   ✅ Pre-filter pass: Demonstrating and deploying innovative collection, sorting-for-reuse and repair 
+2026-03-10 09:22:00 - grant_crawler - INFO -   ✅ Pre-filter pass: Support to the implementation of Circular Economy Strategy and Action Plan for U
+2026-03-10 09:22:03 - grant_crawler - INFO -   ✅ Pre-filter pass: EEA/SUN/25/008 - Preparation of analytical report and expert workshop on the lin
+2026-03-10 09:22:05 - grant_crawler - INFO -   ✅ Pre-filter pass: Crafting routes to a circular economy
+2026-03-10 09:22:05 - grant_crawler - INFO -   ✅ Pre-filter pass: Advanced recovery of critical raw materials from Waste from Electrical and Elect
+2026-03-10 09:22:20 - grant_crawler - INFO - [7/13] Searching EU portal: 'electronic waste recycling developing countries' ...
+2026-03-10 09:22:35 - grant_crawler - INFO -   → 87659 total results for 'electronic waste recycling developing countries'
+2026-03-10 09:23:11 - grant_crawler - INFO - [8/13] Searching EU portal: 'digital infrastructure schools' ...
+2026-03-10 09:23:14 - grant_crawler - INFO -   → 107822 total results for 'digital infrastructure schools'
+2026-03-10 09:23:18 - grant_crawler - INFO -   ✅ Pre-filter pass: MSCA and Citizens 2027
+2026-03-10 09:23:18 - grant_crawler - INFO -   ✅ Pre-filter pass: A services and business incubator for geospatial open-source developments
+2026-03-10 09:23:18 - grant_crawler - INFO -   ✅ Pre-filter pass: The impact of the use of digital tools outside school and for communication on e
+2026-03-10 09:23:25 - grant_crawler - INFO -   ✅ Pre-filter pass: Towards a European network of ocean technology testing sites
+2026-03-10 09:23:31 - grant_crawler - INFO -   ✅ Pre-filter pass: Coordinated preparedness testing and other preparedness actions
+2026-03-10 09:23:31 - grant_crawler - INFO - [9/13] Searching EU portal: 'digital inclusion underserved communities' ...
+2026-03-10 09:23:34 - grant_crawler - INFO -   → 101263 total results for 'digital inclusion underserved communities'
+2026-03-10 09:23:34 - grant_crawler - INFO -   ✅ Pre-filter pass: Ecosystems for Higher Education Inclusion: connecting underserved communities wi
+2026-03-10 09:23:34 - grant_crawler - INFO -   ✅ Pre-filter pass: Virtual Human Twins (VHTs) for integrated clinical decision support in preventio
+2026-03-10 09:23:34 - grant_crawler - INFO -   ✅ Pre-filter pass: Towards Artificial General Intelligence (AGI) for healthcare
+2026-03-10 09:23:34 - grant_crawler - INFO -   ✅ Pre-filter pass: Support to European Research Area (ERA) action on accelerating New Approach Meth
+2026-03-10 09:23:34 - grant_crawler - INFO -   ✅ Pre-filter pass: Development of predictive biomarkers of disease progression and treatment respon
+2026-03-10 09:23:39 - grant_crawler - INFO -   ✅ Pre-filter pass: Enhancing and enlarging the European Partnership on Personalised Medicine (EP Pe
+2026-03-10 09:23:39 - grant_crawler - INFO -   ✅ Pre-filter pass: Personalised approaches to reduce risks from Adverse Drug Reactions due to admin
+2026-03-10 09:23:39 - grant_crawler - INFO -   ✅ Pre-filter pass: Public procurement of innovative solutions for improving citizens' access to hea
+2026-03-10 09:23:39 - grant_crawler - INFO -   ✅ Pre-filter pass: Identifying and addressing low-value care in health and care systems
+2026-03-10 09:24:13 - grant_crawler - INFO -   ✅ Pre-filter pass: The transformative potential of co-governance in the green transition of neighbo
+2026-03-10 09:24:13 - grant_crawler - INFO -   ✅ Pre-filter pass: Intergenerational neighbourhoods and communities aligned with the New European B
+2026-03-10 09:24:13 - grant_crawler - INFO -   ✅ Pre-filter pass: Innovative approaches for the spatial design of neighbourhoods
+2026-03-10 09:24:13 - grant_crawler - INFO -   ✅ Pre-filter pass: Understanding inhabitant’s experiences of neighbourhoods to support their health
+2026-03-10 09:24:13 - grant_crawler - INFO -   ✅ Pre-filter pass: Novel combinations of knowledge and research methods to address social issues an
+2026-03-10 09:24:13 - grant_crawler - INFO -   ✅ Pre-filter pass: Addressing homelessness through housing-led approaches aligned with the New Euro
+2026-03-10 09:24:13 - grant_crawler - INFO -   ✅ Pre-filter pass: AI supporting informed advice for farmers and foresters to improve competitivene
+2026-03-10 09:24:13 - grant_crawler - INFO -   ✅ Pre-filter pass: Fostering generational renewal in agriculture via EU advisory network
+2026-03-10 09:24:13 - grant_crawler - INFO -   ✅ Pre-filter pass: Strengthening strategic advice and synergies between EU and national Research an
+2026-03-10 09:24:13 - grant_crawler - INFO -   ✅ Pre-filter pass: Additional activities for the European Partnership of Agriculture of Data
+2026-03-10 09:24:13 - grant_crawler - INFO -   ✅ Pre-filter pass: International dimension of the circular bio-based economy: seeking win-win oppor
+2026-03-10 09:24:13 - grant_crawler - INFO -   ✅ Pre-filter pass: Increasing knowledge flows to practice within AKIS via EU thematic knowledge hub
+2026-03-10 09:24:13 - grant_crawler - INFO -   ✅ Pre-filter pass: Strengthening the resilience of European farmers through improved capacity in co
+2026-03-10 09:24:13 - grant_crawler - INFO - [10/13] Searching EU portal: 'education technology international cooperation' ...
+2026-03-10 09:24:24 - grant_crawler - INFO -   → 127721 total results for 'education technology international cooperation'
+2026-03-10 09:24:52 - grant_crawler - INFO -   ✅ Pre-filter pass: Contribution of basic skills to productivity, innovation, competitiveness and ec
+2026-03-10 09:24:52 - grant_crawler - INFO -   ✅ Pre-filter pass: Closing the learning gap: uncovering causes and effective policy interventions f
+2026-03-10 09:24:52 - grant_crawler - INFO -   ✅ Pre-filter pass: The effective use of artificial intelligence in learning environments in pre-pri
+2026-03-10 09:24:52 - grant_crawler - INFO -   ✅ Pre-filter pass: Impact of access to nature-positive environments in promoting social cohesion an
+2026-03-10 09:24:52 - grant_crawler - INFO -   ✅ Pre-filter pass: Strengthened implementation of the EU Pact on Migration and Asylum and a focus o
+2026-03-10 09:24:52 - grant_crawler - INFO -   ✅ Pre-filter pass: Impact of in-kind benefits on income distribution and on vulnerable populations
+2026-03-10 09:24:57 - grant_crawler - INFO - [11/13] Searching EU portal: 'digital skills training youth Africa' ...
+2026-03-10 09:25:02 - grant_crawler - INFO -   → 118611 total results for 'digital skills training youth Africa'
+2026-03-10 09:25:02 - grant_crawler - INFO -   ✅ Pre-filter pass: Capacity building in VET in Neighbourhood East
+2026-03-10 09:25:02 - grant_crawler - INFO -   ✅ Pre-filter pass: Capacity building in VET in Caribbean
+2026-03-10 09:25:02 - grant_crawler - INFO -   ✅ Pre-filter pass: Capacity building in VET in Latin America
+2026-03-10 09:25:02 - grant_crawler - INFO -   ✅ Pre-filter pass: Capacity building in VET in Western Balkans
+2026-03-10 09:25:02 - grant_crawler - INFO -   ✅ Pre-filter pass: Training and innovation networks for sustained capacity development related to e
+2026-03-10 09:25:11 - grant_crawler - INFO -   ✅ Pre-filter pass: Digital Skills Training for Health Care Professionals in Oncology
+2026-03-10 09:25:16 - grant_crawler - INFO -   ✅ Pre-filter pass: Call for proposals to provide training for health workforce, including digital s
+2026-03-10 09:25:31 - grant_crawler - INFO - [12/13] Searching EU portal: 'connectivity schools developing countries' ...
+2026-03-10 09:25:42 - grant_crawler - INFO -   → 67546 total results for 'connectivity schools developing countries'
+2026-03-10 09:26:16 - grant_crawler - INFO - [13/13] Searching EU portal: 'NGO capacity building digital' ...
+2026-03-10 09:26:19 - grant_crawler - INFO -   → 120599 total results for 'NGO capacity building digital'
+2026-03-10 09:26:19 - grant_crawler - INFO -   ✅ Pre-filter pass: National Cyber Hubs
+2026-03-10 09:26:19 - grant_crawler - INFO -   ✅ Pre-filter pass: Cross-Border Cyber Hubs
+2026-03-10 09:26:42 - grant_crawler - INFO - ============================================================
+2026-03-10 09:26:42 - grant_crawler - INFO - EC Europa API fetch summary:
+2026-03-10 09:26:42 - grant_crawler - INFO -   Total search hits:     3250
+2026-03-10 09:26:42 - grant_crawler - INFO -   Deduplicated:          1978
+2026-03-10 09:26:42 - grant_crawler - INFO -   Pre-filter removed:    42
+2026-03-10 09:26:42 - grant_crawler - INFO -   Deadline removed:      1166
+2026-03-10 09:26:42 - grant_crawler - INFO -   Passed to LLM scoring: 64
+2026-03-10 09:26:42 - grant_crawler - INFO - ============================================================
+2026-03-10 09:26:42 - GrantCrawler - INFO - Fetched 64 potential grants from EC Europa Funding & Tenders
+2026-03-10 09:26:42 - GrantCrawler - INFO - Analyzing: Digital Education Content: success factors in decision making and use by teachers, trainers and school/institution leaders...
+2026-03-10 09:27:02 - GrantCrawler - INFO - ❌ Low Score (45): Digital Education Content: success factors in decision making and use by teachers, trainers and school/institution leaders
+2026-03-10 09:27:02 - GrantCrawler - INFO - Analyzing: Digital Education: Public-private partnerships for ethical design, development and use of Artificial Intelligence tools in education and training...
+2026-03-10 09:27:20 - GrantCrawler - INFO - ❌ Low Score (40): Digital Education: Public-private partnerships for ethical design, development and use of Artificial Intelligence tools in education and training
+2026-03-10 09:27:20 - GrantCrawler - INFO - Analyzing: Topic 6: Digital education: Assessment of digital skills and competences...
+2026-03-10 09:27:27 - GrantCrawler - INFO - ❌ Low Score (45): Topic 6: Digital education: Assessment of digital skills and competences
+2026-03-10 09:27:28 - GrantCrawler - INFO - Analyzing: Digital Transformation of Asian Higher Education...
+2026-03-10 09:27:38 - GrantCrawler - INFO - ❌ Low Score (20): Digital Transformation of Asian Higher Education
+2026-03-10 09:27:38 - GrantCrawler - INFO - Analyzing: Digital Transformation in the Western Balkans Education...
+2026-03-10 09:28:03 - GrantCrawler - INFO - ❌ Low Score (20): Digital Transformation in the Western Balkans Education
+2026-03-10 09:28:03 - GrantCrawler - INFO - Analyzing: Digital Competence Levels Assessment in School Education...
+2026-03-10 09:28:13 - GrantCrawler - INFO - ❌ Low Score (45): Digital Competence Levels Assessment in School Education
+2026-03-10 09:28:13 - GrantCrawler - INFO - Analyzing: Transforming Professional Higher Education for the Green and Digital Transitions...
+2026-03-10 09:28:26 - GrantCrawler - INFO - ❌ Low Score (45): Transforming Professional Higher Education for the Green and Digital Transitions
+2026-03-10 09:28:26 - GrantCrawler - INFO - Analyzing: Capacity building in VET in South Mediterranean Countries...
+2026-03-10 09:28:47 - GrantCrawler - INFO - ❌ Low Score (40): Capacity building in VET in South Mediterranean Countries
+2026-03-10 09:28:47 - GrantCrawler - INFO - Analyzing: Towards a Europe of Bioeconomy Places...
+2026-03-10 09:28:54 - GrantCrawler - INFO - ❌ Low Score (10): Towards a Europe of Bioeconomy Places
+2026-03-10 09:28:54 - GrantCrawler - INFO - Analyzing: Scientific analysis and exploitation of space data...
+2026-03-10 09:29:01 - GrantCrawler - INFO - ❌ Low Score (0): Scientific analysis and exploitation of space data
+2026-03-10 09:29:01 - GrantCrawler - INFO - Analyzing: Understanding the forms of local democracy in low-income and low-middle income countries...
+2026-03-10 09:29:09 - GrantCrawler - INFO - ❌ Low Score (25): Understanding the forms of local democracy in low-income and low-middle income countries
+2026-03-10 09:29:09 - GrantCrawler - INFO - Analyzing: From lab to market: Strengthening the role of Technology Transfer Offices in bringing knowledge to the market...
+2026-03-10 09:29:19 - GrantCrawler - INFO - ❌ Low Score (20): From lab to market: Strengthening the role of Technology Transfer Offices in bringing knowledge to the market
+2026-03-10 09:29:19 - GrantCrawler - INFO - Analyzing: Digital and media literacy as drivers for democratic and civic resilience...
+2026-03-10 09:29:33 - GrantCrawler - INFO - ❌ Low Score (40): Digital and media literacy as drivers for democratic and civic resilience
+2026-03-10 09:29:33 - GrantCrawler - INFO - Analyzing: Addressing disabilities through the life course to support independent living and inclusion...
+2026-03-10 09:29:44 - GrantCrawler - INFO - ❌ Low Score (25): Addressing disabilities through the life course to support independent living and inclusion
+2026-03-10 09:29:44 - GrantCrawler - INFO - Analyzing: Behavioural interventions as primary prevention for Non-Communicable Diseases (NCDs) among young people...
+2026-03-10 09:30:03 - GrantCrawler - INFO - ❌ Low Score (40): Behavioural interventions as primary prevention for Non-Communicable Diseases (NCDs) among young people
+2026-03-10 09:30:03 - GrantCrawler - INFO - Analyzing: Building public trust and outreach in the life sciences...
+2026-03-10 09:30:12 - GrantCrawler - INFO - ❌ Low Score (15): Building public trust and outreach in the life sciences
+2026-03-10 09:30:12 - GrantCrawler - INFO - Analyzing: School Education: STEM Education Centres...
+2026-03-10 09:30:20 - GrantCrawler - INFO - ✅ RELEVANT (75): School Education: STEM Education Centres
+2026-03-10 09:30:20 - GrantCrawler - INFO - Analyzing: Demonstrating and deploying innovative collection, sorting-for-reuse and repair systems for textiles at city/region level (Circular Cities and Regions Initiative topic)...
+2026-03-10 09:30:29 - GrantCrawler - INFO - ❌ Low Score (15): Demonstrating and deploying innovative collection, sorting-for-reuse and repair systems for textiles at city/region level (Circular Cities and Regions Initiative topic)
+2026-03-10 09:30:29 - GrantCrawler - INFO - Analyzing: Support to the implementation of Circular Economy Strategy and Action Plan for Ukraine...
+2026-03-10 09:30:38 - GrantCrawler - INFO - ❌ Low Score (20): Support to the implementation of Circular Economy Strategy and Action Plan for Ukraine
+2026-03-10 09:30:38 - GrantCrawler - INFO - Analyzing: EEA/SUN/25/008 - Preparation of analytical report and expert workshop on the links between circular economy and wellbeing economy in Europe...
+2026-03-10 09:30:44 - GrantCrawler - INFO - ❌ Low Score (20): EEA/SUN/25/008 - Preparation of analytical report and expert workshop on the links between circular economy and wellbeing economy in Europe
+2026-03-10 09:30:44 - GrantCrawler - INFO - Analyzing: Crafting routes to a circular economy...
+2026-03-10 09:30:51 - GrantCrawler - INFO - ❌ Low Score (25): Crafting routes to a circular economy
+2026-03-10 09:30:51 - GrantCrawler - INFO - Analyzing: Advanced recovery of critical raw materials from Waste from Electrical and Electronic Equipment (WEEE)...
+2026-03-10 09:31:07 - GrantCrawler - INFO - ❌ Low Score (40): Advanced recovery of critical raw materials from Waste from Electrical and Electronic Equipment (WEEE)
+2026-03-10 09:31:07 - GrantCrawler - INFO - Analyzing: MSCA and Citizens 2027...
+2026-03-10 09:31:17 - GrantCrawler - INFO - ❌ Low Score (35): MSCA and Citizens 2027
+2026-03-10 09:31:17 - GrantCrawler - INFO - Analyzing: A services and business incubator for geospatial open-source developments...
+2026-03-10 09:31:24 - GrantCrawler - WARNING - Could not analyze relevance for A services and business incubator for geospatial open-source developments
+2026-03-10 09:31:24 - GrantCrawler - INFO - Analyzing: The impact of the use of digital tools outside school and for communication on educational outcomes and mental health...
+2026-03-10 09:31:40 - GrantCrawler - INFO - ❌ Low Score (45): The impact of the use of digital tools outside school and for communication on educational outcomes and mental health
+2026-03-10 09:31:40 - GrantCrawler - INFO - Analyzing: Towards a European network of ocean technology testing sites...
+2026-03-10 09:31:47 - GrantCrawler - INFO - ❌ Low Score (0): Towards a European network of ocean technology testing sites
+2026-03-10 09:31:47 - GrantCrawler - INFO - Analyzing: Coordinated preparedness testing and other preparedness actions...
+2026-03-10 09:31:53 - GrantCrawler - WARNING - Could not analyze relevance for Coordinated preparedness testing and other preparedness actions
+2026-03-10 09:31:53 - GrantCrawler - INFO - Analyzing: Ecosystems for Higher Education Inclusion: connecting underserved communities with higher education through participatory engagement and research methodologies (EHEI)...
+2026-03-10 09:32:05 - GrantCrawler - INFO - ❌ Low Score (25): Ecosystems for Higher Education Inclusion: connecting underserved communities with higher education through participatory engagement and research methodologies (EHEI)
+2026-03-10 09:32:05 - GrantCrawler - INFO - Analyzing: Virtual Human Twins (VHTs) for integrated clinical decision support in prevention and diagnosis...
+2026-03-10 09:32:11 - GrantCrawler - INFO - ❌ Low Score (10): Virtual Human Twins (VHTs) for integrated clinical decision support in prevention and diagnosis
+2026-03-10 09:32:11 - GrantCrawler - INFO - Analyzing: Towards Artificial General Intelligence (AGI) for healthcare...
+2026-03-10 09:32:17 - GrantCrawler - INFO - ❌ Low Score (10): Towards Artificial General Intelligence (AGI) for healthcare
+2026-03-10 09:32:18 - GrantCrawler - INFO - Analyzing: Support to European Research Area (ERA) action on accelerating New Approach Methodologies (NAMs) to advance biomedical research and testing of medicinal products and medical devices...
+2026-03-10 09:32:24 - GrantCrawler - INFO - ❌ Low Score (0): Support to European Research Area (ERA) action on accelerating New Approach Methodologies (NAMs) to advance biomedical research and testing of medicinal products and medical devices
+2026-03-10 09:32:24 - GrantCrawler - INFO - Analyzing: Development of predictive biomarkers of disease progression and treatment response by using AI methodologies for chronic non-communicable diseases...
+2026-03-10 09:32:35 - GrantCrawler - INFO - ❌ Low Score (10): Development of predictive biomarkers of disease progression and treatment response by using AI methodologies for chronic non-communicable diseases
+2026-03-10 09:32:35 - GrantCrawler - INFO - Analyzing: Enhancing and enlarging the European Partnership on Personalised Medicine (EP PerMEd) (Top-up)...
+2026-03-10 09:32:42 - GrantCrawler - WARNING - Could not analyze relevance for Enhancing and enlarging the European Partnership on Personalised Medicine (EP PerMEd) (Top-up)
+2026-03-10 09:32:42 - GrantCrawler - INFO - Analyzing: Personalised approaches to reduce risks from Adverse Drug Reactions due to administration of multiple medications...
+2026-03-10 09:32:48 - GrantCrawler - INFO - ❌ Low Score (0): Personalised approaches to reduce risks from Adverse Drug Reactions due to administration of multiple medications
+2026-03-10 09:32:48 - GrantCrawler - INFO - Analyzing: Public procurement of innovative solutions for improving citizens' access to healthcare through integrated or personalised approaches...
+2026-03-10 09:32:56 - GrantCrawler - INFO - ❌ Low Score (15): Public procurement of innovative solutions for improving citizens' access to healthcare through integrated or personalised approaches
+2026-03-10 09:32:56 - GrantCrawler - INFO - Analyzing: Identifying and addressing low-value care in health and care systems...
+2026-03-10 09:33:03 - GrantCrawler - INFO - ❌ Low Score (0): Identifying and addressing low-value care in health and care systems
+2026-03-10 09:33:03 - GrantCrawler - INFO - Analyzing: The transformative potential of co-governance in the green transition of neighbourhoods...
+2026-03-10 09:33:14 - GrantCrawler - INFO - ❌ Low Score (15): The transformative potential of co-governance in the green transition of neighbourhoods
+2026-03-10 09:33:14 - GrantCrawler - INFO - Analyzing: Intergenerational neighbourhoods and communities aligned with the New European Bauhaus...
+2026-03-10 09:33:21 - GrantCrawler - INFO - ❌ Low Score (10): Intergenerational neighbourhoods and communities aligned with the New European Bauhaus
+2026-03-10 09:33:21 - GrantCrawler - INFO - Analyzing: Innovative approaches for the spatial design of neighbourhoods...
+2026-03-10 09:33:29 - GrantCrawler - WARNING - Could not analyze relevance for Innovative approaches for the spatial design of neighbourhoods
+2026-03-10 09:33:29 - GrantCrawler - INFO - Analyzing: Understanding inhabitant’s experiences of neighbourhoods to support their health and well-being...
+2026-03-10 09:33:37 - GrantCrawler - INFO - ❌ Low Score (10): Understanding inhabitant’s experiences of neighbourhoods to support their health and well-being
+2026-03-10 09:33:37 - GrantCrawler - INFO - Analyzing: Novel combinations of knowledge and research methods to address social issues and advance a fair green transition of neighbourhoods...
+2026-03-10 09:33:47 - GrantCrawler - INFO - ❌ Low Score (20): Novel combinations of knowledge and research methods to address social issues and advance a fair green transition of neighbourhoods
+2026-03-10 09:33:47 - GrantCrawler - INFO - Analyzing: Addressing homelessness through housing-led approaches aligned with the New European Bauhaus...
+2026-03-10 09:33:55 - GrantCrawler - INFO - ❌ Low Score (10): Addressing homelessness through housing-led approaches aligned with the New European Bauhaus
+2026-03-10 09:33:55 - GrantCrawler - INFO - Analyzing: AI supporting informed advice for farmers and foresters to improve competitiveness and sustainability...
+2026-03-10 09:34:06 - GrantCrawler - INFO - ❌ Low Score (25): AI supporting informed advice for farmers and foresters to improve competitiveness and sustainability
+2026-03-10 09:34:06 - GrantCrawler - INFO - Analyzing: Fostering generational renewal in agriculture via EU advisory network...
+2026-03-10 09:34:13 - GrantCrawler - INFO - ❌ Low Score (10): Fostering generational renewal in agriculture via EU advisory network
+2026-03-10 09:34:13 - GrantCrawler - INFO - Analyzing: Strengthening strategic advice and synergies between EU and national Research and Innovation agendas and investments...
+2026-03-10 09:34:21 - GrantCrawler - INFO - ❌ Low Score (10): Strengthening strategic advice and synergies between EU and national Research and Innovation agendas and investments
+2026-03-10 09:34:21 - GrantCrawler - INFO - Analyzing: Additional activities for the European Partnership of Agriculture of Data...
+2026-03-10 09:34:28 - GrantCrawler - INFO - ❌ Low Score (10): Additional activities for the European Partnership of Agriculture of Data
+2026-03-10 09:34:28 - GrantCrawler - INFO - Analyzing: International dimension of the circular bio-based economy: seeking win-win opportunities...
+2026-03-10 09:34:46 - GrantCrawler - INFO - ❌ Low Score (25): International dimension of the circular bio-based economy: seeking win-win opportunities
+2026-03-10 09:34:46 - GrantCrawler - INFO - Analyzing: Increasing knowledge flows to practice within AKIS via EU thematic knowledge hubs...
+2026-03-10 09:34:53 - GrantCrawler - WARNING - Could not analyze relevance for Increasing knowledge flows to practice within AKIS via EU thematic knowledge hubs
+2026-03-10 09:34:53 - GrantCrawler - INFO - Analyzing: Strengthening the resilience of European farmers through improved capacity in coping with risks and crises...
+2026-03-10 09:34:59 - GrantCrawler - INFO - ❌ Low Score (10): Strengthening the resilience of European farmers through improved capacity in coping with risks and crises
+2026-03-10 09:34:59 - GrantCrawler - INFO - Analyzing: Contribution of basic skills to productivity, innovation, competitiveness and economic growth...
+2026-03-10 09:35:18 - GrantCrawler - INFO - ❌ Low Score (45): Contribution of basic skills to productivity, innovation, competitiveness and economic growth
+2026-03-10 09:35:18 - GrantCrawler - INFO - Analyzing: Closing the learning gap: uncovering causes and effective policy interventions for declining youth skills in mathematics, reading, and science...
+2026-03-10 09:35:29 - GrantCrawler - INFO - ❌ Low Score (45): Closing the learning gap: uncovering causes and effective policy interventions for declining youth skills in mathematics, reading, and science
+2026-03-10 09:35:29 - GrantCrawler - INFO - Analyzing: The effective use of artificial intelligence in learning environments in pre-primary and primary education...
+2026-03-10 09:35:45 - GrantCrawler - INFO - ❌ Low Score (40): The effective use of artificial intelligence in learning environments in pre-primary and primary education
+2026-03-10 09:35:45 - GrantCrawler - INFO - Analyzing: Impact of access to nature-positive environments in promoting social cohesion and reducing inequalities in urban and peri-urban settings...
+2026-03-10 09:35:56 - GrantCrawler - INFO - ❌ Low Score (25): Impact of access to nature-positive environments in promoting social cohesion and reducing inequalities in urban and peri-urban settings
+2026-03-10 09:35:56 - GrantCrawler - INFO - Analyzing: Strengthened implementation of the EU Pact on Migration and Asylum and a focus on inclusion, integration, and health...
+2026-03-10 09:36:08 - GrantCrawler - INFO - ❌ Low Score (10): Strengthened implementation of the EU Pact on Migration and Asylum and a focus on inclusion, integration, and health
+2026-03-10 09:36:08 - GrantCrawler - INFO - Analyzing: Impact of in-kind benefits on income distribution and on vulnerable populations...
+2026-03-10 09:36:16 - GrantCrawler - INFO - ❌ Low Score (20): Impact of in-kind benefits on income distribution and on vulnerable populations
+2026-03-10 09:36:16 - GrantCrawler - INFO - Analyzing: Capacity building in VET in Neighbourhood East...
+2026-03-10 09:36:29 - GrantCrawler - INFO - ❌ Low Score (40): Capacity building in VET in Neighbourhood East
+2026-03-10 09:36:29 - GrantCrawler - INFO - Analyzing: Capacity building in VET in Caribbean...
+2026-03-10 09:36:44 - GrantCrawler - INFO - ❌ Low Score (40): Capacity building in VET in Caribbean
+2026-03-10 09:36:44 - GrantCrawler - INFO - Analyzing: Capacity building in VET in Latin America...
+2026-03-10 09:37:00 - GrantCrawler - INFO - ❌ Low Score (40): Capacity building in VET in Latin America
+2026-03-10 09:37:00 - GrantCrawler - INFO - Analyzing: Capacity building in VET in Western Balkans...
+2026-03-10 09:37:15 - GrantCrawler - INFO - ❌ Low Score (20): Capacity building in VET in Western Balkans
+2026-03-10 09:37:15 - GrantCrawler - INFO - Analyzing: Training and innovation networks for sustained capacity development related to ethics, regulatory, pharmacovigilance, and related digital regulatory platforms...
+2026-03-10 09:37:26 - GrantCrawler - INFO - ❌ Low Score (35): Training and innovation networks for sustained capacity development related to ethics, regulatory, pharmacovigilance, and related digital regulatory platforms
+2026-03-10 09:37:26 - GrantCrawler - INFO - Analyzing: Digital Skills Training for Health Care Professionals in Oncology...
+2026-03-10 09:37:36 - GrantCrawler - INFO - ❌ Low Score (10): Digital Skills Training for Health Care Professionals in Oncology
+2026-03-10 09:37:36 - GrantCrawler - INFO - Analyzing: Call for proposals to provide training for health workforce, including digital skills...
+2026-03-10 09:37:45 - GrantCrawler - INFO - ❌ Low Score (40): Call for proposals to provide training for health workforce, including digital skills
+2026-03-10 09:37:45 - GrantCrawler - INFO - Analyzing: National Cyber Hubs...
+2026-03-10 09:37:58 - GrantCrawler - INFO - ❌ Low Score (20): National Cyber Hubs
+2026-03-10 09:37:58 - GrantCrawler - INFO - Analyzing: Cross-Border Cyber Hubs...
+2026-03-10 09:38:05 - GrantCrawler - INFO - ❌ Low Score (5): Cross-Border Cyber Hubs
+2026-03-10 09:38:05 - GrantCrawler - INFO - ================================================================================
+2026-03-10 09:38:05 - GrantCrawler - INFO - PLAYWRIGHT PROFILES (5 sites)
+2026-03-10 09:38:05 - GrantCrawler - INFO - ================================================================================
+2026-03-10 09:38:09 - GrantCrawler - INFO - ================================================================================
+2026-03-10 09:38:09 - GrantCrawler - INFO - SITE [Playwright]: Charity Excellence
+2026-03-10 09:38:09 - GrantCrawler - INFO - ================================================================================
+2026-03-10 09:38:09 - GrantCrawler - INFO - [CharityExcellence] Logging in …
+2026-03-10 09:38:19 - GrantCrawler - INFO - [CharityExcellence] Login successful → https://myaccount.charityexcellence.co.uk/Dashboard/Index
+2026-03-10 09:38:19 - GrantCrawler - INFO - [CharityExcellence] Opening Funding Finder …
+2026-03-10 09:38:24 - GrantCrawler - INFO - [CharityExcellence] Setting search filters …
+2026-03-10 09:38:55 - GrantCrawler - ERROR - [CharityExcellence] run() failed: Page.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("#btnserarch")
+    - locator resolved to <button id="btnserarch" class="btn btn-primary mb-2 btn-search">Search</button>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div tabindex="-1" role="dialog" id="targethelpfinder" aria-labelledby="mySmallModalLabel" class="modal fade bs-example-modal-lg in">…</div> intercepts pointer events
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div tabindex="-1" role="dialog" id="targethelpfinder" aria-labelledby="mySmallModalLabel" class="modal fade bs-example-modal-lg in">…</div> intercepts pointer events
+    - retrying click action
+      - waiting 100ms
+    56 × waiting for element to be visible, enabled and stable
+       - element is visible, enabled and stable
+       - scrolling into view if needed
+       - done scrolling
+       - <div tabindex="-1" role="dialog" id="targethelpfinder" aria-labelledby="mySmallModalLabel" class="modal fade bs-example-modal-lg in">…</div> intercepts pointer events
+     - retrying click action
+       - waiting 500ms
+Traceback (most recent call last):
+  File "C:\Users\Francis\Desktop\DSG\deepseek-ai-web-crawler\site_profiles\charityexcellence.py", line 116, in run
+    await self._set_filters_and_search(page)
+  File "C:\Users\Francis\Desktop\DSG\deepseek-ai-web-crawler\site_profiles\charityexcellence.py", line 289, in _set_filters_and_search
+    await page.click("#btnserarch")
+  File "C:\Users\Francis\miniconda3\Lib\site-packages\playwright\async_api\_generated.py", line 9878, in click
+    await self._impl_obj.click(
+    ...<11 lines>...
+    )
+  File "C:\Users\Francis\miniconda3\Lib\site-packages\playwright\_impl\_page.py", line 857, in click
+    return await self._main_frame.click(**locals_to_params(locals()))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Francis\miniconda3\Lib\site-packages\playwright\_impl\_frame.py", line 549, in click
+    await self._channel.send("click", self._timeout, locals_to_params(locals()))
+  File "C:\Users\Francis\miniconda3\Lib\site-packages\playwright\_impl\_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\Francis\miniconda3\Lib\site-packages\playwright\_impl\_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: Page.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("#btnserarch")
+    - locator resolved to <button id="btnserarch" class="btn btn-primary mb-2 btn-search">Search</button>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div tabindex="-1" role="dialog" id="targethelpfinder" aria-labelledby="mySmallModalLabel" class="modal fade bs-example-modal-lg in">…</div> intercepts pointer events
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div tabindex="-1" role="dialog" id="targethelpfinder" aria-labelledby="mySmallModalLabel" class="modal fade bs-example-modal-lg in">…</div> intercepts pointer events
+    - retrying click action
+      - waiting 100ms
+    56 × waiting for element to be visible, enabled and stable
+       - element is visible, enabled and stable
+       - scrolling into view if needed
+       - done scrolling
+       - <div tabindex="-1" role="dialog" id="targethelpfinder" aria-labelledby="mySmallModalLabel" class="modal fade bs-example-modal-lg in">…</div> intercepts pointer events
+     - retrying click action
+       - waiting 500ms
+
+2026-03-10 09:38:55 - GrantCrawler - INFO - [CharityExcellence] Finished — 0 grants passed relevance threshold.
+2026-03-10 09:38:55 - GrantCrawler - INFO - Completed Playwright site: Charity Excellence
+2026-03-10 09:38:55 - GrantCrawler - INFO - Total grants collected so far: 1
+
+2026-03-10 09:38:55 - GrantCrawler - INFO - ================================================================================
+2026-03-10 09:38:55 - GrantCrawler - INFO - SITE [Playwright]: GlobalGiving
+2026-03-10 09:38:55 - GrantCrawler - INFO - ================================================================================
+2026-03-10 09:38:55 - GrantCrawler - INFO - ================================================================================
+2026-03-10 09:38:55 - GrantCrawler - INFO - [Playwright] GlobalGiving — URL 1/3: https://www.globalgiving.org/search/?size=25&nextPage=1&sortField=sortorder&selectedThemes=edu&selectedCountries=KE,TZ,UG,NG,GH,ZA,ET,RW,MW,SN
+2026-03-10 09:38:55 - GrantCrawler - INFO - ================================================================================
+2026-03-10 09:38:55 - GrantCrawler - INFO - [Playwright] Loading page 1: https://www.globalgiving.org/search/?size=25&nextPage=1&sortField=sortorder&selectedThemes=edu&selectedCountries=KE,TZ,UG,NG,GH,ZA,ET,RW,MW,SN
+2026-03-10 09:38:56 - GrantCrawler - WARNING - [Playwright] Failed to load https://www.globalgiving.org/search/?size=25&nextPage=1&sortField=sortorder&selectedThemes=edu&selectedCountries=KE,TZ,UG,NG,GH,ZA,ET,RW,MW,SN — skipping.
+2026-03-10 09:38:56 - GrantCrawler - INFO - [Playwright] Completed GlobalGiving — https://www.globalgiving.org/search/?size=25&nextPage=1&sortField=sortorder&selectedThemes=edu&selectedCountries=KE,TZ,UG,NG,GH,ZA,ET,RW,MW,SN (0 grants total)
+
+2026-03-10 09:38:56 - GrantCrawler - INFO - ================================================================================
+2026-03-10 09:38:56 - GrantCrawler - INFO - [Playwright] GlobalGiving — URL 2/3: https://www.globalgiving.org/search/?size=25&nextPage=1&sortField=sortorder&selectedThemes=tech&selectedCountries=KE,TZ,UG,NG,GH,ZA,ET,RW,MW,SN
+2026-03-10 09:38:56 - GrantCrawler - INFO - ================================================================================
+2026-03-10 09:38:56 - GrantCrawler - INFO - [Playwright] Loading page 1: https://www.globalgiving.org/search/?size=25&nextPage=1&sortField=sortorder&selectedThemes=tech&selectedCountries=KE,TZ,UG,NG,GH,ZA,ET,RW,MW,SN
+2026-03-10 09:38:57 - GrantCrawler - WARNING - [Playwright] Failed to load https://www.globalgiving.org/search/?size=25&nextPage=1&sortField=sortorder&selectedThemes=tech&selectedCountries=KE,TZ,UG,NG,GH,ZA,ET,RW,MW,SN — skipping.
+2026-03-10 09:38:57 - GrantCrawler - INFO - [Playwright] Completed GlobalGiving — https://www.globalgiving.org/search/?size=25&nextPage=1&sortField=sortorder&selectedThemes=tech&selectedCountries=KE,TZ,UG,NG,GH,ZA,ET,RW,MW,SN (0 grants total)
+
+2026-03-10 09:38:57 - GrantCrawler - INFO - ================================================================================
+2026-03-10 09:38:57 - GrantCrawler - INFO - [Playwright] GlobalGiving — URL 3/3: https://www.globalgiving.org/search/?size=25&nextPage=1&sortField=sortorder&selectedThemes=children&selectedCountries=KE,TZ,UG,NG,GH,ZA,ET,RW,MW,SN
+2026-03-10 09:38:57 - GrantCrawler - INFO - ================================================================================
+2026-03-10 09:38:57 - GrantCrawler - INFO - [Playwright] Loading page 1: https://www.globalgiving.org/search/?size=25&nextPage=1&sortField=sortorder&selectedThemes=children&selectedCountries=KE,TZ,UG,NG,GH,ZA,ET,RW,MW,SN
+2026-03-10 09:38:57 - GrantCrawler - WARNING - [Playwright] Failed to load https://www.globalgiving.org/search/?size=25&nextPage=1&sortField=sortorder&selectedThemes=children&selectedCountries=KE,TZ,UG,NG,GH,ZA,ET,RW,MW,SN — skipping.
+2026-03-10 09:38:57 - GrantCrawler - INFO - [Playwright] Completed GlobalGiving — https://www.globalgiving.org/search/?size=25&nextPage=1&sortField=sortorder&selectedThemes=children&selectedCountries=KE,TZ,UG,NG,GH,ZA,ET,RW,MW,SN (0 grants total)
+
+2026-03-10 09:38:57 - GrantCrawler - INFO - Completed Playwright site: GlobalGiving
+2026-03-10 09:38:57 - GrantCrawler - INFO - Total grants collected so far: 1
+
+2026-03-10 09:38:57 - GrantCrawler - INFO - ================================================================================
+2026-03-10 09:38:57 - GrantCrawler - INFO - SITE [Playwright]: DevEx Funding
+2026-03-10 09:38:57 - GrantCrawler - INFO - ================================================================================
+2026-03-10 09:38:57 - GrantCrawler - INFO - ================================================================================
+2026-03-10 09:38:57 - GrantCrawler - INFO - [Playwright] DevEx Funding — URL 1/1: https://www.devex.com/funding/r?report=tender-849820&filter%5Bnews_topics%5D%5B%5D=Careers%20%26%20Education&filter%5Bplaces%5D%5B%5D=Eastern%20Africa&filter%5Btype%5D%5B%5D=funding_info&filter%5Btype%5D%5B%5D=tender&filter%5Btype%5D%5B%5D=grant&filter%5Btype%5D%5B%5D=open_opportunity&filter%5Bstatuses%5D%5B%5D=forecast&filter%5Bstatuses%5D%5B%5D=open&sorting%5Border%5D=desc&sorting%5Bfield%5D=updated_at
+2026-03-10 09:38:57 - GrantCrawler - INFO - ================================================================================
+2026-03-10 09:38:57 - GrantCrawler - INFO - [Playwright] Loading page 1: https://www.devex.com/funding/r?report=tender-849820&filter%5Bnews_topics%5D%5B%5D=Careers%20%26%20Education&filter%5Bplaces%5D%5B%5D=Eastern%20Africa&filter%5Btype%5D%5B%5D=funding_info&filter%5Btype%5D%5B%5D=tender&filter%5Btype%5D%5B%5D=grant&filter%5Btype%5D%5B%5D=open_opportunity&filter%5Bstatuses%5D%5B%5D=forecast&filter%5Bstatuses%5D%5B%5D=open&sorting%5Border%5D=desc&sorting%5Bfield%5D=updated_at
+2026-03-10 09:39:47 - GrantCrawler - ERROR - [DevEx Funding] LLM extraction failed: the JSON object must be str, bytes or bytearray, not list
+2026-03-10 09:39:47 - GrantCrawler - INFO - [Playwright] No grants extracted from page 1.
+2026-03-10 09:39:47 - GrantCrawler - INFO - [Playwright] Loading page 2: https://www.devex.com/funding/r?report=tender-849820&filter%5Bnews_topics%5D%5B%5D=Careers%20%26%20Education&filter%5Bplaces%5D%5B%5D=Eastern%20Africa&filter%5Btype%5D%5B%5D=funding_info&filter%5Btype%5D%5B%5D=tender&filter%5Btype%5D%5B%5D=grant&filter%5Btype%5D%5B%5D=open_opportunity&filter%5Bstatuses%5D%5B%5D=forecast&filter%5Bstatuses%5D%5B%5D=open&sorting%5Border%5D=desc&sorting%5Bfield%5D=updated_at&page=2
+2026-03-10 09:40:15 - GrantCrawler - ERROR - [DevEx Funding] LLM extraction failed: the JSON object must be str, bytes or bytearray, not list
+2026-03-10 09:40:15 - GrantCrawler - INFO - [Playwright] No grants extracted from page 2.
+2026-03-10 09:40:15 - GrantCrawler - INFO - [Playwright] 2 consecutive empty pages — moving on.
+2026-03-10 09:40:15 - GrantCrawler - INFO - [Playwright] Completed DevEx Funding — https://www.devex.com/funding/r?report=tender-849820&filter%5Bnews_topics%5D%5B%5D=Careers%20%26%20Education&filter%5Bplaces%5D%5B%5D=Eastern%20Africa&filter%5Btype%5D%5B%5D=funding_info&filter%5Btype%5D%5B%5D=tender&filter%5Btype%5D%5B%5D=grant&filter%5Btype%5D%5B%5D=open_opportunity&filter%5Bstatuses%5D%5B%5D=forecast&filter%5Bstatuses%5D%5B%5D=open&sorting%5Border%5D=desc&sorting%5Bfield%5D=updated_at (0 grants total)
+
+2026-03-10 09:40:15 - GrantCrawler - INFO - Completed Playwright site: DevEx Funding
+2026-03-10 09:40:15 - GrantCrawler - INFO - Total grants collected so far: 1
+
+2026-03-10 09:40:15 - GrantCrawler - INFO - ================================================================================
+2026-03-10 09:40:15 - GrantCrawler - INFO - SITE [Playwright]: DevelopmentAid
+2026-03-10 09:40:15 - GrantCrawler - INFO - ================================================================================
+2026-03-10 09:40:15 - GrantCrawler - INFO - ======================================================================
+2026-03-10 09:40:15 - GrantCrawler - INFO - [DevelopmentAid] Search 1/5: https://www.developmentaid.org/grants/search?hiddenAdvancedFilters=0&locations=3&applicantTypes=1&sectors=5&sort=relevan…
+2026-03-10 09:40:15 - GrantCrawler - INFO - ======================================================================
+2026-03-10 09:40:22 - GrantCrawler - INFO - [DevelopmentAid] Search 1 returned 186 results.
+2026-03-10 09:40:22 - GrantCrawler - INFO - [DevelopmentAid] Search 1, page 1/4
+2026-03-10 09:40:22 - GrantCrawler - INFO -   Analyzing relevance: FO.PR.ALB – Quality professional training for the tourism and hotel sector in the Zanzibar archipelago (AID 013267/01/1) …
+2026-03-10 09:40:33 - GrantCrawler - INFO -   ✗ Low score (40): FO.PR.ALB – Quality professional training for the tourism and hotel sector in the Zanzibar archipelago (AID 013267/01/1)
+2026-03-10 09:40:33 - GrantCrawler - INFO -   Analyzing relevance: Matching Grants Scheme under the Green Heart of Africa - Tikope Alendo ndi Zachilngedwe m’Malawi (TAZA) Programme …
+2026-03-10 09:40:58 - GrantCrawler - INFO -   ✗ Low score (45): Matching Grants Scheme under the Green Heart of Africa - Tikope Alendo ndi Zachilngedwe m’Malawi (TAZA) Programme
+2026-03-10 09:40:58 - GrantCrawler - INFO - [DevelopmentAid] Search 1, page 1 done — 0 grants total so far.
+2026-03-10 09:41:00 - GrantCrawler - INFO - [DevelopmentAid] Search 1, page 2/4
+2026-03-10 09:41:04 - GrantCrawler - INFO - [DevelopmentAid] Search 1, page 2 done — 0 grants total so far.
+2026-03-10 09:41:06 - GrantCrawler - INFO - [DevelopmentAid] Search 1, page 3/4
+2026-03-10 09:41:10 - GrantCrawler - INFO -   Analyzing relevance: FO.PR.ALB – Quality professional training for the tourism and hotel sector in the Zanzibar archipelago (AID 013267/01/1) …
+2026-03-10 09:41:31 - GrantCrawler - INFO -   ✗ Low score (25): FO.PR.ALB – Quality professional training for the tourism and hotel sector in the Zanzibar archipelago (AID 013267/01/1)
+2026-03-10 09:41:31 - GrantCrawler - INFO -   Analyzing relevance: Matching Grants Scheme under the Green Heart of Africa - Tikope Alendo ndi Zachilngedwe m’Malawi (TAZA) Programme …
+2026-03-10 09:41:48 - GrantCrawler - INFO -   ✗ Low score (45): Matching Grants Scheme under the Green Heart of Africa - Tikope Alendo ndi Zachilngedwe m’Malawi (TAZA) Programme
+2026-03-10 09:41:48 - GrantCrawler - INFO - [DevelopmentAid] Search 1, page 3 done — 0 grants total so far.
+2026-03-10 09:41:50 - GrantCrawler - INFO - [DevelopmentAid] Search 1, page 4/4
+2026-03-10 09:41:54 - GrantCrawler - INFO -   Analyzing relevance: FO.PR.ALB – Quality professional training for the tourism and hotel sector in the Zanzibar archipelago (AID 013267/01/1) …
+2026-03-10 09:42:09 - GrantCrawler - INFO -   ✗ Low score (40): FO.PR.ALB – Quality professional training for the tourism and hotel sector in the Zanzibar archipelago (AID 013267/01/1)
+2026-03-10 09:42:09 - GrantCrawler - INFO -   Analyzing relevance: Matching Grants Scheme under the Green Heart of Africa - Tikope Alendo ndi Zachilngedwe m’Malawi (TAZA) Programme …
+2026-03-10 09:42:24 - GrantCrawler - INFO -   ✗ Low score (45): Matching Grants Scheme under the Green Heart of Africa - Tikope Alendo ndi Zachilngedwe m’Malawi (TAZA) Programme
+2026-03-10 09:42:24 - GrantCrawler - INFO - [DevelopmentAid] Search 1, page 4 done — 0 grants total so far.
+2026-03-10 09:42:26 - GrantCrawler - INFO - [DevelopmentAid] Search 1 complete — 0 grants so far across all searches.
+2026-03-10 09:42:26 - GrantCrawler - INFO - ======================================================================
+2026-03-10 09:42:26 - GrantCrawler - INFO - [DevelopmentAid] Search 2/5: https://www.developmentaid.org/grants/search?hiddenAdvancedFilters=0&locations=3&applicantTypes=1&sectors=5&sort=relevan…
+2026-03-10 09:42:26 - GrantCrawler - INFO - ======================================================================
+2026-03-10 09:42:30 - GrantCrawler - INFO - [DevelopmentAid] Search 2 returned 611 results.
+2026-03-10 09:42:30 - GrantCrawler - INFO - [DevelopmentAid] Search 2, page 1/5
+2026-03-10 09:42:30 - GrantCrawler - INFO -   Analyzing relevance: Call to Establish a Pool of Eligible Standby CSO Partners for UNICEF Sudan – South Area Field Offices – Education Programme (June ... …
+2026-03-10 09:42:43 - GrantCrawler - INFO -   ✗ Low score (40): Call to Establish a Pool of Eligible Standby CSO Partners for UNICEF Sudan – South Area Field Offices – Education Programme (June ...
+2026-03-10 09:42:43 - GrantCrawler - INFO -   Analyzing relevance: Explosive Ordnance Risk Education (EORE) Indirect Delivery Campaign to protect civilians from Explosive Ordnance risks in Sudan …
+2026-03-10 09:42:53 - GrantCrawler - INFO -   ✗ Low score (20): Explosive Ordnance Risk Education (EORE) Indirect Delivery Campaign to protect civilians from Explosive Ordnance risks in Sudan
+2026-03-10 09:42:53 - GrantCrawler - INFO -   Analyzing relevance: Matching Grants Scheme under the Green Heart of Africa - Tikope Alendo ndi Zachilngedwe m’Malawi (TAZA) Programme …
+2026-03-10 09:43:10 - GrantCrawler - INFO -   ✗ Low score (45): Matching Grants Scheme under the Green Heart of Africa - Tikope Alendo ndi Zachilngedwe m’Malawi (TAZA) Programme
+2026-03-10 09:43:10 - GrantCrawler - INFO - [DevelopmentAid] Search 2, page 1 done — 0 grants total so far.
+2026-03-10 09:43:12 - GrantCrawler - INFO - [DevelopmentAid] Search 2, page 2/5
+2026-03-10 09:43:15 - GrantCrawler - INFO -   Analyzing relevance: Knorr-Bremse Global Care e. V. …
+2026-03-10 09:43:26 - GrantCrawler - INFO -   ✓ Relevant (75/100): Knorr-Bremse Global Care e. V.
+2026-03-10 09:43:26 - GrantCrawler - INFO - [DevelopmentAid] Search 2, page 2 done — 1 grants total so far.
+2026-03-10 09:43:28 - GrantCrawler - INFO - [DevelopmentAid] Search 2, page 3/5
+2026-03-10 09:43:32 - GrantCrawler - INFO -   Analyzing relevance: Call to Establish a Pool of Eligible Standby CSO Partners for UNICEF Sudan – South Area Field Offices – Education Programme (June ... …
+2026-03-10 09:43:43 - GrantCrawler - INFO -   ✗ Low score (40): Call to Establish a Pool of Eligible Standby CSO Partners for UNICEF Sudan – South Area Field Offices – Education Programme (June ...
+2026-03-10 09:43:43 - GrantCrawler - INFO -   Analyzing relevance: Explosive Ordnance Risk Education (EORE) Indirect Delivery Campaign to protect civilians from Explosive Ordnance risks in Sudan …
+2026-03-10 09:43:53 - GrantCrawler - INFO -   ✗ Low score (40): Explosive Ordnance Risk Education (EORE) Indirect Delivery Campaign to protect civilians from Explosive Ordnance risks in Sudan
+2026-03-10 09:43:53 - GrantCrawler - INFO -   Analyzing relevance: Matching Grants Scheme under the Green Heart of Africa - Tikope Alendo ndi Zachilngedwe m’Malawi (TAZA) Programme …
+2026-03-10 09:44:10 - GrantCrawler - INFO -   ✗ Low score (40): Matching Grants Scheme under the Green Heart of Africa - Tikope Alendo ndi Zachilngedwe m’Malawi (TAZA) Programme
+2026-03-10 09:44:10 - GrantCrawler - INFO - [DevelopmentAid] Search 2, page 3 done — 1 grants total so far.
+2026-03-10 09:44:12 - GrantCrawler - INFO - [DevelopmentAid] Search 2, page 4/5
+2026-03-10 09:44:15 - GrantCrawler - INFO -   Analyzing relevance: Call to Establish a Pool of Eligible Standby CSO Partners for UNICEF Sudan – South Area Field Offices – Education Programme (June ... …
+2026-03-10 09:44:28 - GrantCrawler - INFO -   ✗ Low score (40): Call to Establish a Pool of Eligible Standby CSO Partners for UNICEF Sudan – South Area Field Offices – Education Programme (June ...
+2026-03-10 09:44:28 - GrantCrawler - INFO -   Analyzing relevance: Explosive Ordnance Risk Education (EORE) Indirect Delivery Campaign to protect civilians from Explosive Ordnance risks in Sudan …
+2026-03-10 09:44:46 - GrantCrawler - INFO -   ✗ Low score (30): Explosive Ordnance Risk Education (EORE) Indirect Delivery Campaign to protect civilians from Explosive Ordnance risks in Sudan
+2026-03-10 09:44:46 - GrantCrawler - INFO -   Analyzing relevance: Matching Grants Scheme under the Green Heart of Africa - Tikope Alendo ndi Zachilngedwe m’Malawi (TAZA) Programme …
+2026-03-10 09:45:08 - GrantCrawler - INFO -   ✗ Low score (45): Matching Grants Scheme under the Green Heart of Africa - Tikope Alendo ndi Zachilngedwe m’Malawi (TAZA) Programme
+2026-03-10 09:45:08 - GrantCrawler - INFO - [DevelopmentAid] Search 2, page 4 done — 1 grants total so far.
+2026-03-10 09:45:10 - GrantCrawler - INFO - [DevelopmentAid] Search 2, page 5/5
+2026-03-10 09:45:14 - GrantCrawler - INFO -   Analyzing relevance: Call to Establish a Pool of Eligible Standby CSO Partners for UNICEF Sudan – South Area Field Offices – Education Programme (June ... …
+2026-03-10 09:45:27 - GrantCrawler - INFO -   ✗ Low score (40): Call to Establish a Pool of Eligible Standby CSO Partners for UNICEF Sudan – South Area Field Offices – Education Programme (June ...
+2026-03-10 09:45:27 - GrantCrawler - INFO -   Analyzing relevance: Explosive Ordnance Risk Education (EORE) Indirect Delivery Campaign to protect civilians from Explosive Ordnance risks in Sudan …
+2026-03-10 09:45:37 - GrantCrawler - INFO -   ✗ Low score (20): Explosive Ordnance Risk Education (EORE) Indirect Delivery Campaign to protect civilians from Explosive Ordnance risks in Sudan
+2026-03-10 09:45:37 - GrantCrawler - INFO -   Analyzing relevance: Matching Grants Scheme under the Green Heart of Africa - Tikope Alendo ndi Zachilngedwe m’Malawi (TAZA) Programme …
+2026-03-10 09:45:56 - GrantCrawler - INFO -   ✗ Low score (40): Matching Grants Scheme under the Green Heart of Africa - Tikope Alendo ndi Zachilngedwe m’Malawi (TAZA) Programme
+2026-03-10 09:45:56 - GrantCrawler - INFO - [DevelopmentAid] Search 2, page 5 done — 1 grants total so far.
+2026-03-10 09:45:58 - GrantCrawler - INFO - [DevelopmentAid] Search 2 complete — 1 grants so far across all searches.
+2026-03-10 09:45:58 - GrantCrawler - INFO - ======================================================================
+2026-03-10 09:45:58 - GrantCrawler - INFO - [DevelopmentAid] Search 3/5: https://www.developmentaid.org/grants/search?hiddenAdvancedFilters=0&locations=3&applicantTypes=1&sectors=5&sort=relevan…
+2026-03-10 09:45:58 - GrantCrawler - INFO - ======================================================================
+2026-03-10 09:46:01 - GrantCrawler - INFO - [DevelopmentAid] Search 3 returned 725 results.
+2026-03-10 09:46:01 - GrantCrawler - INFO - [DevelopmentAid] Search 3, page 1/5
+2026-03-10 09:46:01 - GrantCrawler - INFO -   Analyzing relevance: FO.PR.ALB – Quality professional training for the tourism and hotel sector in the Zanzibar archipelago (AID 013267/01/1) …
+2026-03-10 09:46:14 - GrantCrawler - INFO -   ✗ Low score (35): FO.PR.ALB – Quality professional training for the tourism and hotel sector in the Zanzibar archipelago (AID 013267/01/1)
+2026-03-10 09:46:14 - GrantCrawler - INFO -   Analyzing relevance: U.S. Embassy Port Louis Public Diplomacy Small Grants Program …
+2026-03-10 09:46:22 - GrantCrawler - INFO -   ✗ Low score (25): U.S. Embassy Port Louis Public Diplomacy Small Grants Program
+2026-03-10 09:46:22 - GrantCrawler - INFO - [DevelopmentAid] Search 3, page 1 done — 1 grants total so far.
+2026-03-10 09:46:24 - GrantCrawler - INFO - [DevelopmentAid] Search 3, page 2/5
+2026-03-10 09:46:29 - GrantCrawler - INFO -   Analyzing relevance: Dispositif de soutien au tissu associatif des Français à l’étranger (STAFE) - 2025 …
+2026-03-10 09:46:43 - GrantCrawler - INFO -   ✗ Low score (40): Dispositif de soutien au tissu associatif des Français à l’étranger (STAFE) - 2025
+2026-03-10 09:46:43 - GrantCrawler - INFO - [DevelopmentAid] Search 3, page 2 done — 1 grants total so far.
+2026-03-10 09:46:45 - GrantCrawler - INFO - [DevelopmentAid] Search 3, page 3/5
+2026-03-10 09:46:48 - GrantCrawler - INFO -   Analyzing relevance: FO.PR.ALB – Quality professional training for the tourism and hotel sector in the Zanzibar archipelago (AID 013267/01/1) …
+2026-03-10 09:47:03 - GrantCrawler - INFO -   ✗ Low score (35): FO.PR.ALB – Quality professional training for the tourism and hotel sector in the Zanzibar archipelago (AID 013267/01/1)
+2026-03-10 09:47:03 - GrantCrawler - INFO -   Analyzing relevance: U.S. Embassy Port Louis Public Diplomacy Small Grants Program …
+2026-03-10 09:47:21 - GrantCrawler - INFO -   ✗ Low score (45): U.S. Embassy Port Louis Public Diplomacy Small Grants Program
+2026-03-10 09:47:21 - GrantCrawler - INFO - [DevelopmentAid] Search 3, page 3 done — 1 grants total so far.
+2026-03-10 09:47:23 - GrantCrawler - INFO - [DevelopmentAid] Search 3, page 4/5
+2026-03-10 09:47:26 - GrantCrawler - INFO -   Analyzing relevance: FO.PR.ALB – Quality professional training for the tourism and hotel sector in the Zanzibar archipelago (AID 013267/01/1) …
+2026-03-10 09:47:46 - GrantCrawler - INFO -   ✗ Low score (35): FO.PR.ALB – Quality professional training for the tourism and hotel sector in the Zanzibar archipelago (AID 013267/01/1)
+2026-03-10 09:47:46 - GrantCrawler - INFO -   Analyzing relevance: U.S. Embassy Port Louis Public Diplomacy Small Grants Program …
+2026-03-10 09:47:58 - GrantCrawler - INFO -   ✗ Low score (35): U.S. Embassy Port Louis Public Diplomacy Small Grants Program
+2026-03-10 09:47:58 - GrantCrawler - INFO - [DevelopmentAid] Search 3, page 4 done — 1 grants total so far.
+2026-03-10 09:48:00 - GrantCrawler - INFO - [DevelopmentAid] Search 3, page 5/5
+2026-03-10 09:48:04 - GrantCrawler - INFO -   Analyzing relevance: FO.PR.ALB – Quality professional training for the tourism and hotel sector in the Zanzibar archipelago (AID 013267/01/1) …
+2026-03-10 09:48:17 - GrantCrawler - INFO -   ✗ Low score (25): FO.PR.ALB – Quality professional training for the tourism and hotel sector in the Zanzibar archipelago (AID 013267/01/1)
+2026-03-10 09:48:17 - GrantCrawler - INFO -   Analyzing relevance: U.S. Embassy Port Louis Public Diplomacy Small Grants Program …
+2026-03-10 09:48:25 - GrantCrawler - INFO -   ✗ Low score (20): U.S. Embassy Port Louis Public Diplomacy Small Grants Program
+2026-03-10 09:48:25 - GrantCrawler - INFO - [DevelopmentAid] Search 3, page 5 done — 1 grants total so far.
+2026-03-10 09:48:27 - GrantCrawler - INFO - [DevelopmentAid] Search 3 complete — 1 grants so far across all searches.
+2026-03-10 09:48:27 - GrantCrawler - INFO - ======================================================================
+2026-03-10 09:48:27 - GrantCrawler - INFO - [DevelopmentAid] Search 4/5: https://www.developmentaid.org/grants/search?hiddenAdvancedFilters=0&locations=3&applicantTypes=1&sectors=13&searchedFie…
+2026-03-10 09:48:27 - GrantCrawler - INFO - ======================================================================
+2026-03-10 09:48:31 - GrantCrawler - INFO - [DevelopmentAid] Search 4 returned 107 results.
+2026-03-10 09:48:31 - GrantCrawler - INFO - [DevelopmentAid] Search 4, page 1/3
+2026-03-10 09:48:31 - GrantCrawler - INFO - [DevelopmentAid] Search 4, page 1 done — 1 grants total so far.
+2026-03-10 09:48:33 - GrantCrawler - INFO - [DevelopmentAid] Search 4, page 2/3
+2026-03-10 09:48:36 - GrantCrawler - INFO -   Analyzing relevance: Call for Proposals UGA 1402711/Call 004 …
+2026-03-10 09:48:46 - GrantCrawler - INFO -   ✗ Low score (45): Call for Proposals UGA 1402711/Call 004
+2026-03-10 09:48:46 - GrantCrawler - INFO -   Analyzing relevance: PEDL Exploratory Research Grants …
+2026-03-10 09:48:58 - GrantCrawler - INFO -   ✗ Low score (40): PEDL Exploratory Research Grants
+2026-03-10 09:48:58 - GrantCrawler - INFO - [DevelopmentAid] Search 4, page 2 done — 1 grants total so far.
+2026-03-10 09:49:00 - GrantCrawler - INFO - [DevelopmentAid] Search 4, page 3/3
+2026-03-10 09:49:03 - GrantCrawler - INFO - [DevelopmentAid] Search 4, page 3 done — 1 grants total so far.
+2026-03-10 09:49:05 - GrantCrawler - INFO - [DevelopmentAid] Search 4 complete — 1 grants so far across all searches.
+2026-03-10 09:49:05 - GrantCrawler - INFO - ======================================================================
+2026-03-10 09:49:05 - GrantCrawler - INFO - [DevelopmentAid] Search 5/5: https://www.developmentaid.org/grants/search?hiddenAdvancedFilters=0&locations=3&applicantTypes=1&sort=relevance.desc&se…
+2026-03-10 09:49:05 - GrantCrawler - INFO - ======================================================================
+2026-03-10 09:49:09 - GrantCrawler - INFO - [DevelopmentAid] Search 5 returned 207 results.
+2026-03-10 09:49:09 - GrantCrawler - INFO - [DevelopmentAid] Search 5, page 1/5
+2026-03-10 09:49:09 - GrantCrawler - INFO -   Analyzing relevance: Personalised Medicine for CARdiovascular, MEtabolic, and kidNey diseases (CARMEN2026) …
+2026-03-10 09:49:15 - GrantCrawler - WARNING -   Could not score: Personalised Medicine for CARdiovascular, MEtabolic, and kidNey diseases (CARMEN2026)
+2026-03-10 09:49:15 - GrantCrawler - INFO -   Analyzing relevance: Driving Urban Transitions (DUT) Call 2025 …
+2026-03-10 09:49:23 - GrantCrawler - INFO -   ✗ Low score (25): Driving Urban Transitions (DUT) Call 2025
+2026-03-10 09:49:23 - GrantCrawler - INFO - [DevelopmentAid] Search 5, page 1 done — 1 grants total so far.
+2026-03-10 09:49:25 - GrantCrawler - INFO - [DevelopmentAid] Search 5, page 2/5
+2026-03-10 09:49:29 - GrantCrawler - INFO - [DevelopmentAid] Search 5, page 2 done — 1 grants total so far.
+2026-03-10 09:49:31 - GrantCrawler - INFO - [DevelopmentAid] Search 5, page 3/5
+2026-03-10 09:49:34 - GrantCrawler - INFO -   Analyzing relevance: Personalised Medicine for CARdiovascular, MEtabolic, and kidNey diseases (CARMEN2026) …
+2026-03-10 09:49:40 - GrantCrawler - INFO -   ✗ Low score (0): Personalised Medicine for CARdiovascular, MEtabolic, and kidNey diseases (CARMEN2026)
+2026-03-10 09:49:40 - GrantCrawler - INFO -   Analyzing relevance: Driving Urban Transitions (DUT) Call 2025 …
+2026-03-10 09:49:46 - GrantCrawler - INFO -   ✗ Low score (10): Driving Urban Transitions (DUT) Call 2025
+2026-03-10 09:49:46 - GrantCrawler - INFO - [DevelopmentAid] Search 5, page 3 done — 1 grants total so far.
+2026-03-10 09:49:48 - GrantCrawler - INFO - [DevelopmentAid] Search 5, page 4/5
+2026-03-10 09:49:52 - GrantCrawler - INFO -   Analyzing relevance: Personalised Medicine for CARdiovascular, MEtabolic, and kidNey diseases (CARMEN2026) …
+2026-03-10 09:50:01 - GrantCrawler - INFO -   ✗ Low score (0): Personalised Medicine for CARdiovascular, MEtabolic, and kidNey diseases (CARMEN2026)
+2026-03-10 09:50:01 - GrantCrawler - INFO -   Analyzing relevance: Driving Urban Transitions (DUT) Call 2025 …
+2026-03-10 09:50:07 - GrantCrawler - INFO -   ✗ Low score (20): Driving Urban Transitions (DUT) Call 2025
+2026-03-10 09:50:07 - GrantCrawler - INFO - [DevelopmentAid] Search 5, page 4 done — 1 grants total so far.
+2026-03-10 09:50:09 - GrantCrawler - INFO - [DevelopmentAid] Search 5, page 5/5
+2026-03-10 09:50:12 - GrantCrawler - INFO -   Analyzing relevance: Personalised Medicine for CARdiovascular, MEtabolic, and kidNey diseases (CARMEN2026) …
+2026-03-10 09:50:19 - GrantCrawler - INFO -   ✗ Low score (0): Personalised Medicine for CARdiovascular, MEtabolic, and kidNey diseases (CARMEN2026)
+2026-03-10 09:50:19 - GrantCrawler - INFO -   Analyzing relevance: Driving Urban Transitions (DUT) Call 2025 …
+2026-03-10 09:50:26 - GrantCrawler - INFO -   ✗ Low score (10): Driving Urban Transitions (DUT) Call 2025
+2026-03-10 09:50:26 - GrantCrawler - INFO - [DevelopmentAid] Search 5, page 5 done — 1 grants total so far.
+2026-03-10 09:50:28 - GrantCrawler - INFO - [DevelopmentAid] Search 5 complete — 1 grants so far across all searches.
+2026-03-10 09:50:28 - GrantCrawler - INFO - [DevelopmentAid] Finished all 5 searches — 1 grants passed relevance threshold.
+2026-03-10 09:50:28 - GrantCrawler - INFO - ⏰ Skipping 'Knorr-Bremse Global Care e. V.': no deadline, posted Oct 30, 2025 (>60d ago).
+2026-03-10 09:50:28 - GrantCrawler - INFO - Progress saved. Total grants: 1
+2026-03-10 09:50:28 - GrantCrawler - INFO - Completed Playwright site: DevelopmentAid
+2026-03-10 09:50:28 - GrantCrawler - INFO - Total grants collected so far: 1
+
+2026-03-10 09:50:28 - GrantCrawler - INFO - ================================================================================
+2026-03-10 09:50:28 - GrantCrawler - INFO - SITE [Playwright]: Instrumentl
+2026-03-10 09:50:28 - GrantCrawler - INFO - ================================================================================
+2026-03-10 09:50:28 - GrantCrawler - INFO - ======================================================================
+2026-03-10 09:50:28 - GrantCrawler - INFO - [Instrumentl] Category 1/20: Africa – technology
+2026-03-10 09:50:28 - GrantCrawler - INFO -   URL: https://www.instrumentl.com/browse-grants/africa/technology-grants
+2026-03-10 09:50:28 - GrantCrawler - INFO - ======================================================================
+2026-03-10 09:50:32 - GrantCrawler - INFO - [Instrumentl] Parsed 27 cards, 27 new (not seen in earlier categories).
+2026-03-10 09:50:32 - GrantCrawler - INFO -   Analyzing relevance: DanPaul Foundation Grants …
+2026-03-10 09:50:43 - GrantCrawler - INFO -   ✓ Relevant (72/100): DanPaul Foundation Grants
+2026-03-10 09:50:43 - GrantCrawler - INFO -   Analyzing relevance: Save the Rhino International (SRI) Grant …
+2026-03-10 09:50:53 - GrantCrawler - WARNING -   Could not score: Save the Rhino International (SRI) Grant
+2026-03-10 09:50:53 - GrantCrawler - INFO -   Analyzing relevance: Tony Robbins Foundation Grant …
+2026-03-10 09:51:03 - GrantCrawler - INFO -   ✓ Relevant (72/100): Tony Robbins Foundation Grant
+2026-03-10 09:51:03 - GrantCrawler - INFO -   Analyzing relevance: Zegar Family Foundation Grant …
+2026-03-10 09:51:13 - GrantCrawler - INFO -   ✗ Low score (45): Zegar Family Foundation Grant
+2026-03-10 09:51:13 - GrantCrawler - INFO -   Analyzing relevance: EEP Africa Call for Proposals …
+2026-03-10 09:51:36 - GrantCrawler - INFO -   ✗ Low score (45): EEP Africa Call for Proposals
+2026-03-10 09:51:36 - GrantCrawler - INFO -   Analyzing relevance: Intuitive Foundation: Clinical Research Grants …
+2026-03-10 09:51:50 - GrantCrawler - INFO -   ✗ Low score (40): Intuitive Foundation: Clinical Research Grants
+2026-03-10 09:51:50 - GrantCrawler - INFO -   Analyzing relevance: Marine Debris Grants …
+2026-03-10 09:51:58 - GrantCrawler - INFO -   ✗ Low score (20): Marine Debris Grants
+2026-03-10 09:51:58 - GrantCrawler - INFO -   Analyzing relevance: Conservation, Food & Health Foundation Grant Program …
+2026-03-10 09:52:10 - GrantCrawler - INFO -   ✗ Low score (65): Conservation, Food & Health Foundation Grant Program
+2026-03-10 09:52:10 - GrantCrawler - INFO -   Analyzing relevance: International Foundation Grant …
+2026-03-10 09:52:25 - GrantCrawler - INFO -   ✗ Low score (45): International Foundation Grant
+2026-03-10 09:52:25 - GrantCrawler - INFO -   Analyzing relevance: KFAS: Al-Sumait Prize- Health Nomination …
+2026-03-10 09:52:31 - GrantCrawler - INFO -   ✗ Low score (0): KFAS: Al-Sumait Prize- Health Nomination
+2026-03-10 09:52:31 - GrantCrawler - INFO -   Analyzing relevance: Looking Out Foundation Grant …
+2026-03-10 09:52:41 - GrantCrawler - INFO -   ✓ Relevant (75/100): Looking Out Foundation Grant
+2026-03-10 09:52:41 - GrantCrawler - INFO -   Analyzing relevance: Antioch Foundation Grant …
+2026-03-10 09:52:54 - GrantCrawler - INFO -   ✗ Low score (65): Antioch Foundation Grant
+2026-03-10 09:52:54 - GrantCrawler - INFO -   Analyzing relevance: Medical Research and Human Services Grants …
+2026-03-10 09:53:24 - GrantCrawler - INFO -   ✗ Low score (45): Medical Research and Human Services Grants
+2026-03-10 09:53:24 - GrantCrawler - INFO -   Analyzing relevance: Zimmer Family Foundation National & International Grants …
+2026-03-10 09:53:39 - GrantCrawler - INFO -   ✗ Low score (40): Zimmer Family Foundation National & International Grants
+2026-03-10 09:53:39 - GrantCrawler - INFO -   Analyzing relevance: Pure Ocean Challenges Call for Projects …
+2026-03-10 09:53:47 - GrantCrawler - INFO -   ✗ Low score (10): Pure Ocean Challenges Call for Projects
+2026-03-10 09:53:47 - GrantCrawler - INFO -   Analyzing relevance: Exploring Equitable Futures Grant Program …
+2026-03-10 09:54:26 - GrantCrawler - INFO -   ✗ Low score (45): Exploring Equitable Futures Grant Program
+2026-03-10 09:54:26 - GrantCrawler - INFO - [Instrumentl] Category 1 done — 3 grants total so far.
+2026-03-10 09:54:28 - GrantCrawler - INFO - ======================================================================
+2026-03-10 09:54:28 - GrantCrawler - INFO - [Instrumentl] Category 2/20: Africa – computers for nonprofits
+2026-03-10 09:54:28 - GrantCrawler - INFO -   URL: https://www.instrumentl.com/browse-grants/africa/grants-for-computers-for-nonprofits
+2026-03-10 09:54:28 - GrantCrawler - INFO - ======================================================================
+2026-03-10 09:54:31 - GrantCrawler - INFO - [Instrumentl] Parsed 27 cards, 12 new (not seen in earlier categories).
+2026-03-10 09:54:31 - GrantCrawler - INFO -   Analyzing relevance: Cosmopolitan of Las Vegas Charitable Donations …
+2026-03-10 09:54:44 - GrantCrawler - INFO -   ✗ Low score (40): Cosmopolitan of Las Vegas Charitable Donations
+2026-03-10 09:54:44 - GrantCrawler - INFO -   Analyzing relevance: Michael & Susan Dell Foundation Grants …
+2026-03-10 09:54:59 - GrantCrawler - INFO -   ✗ Low score (45): Michael & Susan Dell Foundation Grants
+2026-03-10 09:54:59 - GrantCrawler - INFO -   Analyzing relevance: Sachs Family Foundation Grant …
+2026-03-10 09:55:07 - GrantCrawler - INFO -   ✓ Relevant (82/100): Sachs Family Foundation Grant
+2026-03-10 09:55:07 - GrantCrawler - INFO -   Analyzing relevance: Semnani Family Foundation Grants …
+2026-03-10 09:55:27 - GrantCrawler - INFO -   ✗ Low score (45): Semnani Family Foundation Grants
+2026-03-10 09:55:27 - GrantCrawler - INFO -   Analyzing relevance: The Audacious Project Grant Program …
+2026-03-10 09:55:41 - GrantCrawler - INFO -   ✗ Low score (40): The Audacious Project Grant Program
+2026-03-10 09:55:41 - GrantCrawler - INFO -   Analyzing relevance: Cowles Charitable Trust Grant …
+2026-03-10 09:55:56 - GrantCrawler - INFO -   ✗ Low score (40): Cowles Charitable Trust Grant
+2026-03-10 09:55:56 - GrantCrawler - INFO -   Analyzing relevance: CPPS Heritage Mission Fund Grant …
+2026-03-10 09:56:09 - GrantCrawler - INFO -   ✗ Low score (68): CPPS Heritage Mission Fund Grant
+2026-03-10 09:56:09 - GrantCrawler - INFO - [Instrumentl] Category 2 done — 4 grants total so far.
+2026-03-10 09:56:11 - GrantCrawler - INFO - ======================================================================
+2026-03-10 09:56:11 - GrantCrawler - INFO - [Instrumentl] Category 3/20: Africa – STEM education
+2026-03-10 09:56:11 - GrantCrawler - INFO -   URL: https://www.instrumentl.com/browse-grants/africa/stem-education-grants
+2026-03-10 09:56:11 - GrantCrawler - INFO - ======================================================================
+2026-03-10 09:56:14 - GrantCrawler - INFO - [Instrumentl] Parsed 27 cards, 1 new (not seen in earlier categories).
+2026-03-10 09:56:14 - GrantCrawler - INFO - [Instrumentl] Category 3 done — 4 grants total so far.
+2026-03-10 09:56:16 - GrantCrawler - INFO - ======================================================================
+2026-03-10 09:56:16 - GrantCrawler - INFO - [Instrumentl] Category 4/20: Africa – all grants
+2026-03-10 09:56:16 - GrantCrawler - INFO -   URL: https://www.instrumentl.com/browse-grants/africa/
+2026-03-10 09:56:16 - GrantCrawler - INFO - ======================================================================
+2026-03-10 09:56:19 - GrantCrawler - INFO - [Instrumentl] Parsed 27 cards, 13 new (not seen in earlier categories).
+2026-03-10 09:56:19 - GrantCrawler - INFO -   Analyzing relevance: Great Apes and Gibbons Program Grant …
+2026-03-10 09:56:32 - GrantCrawler - INFO -   ✗ Low score (10): Great Apes and Gibbons Program Grant
+2026-03-10 09:56:32 - GrantCrawler - INFO -   Analyzing relevance: The Global Commons Alliance: Accountability Accelerator Grant …
+2026-03-10 09:56:46 - GrantCrawler - INFO -   ✗ Low score (35): The Global Commons Alliance: Accountability Accelerator Grant
+2026-03-10 09:56:46 - GrantCrawler - INFO -   Analyzing relevance: World Land Trust Grant …
+2026-03-10 09:57:02 - GrantCrawler - INFO -   ✗ Low score (30): World Land Trust Grant
+2026-03-10 09:57:02 - GrantCrawler - INFO -   Analyzing relevance: Jana Trust Fund Grant …
+2026-03-10 09:57:07 - GrantCrawler - INFO -   ✗ Low score (0): Jana Trust Fund Grant
+2026-03-10 09:57:07 - GrantCrawler - INFO -   Analyzing relevance: The Sustain Fund Grant …
+2026-03-10 09:57:14 - GrantCrawler - WARNING -   Could not score: The Sustain Fund Grant
+2026-03-10 09:57:14 - GrantCrawler - INFO -   Analyzing relevance: Lisle Global Seed Grant …
+2026-03-10 09:57:22 - GrantCrawler - INFO -   ✗ Low score (35): Lisle Global Seed Grant
+2026-03-10 09:57:22 - GrantCrawler - INFO -   Analyzing relevance: The Hitchman Charitable Trust …
+2026-03-10 09:57:34 - GrantCrawler - INFO -   ✓ Relevant (70/100): The Hitchman Charitable Trust
+2026-03-10 09:57:34 - GrantCrawler - INFO -   Analyzing relevance: Access to Essential Services …
+2026-03-10 09:57:48 - GrantCrawler - INFO -   ✗ Low score (40): Access to Essential Services
+2026-03-10 09:57:48 - GrantCrawler - INFO -   Analyzing relevance: The Solidarity Fund Grant …
+2026-03-10 09:58:04 - GrantCrawler - INFO -   ✗ Low score (40): The Solidarity Fund Grant
+2026-03-10 09:58:04 - GrantCrawler - INFO -   Analyzing relevance: New England BioLabs Foundation Grant …
+2026-03-10 09:58:18 - GrantCrawler - INFO -   ✗ Low score (35): New England BioLabs Foundation Grant
+2026-03-10 09:58:18 - GrantCrawler - INFO - [Instrumentl] Category 4 done — 5 grants total so far.
+2026-03-10 09:58:20 - GrantCrawler - INFO - ======================================================================
+2026-03-10 09:58:20 - GrantCrawler - INFO - [Instrumentl] Category 5/20: Africa – education nonprofits
+2026-03-10 09:58:20 - GrantCrawler - INFO -   URL: https://www.instrumentl.com/browse-grants/africa/grants-for-education-nonprofits
+2026-03-10 09:58:20 - GrantCrawler - INFO - ======================================================================
+2026-03-10 09:58:23 - GrantCrawler - INFO - [Instrumentl] Parsed 27 cards, 0 new (not seen in earlier categories).
+2026-03-10 09:58:23 - GrantCrawler - INFO - [Instrumentl] Category 5 done — 5 grants total so far.
+2026-03-10 09:58:25 - GrantCrawler - INFO - ======================================================================
+2026-03-10 09:58:25 - GrantCrawler - INFO - [Instrumentl] Category 6/20: Africa – K-12 schools
+2026-03-10 09:58:25 - GrantCrawler - INFO -   URL: https://www.instrumentl.com/browse-grants/africa/grants-for-k-12-schools
+2026-03-10 09:58:25 - GrantCrawler - INFO - ======================================================================
+2026-03-10 09:58:28 - GrantCrawler - INFO - [Instrumentl] Parsed 27 cards, 0 new (not seen in earlier categories).
+2026-03-10 09:58:28 - GrantCrawler - INFO - [Instrumentl] Category 6 done — 5 grants total so far.
+2026-03-10 09:58:30 - GrantCrawler - INFO - ======================================================================
+2026-03-10 09:58:30 - GrantCrawler - INFO - [Instrumentl] Category 7/20: Africa – youth programs
+2026-03-10 09:58:30 - GrantCrawler - INFO -   URL: https://www.instrumentl.com/browse-grants/africa/grants-for-youth-programs
+2026-03-10 09:58:30 - GrantCrawler - INFO - ======================================================================
+2026-03-10 09:58:33 - GrantCrawler - INFO - [Instrumentl] Parsed 27 cards, 0 new (not seen in earlier categories).
+2026-03-10 09:58:33 - GrantCrawler - INFO - [Instrumentl] Category 7 done — 5 grants total so far.
+2026-03-10 09:58:35 - GrantCrawler - INFO - ======================================================================
+2026-03-10 09:58:35 - GrantCrawler - INFO - [Instrumentl] Category 8/20: Africa – after school programs
+2026-03-10 09:58:35 - GrantCrawler - INFO -   URL: https://www.instrumentl.com/browse-grants/africa/grants-for-after-school-programs
+2026-03-10 09:58:35 - GrantCrawler - INFO - ======================================================================
+2026-03-10 09:58:37 - GrantCrawler - INFO - [Instrumentl] Parsed 27 cards, 1 new (not seen in earlier categories).
+2026-03-10 09:58:37 - GrantCrawler - INFO - [Instrumentl] Category 8 done — 5 grants total so far.
+2026-03-10 09:58:39 - GrantCrawler - INFO - ======================================================================
+2026-03-10 09:58:39 - GrantCrawler - INFO - [Instrumentl] Category 9/20: Africa – international development
+2026-03-10 09:58:39 - GrantCrawler - INFO -   URL: https://www.instrumentl.com/browse-grants/africa/grants-for-international-development
+2026-03-10 09:58:39 - GrantCrawler - INFO - ======================================================================
+2026-03-10 09:58:42 - GrantCrawler - INFO - [Instrumentl] Parsed 27 cards, 1 new (not seen in earlier categories).
+2026-03-10 09:58:42 - GrantCrawler - INFO -   Analyzing relevance: Wikimedia Foundation General Support Fund …
+2026-03-10 09:58:50 - GrantCrawler - INFO -   ✗ Low score (40): Wikimedia Foundation General Support Fund
+2026-03-10 09:58:50 - GrantCrawler - INFO - [Instrumentl] Category 9 done — 5 grants total so far.
+2026-03-10 09:58:52 - GrantCrawler - INFO - ======================================================================
+2026-03-10 09:58:52 - GrantCrawler - INFO - [Instrumentl] Category 10/20: Africa – capacity building
+2026-03-10 09:58:52 - GrantCrawler - INFO -   URL: https://www.instrumentl.com/browse-grants/africa/capacity-building-grants-for-nonprofits
+2026-03-10 09:58:52 - GrantCrawler - INFO - ======================================================================
+2026-03-10 09:58:55 - GrantCrawler - INFO - [Instrumentl] Parsed 27 cards, 0 new (not seen in earlier categories).
+2026-03-10 09:58:55 - GrantCrawler - INFO - [Instrumentl] Category 10 done — 5 grants total so far.
+2026-03-10 09:58:57 - GrantCrawler - INFO - ======================================================================
+2026-03-10 09:58:57 - GrantCrawler - INFO - [Instrumentl] Category 11/20: Africa – community development
+2026-03-10 09:58:57 - GrantCrawler - INFO -   URL: https://www.instrumentl.com/browse-grants/africa/community-development-and-employment-grants
+2026-03-10 09:58:57 - GrantCrawler - INFO - ======================================================================
+2026-03-10 09:59:00 - GrantCrawler - INFO - [Instrumentl] Parsed 27 cards, 0 new (not seen in earlier categories).
+2026-03-10 09:59:00 - GrantCrawler - INFO - [Instrumentl] Category 11 done — 5 grants total so far.
+2026-03-10 09:59:02 - GrantCrawler - INFO - ======================================================================
+2026-03-10 09:59:02 - GrantCrawler - INFO - [Instrumentl] Category 12/20: Africa – community service projects
+2026-03-10 09:59:02 - GrantCrawler - INFO -   URL: https://www.instrumentl.com/browse-grants/africa/grants-for-community-service-projects
+2026-03-10 09:59:02 - GrantCrawler - INFO - ======================================================================
+2026-03-10 09:59:05 - GrantCrawler - INFO - [Instrumentl] Parsed 27 cards, 2 new (not seen in earlier categories).
+2026-03-10 09:59:05 - GrantCrawler - INFO -   Analyzing relevance: Gerda Henkel Foundation: Funding Initiative Patrimonies …
+2026-03-10 09:59:21 - GrantCrawler - INFO -   ✗ Low score (35): Gerda Henkel Foundation: Funding Initiative Patrimonies
+2026-03-10 09:59:21 - GrantCrawler - INFO -   Analyzing relevance: James B. Pearson Fellowship …
+2026-03-10 09:59:30 - GrantCrawler - INFO -   ✗ Low score (10): James B. Pearson Fellowship
+2026-03-10 09:59:30 - GrantCrawler - INFO - [Instrumentl] Category 12 done — 5 grants total so far.
+2026-03-10 09:59:32 - GrantCrawler - INFO - ======================================================================
+2026-03-10 09:59:32 - GrantCrawler - INFO - [Instrumentl] Category 13/20: Africa – sustainability
+2026-03-10 09:59:32 - GrantCrawler - INFO -   URL: https://www.instrumentl.com/browse-grants/africa/sustainability-grants
+2026-03-10 09:59:32 - GrantCrawler - INFO - ======================================================================
+2026-03-10 09:59:34 - GrantCrawler - INFO - [Instrumentl] Parsed 27 cards, 11 new (not seen in earlier categories).
+2026-03-10 09:59:34 - GrantCrawler - INFO -   Analyzing relevance: IDEA WILD: Small Equipment Grants …
+2026-03-10 09:59:57 - GrantCrawler - INFO -   ✗ Low score (40): IDEA WILD: Small Equipment Grants
+2026-03-10 09:59:57 - GrantCrawler - INFO -   Analyzing relevance: Ocean and Fisheries Reporting Grant …
+2026-03-10 10:00:02 - GrantCrawler - INFO -   ✗ Low score (0): Ocean and Fisheries Reporting Grant
+2026-03-10 10:00:02 - GrantCrawler - INFO -   Analyzing relevance: Work/Environment Reporting Grants …
+2026-03-10 10:00:12 - GrantCrawler - INFO -   ✗ Low score (25): Work/Environment Reporting Grants
+2026-03-10 10:00:12 - GrantCrawler - INFO -   Analyzing relevance: Small Cat Action Fund Grant …
+2026-03-10 10:00:23 - GrantCrawler - INFO -   ✗ Low score (20): Small Cat Action Fund Grant
+2026-03-10 10:00:23 - GrantCrawler - INFO -   Analyzing relevance: Freshwater Storytelling: Request for Proposals …
+2026-03-10 10:00:38 - GrantCrawler - INFO -   ✗ Low score (40): Freshwater Storytelling: Request for Proposals
+2026-03-10 10:00:38 - GrantCrawler - INFO -   Analyzing relevance: Zayed Sustainability Prize: Global High Schools …
+2026-03-10 10:00:45 - GrantCrawler - WARNING -   Could not score: Zayed Sustainability Prize: Global High Schools
+2026-03-10 10:00:45 - GrantCrawler - INFO -   Analyzing relevance: Henry Arnholds Fellowships …
+2026-03-10 10:01:02 - GrantCrawler - INFO -   ✗ Low score (65): Henry Arnholds Fellowships
+2026-03-10 10:01:02 - GrantCrawler - INFO -   Analyzing relevance: Interledger-NextGen Higher Education Grant …
+2026-03-10 10:01:14 - GrantCrawler - INFO -   ✗ Low score (45): Interledger-NextGen Higher Education Grant
+2026-03-10 10:01:14 - GrantCrawler - INFO -   Analyzing relevance: Orskov Foundation: Dr Neville Suttle scholarships …
+2026-03-10 10:01:23 - GrantCrawler - INFO -   ✗ Low score (20): Orskov Foundation: Dr Neville Suttle scholarships
+2026-03-10 10:01:23 - GrantCrawler - INFO -   Analyzing relevance: Bezos Scholars Program …
+2026-03-10 10:01:27 - GrantCrawler - INFO -   ✗ Low score (20): Bezos Scholars Program
+2026-03-10 10:01:27 - GrantCrawler - INFO -   Analyzing relevance: The Tessler – Sabbagh Graduate Student Prize Award …
+2026-03-10 10:01:33 - GrantCrawler - INFO -   ✗ Low score (10): The Tessler – Sabbagh Graduate Student Prize Award
+2026-03-10 10:01:33 - GrantCrawler - INFO - [Instrumentl] Category 13 done — 5 grants total so far.
+2026-03-10 10:01:35 - GrantCrawler - INFO - ======================================================================
+2026-03-10 10:01:35 - GrantCrawler - INFO - [Instrumentl] Category 14/20: Africa – public infrastructure
+2026-03-10 10:01:35 - GrantCrawler - INFO -   URL: https://www.instrumentl.com/browse-grants/africa/public-infrastructure-grants
+2026-03-10 10:01:35 - GrantCrawler - INFO - ======================================================================
+2026-03-10 10:01:38 - GrantCrawler - INFO - [Instrumentl] Parsed 27 cards, 1 new (not seen in earlier categories).
+2026-03-10 10:01:38 - GrantCrawler - INFO -   Analyzing relevance: OI Travel Scholarships …
+2026-03-10 10:01:47 - GrantCrawler - INFO -   ✗ Low score (10): OI Travel Scholarships
+2026-03-10 10:01:47 - GrantCrawler - INFO - [Instrumentl] Category 14 done — 5 grants total so far.
+2026-03-10 10:01:49 - GrantCrawler - INFO - ======================================================================
+2026-03-10 10:01:49 - GrantCrawler - INFO - [Instrumentl] Category 15/20: Africa – corporate grants
+2026-03-10 10:01:49 - GrantCrawler - INFO -   URL: https://www.instrumentl.com/browse-grants/africa/corporate-grants-for-nonprofits
+2026-03-10 10:01:49 - GrantCrawler - INFO - ======================================================================
+2026-03-10 10:01:52 - GrantCrawler - INFO - [Instrumentl] Parsed 26 cards, 23 new (not seen in earlier categories).
+2026-03-10 10:01:52 - GrantCrawler - INFO -   Analyzing relevance: Environmental Conservation: Special Projects …
+2026-03-10 10:02:04 - GrantCrawler - INFO -   ✗ Low score (60): Environmental Conservation: Special Projects
+2026-03-10 10:02:04 - GrantCrawler - INFO -   Analyzing relevance: HESI Propose a Project …
+2026-03-10 10:02:23 - GrantCrawler - WARNING -   Could not score: HESI Propose a Project
+2026-03-10 10:02:23 - GrantCrawler - INFO -   Analyzing relevance: NEO Action Fund …
+2026-03-10 10:02:36 - GrantCrawler - INFO -   ✗ Low score (45): NEO Action Fund
+2026-03-10 10:02:36 - GrantCrawler - INFO -   Analyzing relevance: Prevent Child Sexual Abuse Grants …
+2026-03-10 10:02:52 - GrantCrawler - WARNING -   Could not score: Prevent Child Sexual Abuse Grants
+2026-03-10 10:02:52 - GrantCrawler - INFO -   Analyzing relevance: Rotary Club: Global Grants …
+2026-03-10 10:03:05 - GrantCrawler - INFO -   ✓ Relevant (82/100): Rotary Club: Global Grants
+2026-03-10 10:03:05 - GrantCrawler - INFO -   Analyzing relevance: The Dakota Foundation Program-Related Investments and Grants …
+2026-03-10 10:03:23 - GrantCrawler - WARNING -   Could not score: The Dakota Foundation Program-Related Investments and Grants
+2026-03-10 10:03:23 - GrantCrawler - INFO -   Analyzing relevance: WISE Prize for Education …
+2026-03-10 10:03:41 - GrantCrawler - INFO -   ✗ Low score (45): WISE Prize for Education
+2026-03-10 10:03:41 - GrantCrawler - INFO -   Analyzing relevance: iF SOCIAL IMPACT PRIZE …
+2026-03-10 10:03:51 - GrantCrawler - INFO -   ✗ Low score (40): iF SOCIAL IMPACT PRIZE
+2026-03-10 10:03:51 - GrantCrawler - INFO -   Analyzing relevance: Zayed Sustainability Prize: Health, Food, Energy, Water …
+2026-03-10 10:04:01 - GrantCrawler - INFO -   ✗ Low score (25): Zayed Sustainability Prize: Health, Food, Energy, Water
+2026-03-10 10:04:01 - GrantCrawler - INFO -   Analyzing relevance: John Templeton Foundation Grant Program …
+2026-03-10 10:04:13 - GrantCrawler - INFO -   ✗ Low score (40): John Templeton Foundation Grant Program
+2026-03-10 10:04:13 - GrantCrawler - INFO -   Analyzing relevance: Learning Engineering Tools Competition …
+2026-03-10 10:04:31 - GrantCrawler - INFO -   ✗ Low score (45): Learning Engineering Tools Competition
+2026-03-10 10:04:31 - GrantCrawler - INFO -   Analyzing relevance: F. M. Kirby Prize for Scaling Impact …
+2026-03-10 10:04:38 - GrantCrawler - INFO -   ✗ Low score (25): F. M. Kirby Prize for Scaling Impact
+2026-03-10 10:04:38 - GrantCrawler - INFO -   Analyzing relevance: Seeding The Future Global Food System Challenge- Growth Grants …
+2026-03-10 10:04:46 - GrantCrawler - INFO -   ✗ Low score (10): Seeding The Future Global Food System Challenge- Growth Grants
+2026-03-10 10:04:46 - GrantCrawler - INFO -   Analyzing relevance: Seeding The Future Global Food System Challenge- Seed Grants …
+2026-03-10 10:04:53 - GrantCrawler - WARNING -   Could not score: Seeding The Future Global Food System Challenge- Seed Grants
+2026-03-10 10:04:53 - GrantCrawler - INFO -   Analyzing relevance: Seeding The Future Global Food System Challenge- Seeding the Future Grand Prizes …
+2026-03-10 10:05:02 - GrantCrawler - INFO -   ✗ Low score (10): Seeding The Future Global Food System Challenge- Seeding the Future Grand Prizes
+2026-03-10 10:05:02 - GrantCrawler - INFO -   Analyzing relevance: Unity for Humanity Grant …
+2026-03-10 10:05:10 - GrantCrawler - INFO -   ✗ Low score (25): Unity for Humanity Grant
+2026-03-10 10:05:10 - GrantCrawler - INFO - [Instrumentl] Category 15 done — 6 grants total so far.
+2026-03-10 10:05:12 - GrantCrawler - INFO - ======================================================================
+2026-03-10 10:05:12 - GrantCrawler - INFO - [Instrumentl] Category 16/20: Africa – large grants
+2026-03-10 10:05:12 - GrantCrawler - INFO -   URL: https://www.instrumentl.com/browse-grants/africa/large-grants-for-nonprofit-organizations
+2026-03-10 10:05:12 - GrantCrawler - INFO - ======================================================================
+2026-03-10 10:05:15 - GrantCrawler - INFO - [Instrumentl] Parsed 27 cards, 8 new (not seen in earlier categories).
+2026-03-10 10:05:15 - GrantCrawler - INFO -   Analyzing relevance: Brutten Family Foundation Grant …
+2026-03-10 10:05:22 - GrantCrawler - INFO -   ✓ Relevant (82/100): Brutten Family Foundation Grant
+2026-03-10 10:05:22 - GrantCrawler - INFO -   Analyzing relevance: Pentair Foundation Grants …
+2026-03-10 10:05:34 - GrantCrawler - INFO -   ✗ Low score (45): Pentair Foundation Grants
+2026-03-10 10:05:34 - GrantCrawler - INFO -   Analyzing relevance: Walmart Foundation: Concept Note …
+2026-03-10 10:05:42 - GrantCrawler - INFO -   ✗ Low score (0): Walmart Foundation: Concept Note
+2026-03-10 10:05:42 - GrantCrawler - INFO -   Analyzing relevance: Thriving Communities: National & International Environment Grant Program …
+2026-03-10 10:05:52 - GrantCrawler - INFO -   ✗ Low score (65): Thriving Communities: National & International Environment Grant Program
+2026-03-10 10:05:52 - GrantCrawler - INFO - [Instrumentl] Category 16 done — 7 grants total so far.
+2026-03-10 10:05:54 - GrantCrawler - INFO - ======================================================================
+2026-03-10 10:05:54 - GrantCrawler - INFO - [Instrumentl] Category 17/20: Africa – 501(c)(3) grants
+2026-03-10 10:05:54 - GrantCrawler - INFO -   URL: https://www.instrumentl.com/browse-grants/africa/grants-for-501-c-3
+2026-03-10 10:05:54 - GrantCrawler - INFO - ======================================================================
+2026-03-10 10:05:58 - GrantCrawler - INFO - [Instrumentl] Parsed 27 cards, 1 new (not seen in earlier categories).
+2026-03-10 10:05:58 - GrantCrawler - INFO -   Analyzing relevance: Cold Noses Foundation Grant …
+2026-03-10 10:06:11 - GrantCrawler - INFO -   ✗ Low score (20): Cold Noses Foundation Grant
+2026-03-10 10:06:11 - GrantCrawler - INFO - [Instrumentl] Category 17 done — 7 grants total so far.
+2026-03-10 10:06:13 - GrantCrawler - INFO - ======================================================================
+2026-03-10 10:06:13 - GrantCrawler - INFO - [Instrumentl] Category 18/20: Africa – grassroots organisations
+2026-03-10 10:06:13 - GrantCrawler - INFO -   URL: https://www.instrumentl.com/browse-grants/africa/grants-for-grassroots-organizations
+2026-03-10 10:06:13 - GrantCrawler - INFO - ======================================================================
+2026-03-10 10:06:15 - GrantCrawler - INFO - [Instrumentl] Parsed 27 cards, 0 new (not seen in earlier categories).
+2026-03-10 10:06:15 - GrantCrawler - INFO - [Instrumentl] Category 18 done — 7 grants total so far.
+2026-03-10 10:06:17 - GrantCrawler - INFO - ======================================================================
+2026-03-10 10:06:17 - GrantCrawler - INFO - [Instrumentl] Category 19/20: Africa – small nonprofits
+2026-03-10 10:06:17 - GrantCrawler - INFO -   URL: https://www.instrumentl.com/browse-grants/africa/grants-for-small-nonprofits
+2026-03-10 10:06:17 - GrantCrawler - INFO - ======================================================================
+2026-03-10 10:06:20 - GrantCrawler - INFO - [Instrumentl] Parsed 27 cards, 0 new (not seen in earlier categories).
+2026-03-10 10:06:20 - GrantCrawler - INFO - [Instrumentl] Category 19 done — 7 grants total so far.
+2026-03-10 10:06:22 - GrantCrawler - INFO - ======================================================================
+2026-03-10 10:06:22 - GrantCrawler - INFO - [Instrumentl] Category 20/20: Africa – seed grants
+2026-03-10 10:06:22 - GrantCrawler - INFO -   URL: https://www.instrumentl.com/browse-grants/africa/seed-grants-for-nonprofits
+2026-03-10 10:06:22 - GrantCrawler - INFO - ======================================================================
+2026-03-10 10:06:25 - GrantCrawler - INFO - [Instrumentl] Parsed 27 cards, 0 new (not seen in earlier categories).
+2026-03-10 10:06:25 - GrantCrawler - INFO - [Instrumentl] Category 20 done — 7 grants total so far.
+2026-03-10 10:06:27 - GrantCrawler - INFO - [Instrumentl] Finished all 20 categories — 7 grants passed relevance threshold.
+2026-03-10 10:06:27 - GrantCrawler - INFO - Progress saved. Total grants: 5
+2026-03-10 10:06:27 - GrantCrawler - INFO - Completed Playwright site: Instrumentl
+2026-03-10 10:06:27 - GrantCrawler - INFO - Total grants collected so far: 5
+
+2026-03-10 10:06:28 - GrantCrawler - INFO - ================================================================================
+2026-03-10 10:06:28 - GrantCrawler - INFO - SITE: Funds for NGOs
+2026-03-10 10:06:28 - GrantCrawler - INFO - ================================================================================
+2026-03-10 10:06:28 - GrantCrawler - INFO - ================================================================================
+2026-03-10 10:06:28 - GrantCrawler - INFO - Starting crawl for URL 1/10: https://www2.fundsforngos.org/category/children/
+2026-03-10 10:06:28 - GrantCrawler - INFO - ================================================================================
+
+2026-03-10 10:06:28 - GrantCrawler - INFO - Loading page 1...
+2026-03-10 10:08:09 - GrantCrawler - ERROR - 
+
+An unexpected error occurred: name 'RELEVANCE_PROVIDER' is not defined
+Traceback (most recent call last):
+  File "C:\Users\Francis\Desktop\DSG\deepseek-ai-web-crawler\main.py", line 402, in crawl_grants
+    grants, no_results_found, grants_found_on_page, all_were_duplicates = await fetch_and_process_page(
+                                                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "C:\Users\Francis\Desktop\DSG\deepseek-ai-web-crawler\utils\scraper_utils.py", line 602, in fetch_and_process_page
+    logger.info(f"Analyzing relevance for: {grant.get('title', 'Unknown')} (using {RELEVANCE_PROVIDER})")
+                                                                                   ^^^^^^^^^^^^^^^^^^
+NameError: name 'RELEVANCE_PROVIDER' is not defined
+2026-03-10 10:08:09 - GrantCrawler - INFO - Saving collected data...
+2026-03-10 10:08:09 - GrantCrawler - INFO - 
+Total: Saved 5 grants to 'grants_output.csv' and 'grants_output.json'.
+2026-03-10 10:08:09 - GrantCrawler - INFO - 
+================================================================================
+2026-03-10 10:08:09 - GrantCrawler - INFO - EXCEL EXPORT
+2026-03-10 10:08:09 - GrantCrawler - INFO - ================================================================================
+2026-03-10 10:08:09 - grant_crawler - INFO -   Appended 5 new grants to local Excel: C:\Users\Francis\Documents\Grants\Grant_Tracker_Database.xlsx [From Automation]
+2026-03-10 10:08:09 - GrantCrawler - INFO - Exported 5 new grants to shared Excel file.
+2026-03-10 10:08:09 - GrantCrawler - INFO - 
+================================================================================
+2026-03-10 10:08:09 - GrantCrawler - INFO - RUN SUMMARY
+2026-03-10 10:08:09 - GrantCrawler - INFO - ================================================================================
+2026-03-10 10:08:09 - GrantCrawler - INFO - Grants found this run: 5
+2026-03-10 10:08:09 - GrantCrawler - INFO - New grants added to DB: 5
+2026-03-10 10:08:09 - GrantCrawler - INFO - Total grants in database: 52
+2026-03-10 10:08:09 - GrantCrawler - INFO - ================================================================================
+
+2026-03-10 10:08:09 - grant_crawler - INFO - 
+2026-03-10 10:08:09 - grant_crawler - INFO - ==========================================================================================
+2026-03-10 10:08:09 - grant_crawler - INFO - SITE PERFORMANCE REPORT
+2026-03-10 10:08:09 - grant_crawler - INFO - Run: 2026-03-10T09:16:29  |  Duration: 3100.0s  |  Total fetched: 4008  |  Total accepted: 5
+2026-03-10 10:08:09 - grant_crawler - INFO - ==========================================================================================
+2026-03-10 10:08:09 - grant_crawler - INFO - 
+2026-03-10 10:08:09 - grant_crawler - INFO - ─── Instrumentl (playwright) ─────────────────────────────────────────────────
+2026-03-10 10:08:09 - grant_crawler - INFO -   Time: 958.7s  |  Pages: 0 ok, 0 errors
+2026-03-10 10:08:09 - grant_crawler - INFO -   Funnel:  fetched=7  →  filtered=0  →  scored=0  →  accepted=4
+2026-03-10 10:08:09 - grant_crawler - INFO -   Acceptance rate: 57.1%  |  Avg score: 75  |  Already in DB: 3
+2026-03-10 10:08:09 - grant_crawler - INFO -   Scored grants (4):
+2026-03-10 10:08:09 - grant_crawler - INFO -     ✅  82  Rotary Club: Global Grants
+2026-03-10 10:08:09 - grant_crawler - INFO -            └ Partner with a local Kenyan or international Rotary club/district to co-develop 
+2026-03-10 10:08:09 - grant_crawler - INFO -     ✅  75  Looking Out Foundation Grant
+2026-03-10 10:08:09 - grant_crawler - INFO -            └ Apply under Youth Services theme, pitching refurbishment and distribution of IT 
+2026-03-10 10:08:09 - grant_crawler - INFO -     ✅  72  Tony Robbins Foundation Grant
+2026-03-10 10:08:09 - grant_crawler - INFO -            └ Frame application around 'Youth Development & Leadership' by emphasizing how ref
+2026-03-10 10:08:09 - grant_crawler - INFO -     ✅  70  The Hitchman Charitable Trust
+2026-03-10 10:08:09 - grant_crawler - INFO -            └ Frame the project as a child welfare initiative by distributing refurbished IT e
+2026-03-10 10:08:09 - grant_crawler - INFO - 
+2026-03-10 10:08:09 - grant_crawler - INFO - ─── EC Europa Funding & Tenders (api) ─────────────────────────────────
+2026-03-10 10:08:09 - grant_crawler - INFO -   Time: 1119.6s  |  Pages: 0 ok, 0 errors
+2026-03-10 10:08:09 - grant_crawler - INFO -   Funnel:  fetched=3250  →  filtered=3191  →  scored=64  →  accepted=1
+2026-03-10 10:08:09 - grant_crawler - INFO -   Acceptance rate: 0.0%  |  Avg score: 26  |  Already in DB: 0
+2026-03-10 10:08:09 - grant_crawler - INFO -   Filter breakdown: analysis_failed=5, deadline_expired=1166, duplicate_in_db=1978, prefilter_keywords=42
+2026-03-10 10:08:09 - grant_crawler - INFO -   Scored grants (59):
+2026-03-10 10:08:09 - grant_crawler - INFO -     ✅  75  School Education: STEM Education Centres
+2026-03-10 10:08:09 - grant_crawler - INFO -            └ Form partnerships with EU schools/organizations under Erasmus+ to co-develop STE
+2026-03-10 10:08:09 - grant_crawler - INFO -     ❌  45  Digital Education Content: success factors in decision making and [low_score]
+2026-03-10 10:08:09 - grant_crawler - INFO -            └ Not applicable
+2026-03-10 10:08:09 - grant_crawler - INFO -     ❌  45  Topic 6: Digital education: Assessment of digital skills and comp [low_score]
+2026-03-10 10:08:09 - grant_crawler - INFO -            └ Not applicable
+2026-03-10 10:08:09 - grant_crawler - INFO -     ❌  45  Digital Competence Levels Assessment in School Education [low_score]
+2026-03-10 10:08:09 - grant_crawler - INFO -            └ Not applicable
+2026-03-10 10:08:09 - grant_crawler - INFO -     ❌  45  Transforming Professional Higher Education for the Green and Digi [low_score]
+2026-03-10 10:08:09 - grant_crawler - INFO -            └ Not applicable
+2026-03-10 10:08:09 - grant_crawler - INFO -     ❌  45  The impact of the use of digital tools outside school and for com [low_score]
+2026-03-10 10:08:09 - grant_crawler - INFO -            └ Not applicable
+2026-03-10 10:08:09 - grant_crawler - INFO -     ❌  45  Contribution of basic skills to productivity, innovation, competi [low_score]
+2026-03-10 10:08:09 - grant_crawler - INFO -            └ Not applicable
+2026-03-10 10:08:09 - grant_crawler - INFO -     ❌  45  Closing the learning gap: uncovering causes and effective policy  [low_score]
+2026-03-10 10:08:09 - grant_crawler - INFO -            └ Not applicable
+2026-03-10 10:08:09 - grant_crawler - INFO -     ❌  40  Digital Education: Public-private partnerships for ethical design [low_score]
+2026-03-10 10:08:09 - grant_crawler - INFO -            └ Not applicable
+2026-03-10 10:08:09 - grant_crawler - INFO -     ❌  40  Capacity building in VET in South Mediterranean Countries [low_score]
+2026-03-10 10:08:09 - grant_crawler - INFO -            └ Not applicable
+2026-03-10 10:08:09 - grant_crawler - INFO -     ❌  40  Digital and media literacy as drivers for democratic and civic re [low_score]
+2026-03-10 10:08:09 - grant_crawler - INFO -            └ Not applicable
+2026-03-10 10:08:09 - grant_crawler - INFO -     ❌  40  Behavioural interventions as primary prevention for Non-Communica [low_score]
+2026-03-10 10:08:09 - grant_crawler - INFO -            └ Not applicable
+2026-03-10 10:08:09 - grant_crawler - INFO -     ❌  40  Advanced recovery of critical raw materials from Waste from Elect [low_score]
+2026-03-10 10:08:09 - grant_crawler - INFO -            └ Not applicable
+2026-03-10 10:08:09 - grant_crawler - INFO -     ❌  40  The effective use of artificial intelligence in learning environm [low_score]
+2026-03-10 10:08:09 - grant_crawler - INFO -            └ Not applicable
+2026-03-10 10:08:09 - grant_crawler - INFO -     ❌  40  Capacity building in VET in Neighbourhood East [low_score]
+2026-03-10 10:08:09 - grant_crawler - INFO -            └ Not applicable
+2026-03-10 10:08:09 - grant_crawler - INFO -     ❌  40  Capacity building in VET in Caribbean [low_score]
+2026-03-10 10:08:09 - grant_crawler - INFO -            └ Not applicable
+2026-03-10 10:08:09 - grant_crawler - INFO -     ❌  40  Capacity building in VET in Latin America [low_score]
+2026-03-10 10:08:09 - grant_crawler - INFO -            └ Not applicable
+2026-03-10 10:08:09 - grant_crawler - INFO -     ❌  40  Call for proposals to provide training for health workforce, incl [low_score]
+2026-03-10 10:08:09 - grant_crawler - INFO -            └ Not applicable
+2026-03-10 10:08:09 - grant_crawler - INFO -     ❌  35  MSCA and Citizens 2027 [low_score]
+2026-03-10 10:08:09 - grant_crawler - INFO -            └ Not applicable
+2026-03-10 10:08:09 - grant_crawler - INFO -     ❌  35  Training and innovation networks for sustained capacity developme [low_score]
+2026-03-10 10:08:09 - grant_crawler - INFO -            └ Not applicable
+2026-03-10 10:08:09 - grant_crawler - INFO -     ❌  25  Understanding the forms of local democracy in low-income and low- [low_score]
+2026-03-10 10:08:09 - grant_crawler - INFO -            └ Not applicable
+2026-03-10 10:08:09 - grant_crawler - INFO -     ❌  25  Addressing disabilities through the life course to support indepe [low_score]
+2026-03-10 10:08:09 - grant_crawler - INFO -            └ Not applicable
+2026-03-10 10:08:09 - grant_crawler - INFO -     ❌  25  Crafting routes to a circular economy [low_score]
+2026-03-10 10:08:09 - grant_crawler - INFO -            └ Not applicable
+2026-03-10 10:08:09 - grant_crawler - INFO -     ❌  25  Ecosystems for Higher Education Inclusion: connecting underserved [low_score]
+2026-03-10 10:08:09 - grant_crawler - INFO -            └ Not applicable
+2026-03-10 10:08:09 - grant_crawler - INFO -     ❌  25  AI supporting informed advice for farmers and foresters to improv [low_score]
+2026-03-10 10:08:09 - grant_crawler - INFO -            └ Not applicable
+2026-03-10 10:08:09 - grant_crawler - INFO -     ❌  25  International dimension of the circular bio-based economy: seekin [low_score]
+2026-03-10 10:08:09 - grant_crawler - INFO -            └ Not applicable
+2026-03-10 10:08:09 - grant_crawler - INFO -     ❌  25  Impact of access to nature-positive environments in promoting soc [low_score]
+2026-03-10 10:08:09 - grant_crawler - INFO -            └ Not applicable
+2026-03-10 10:08:09 - grant_crawler - INFO -     ❌  20  Digital Transformation of Asian Higher Education [low_score]
+2026-03-10 10:08:09 - grant_crawler - INFO -            └ Not applicable
+2026-03-10 10:08:09 - grant_crawler - INFO -     ❌  20  Digital Transformation in the Western Balkans Education [low_score]
+2026-03-10 10:08:09 - grant_crawler - INFO -            └ Not applicable
+2026-03-10 10:08:09 - grant_crawler - INFO -     ❌  20  From lab to market: Strengthening the role of Technology Transfer [low_score]
+2026-03-10 10:08:09 - grant_crawler - INFO -            └ Not applicable
+2026-03-10 10:08:09 - grant_crawler - INFO -     ❌  20  Support to the implementation of Circular Economy Strategy and Ac [low_score]
+2026-03-10 10:08:09 - grant_crawler - INFO -            └ Not applicable
+2026-03-10 10:08:09 - grant_crawler - INFO -     ❌  20  EEA/SUN/25/008 - Preparation of analytical report and expert work [low_score]
+2026-03-10 10:08:09 - grant_crawler - INFO -            └ Not applicable
+2026-03-10 10:08:09 - grant_crawler - INFO -     ❌  20  Novel combinations of knowledge and research methods to address s [low_score]
+2026-03-10 10:08:09 - grant_crawler - INFO -            └ Not applicable
+2026-03-10 10:08:09 - grant_crawler - INFO -     ❌  20  Impact of in-kind benefits on income distribution and on vulnerab [low_score]
+2026-03-10 10:08:09 - grant_crawler - INFO -            └ Not applicable
+2026-03-10 10:08:09 - grant_crawler - INFO -     ❌  20  Capacity building in VET in Western Balkans [low_score]
+2026-03-10 10:08:09 - grant_crawler - INFO -            └ Not applicable
+2026-03-10 10:08:09 - grant_crawler - INFO -     ❌  20  National Cyber Hubs [low_score]
+2026-03-10 10:08:09 - grant_crawler - INFO -            └ Not applicable
+2026-03-10 10:08:09 - grant_crawler - INFO -     ❌  15  Building public trust and outreach in the life sciences [low_score]
+2026-03-10 10:08:09 - grant_crawler - INFO -            └ Not applicable
+2026-03-10 10:08:09 - grant_crawler - INFO -     ❌  15  Demonstrating and deploying innovative collection, sorting-for-re [low_score]
+2026-03-10 10:08:09 - grant_crawler - INFO -            └ Not applicable
+2026-03-10 10:08:09 - grant_crawler - INFO -     ❌  15  Public procurement of innovative solutions for improving citizens [low_score]
+2026-03-10 10:08:09 - grant_crawler - INFO -            └ Not applicable
+2026-03-10 10:08:09 - grant_crawler - INFO -     ❌  15  The transformative potential of co-governance in the green transi [low_score]
+2026-03-10 10:08:09 - grant_crawler - INFO -            └ Not applicable
+2026-03-10 10:08:09 - grant_crawler - INFO -     ❌  10  Towards a Europe of Bioeconomy Places [low_score]
+2026-03-10 10:08:09 - grant_crawler - INFO -            └ Not applicable
+2026-03-10 10:08:09 - grant_crawler - INFO -     ❌  10  Virtual Human Twins (VHTs) for integrated clinical decision suppo [low_score]
+2026-03-10 10:08:09 - grant_crawler - INFO -            └ Not applicable
+2026-03-10 10:08:09 - grant_crawler - INFO -     ❌  10  Towards Artificial General Intelligence (AGI) for healthcare [low_score]
+2026-03-10 10:08:09 - grant_crawler - INFO -            └ Not applicable
+2026-03-10 10:08:09 - grant_crawler - INFO -     ❌  10  Development of predictive biomarkers of disease progression and t [low_score]
+2026-03-10 10:08:09 - grant_crawler - INFO -            └ Not applicable
+2026-03-10 10:08:09 - grant_crawler - INFO -     ❌  10  Intergenerational neighbourhoods and communities aligned with the [low_score]
+2026-03-10 10:08:09 - grant_crawler - INFO -            └ Not applicable
+2026-03-10 10:08:09 - grant_crawler - INFO -     ❌  10  Understanding inhabitant’s experiences of neighbourhoods to suppo [low_score]
+2026-03-10 10:08:09 - grant_crawler - INFO -            └ Not applicable
+2026-03-10 10:08:09 - grant_crawler - INFO -     ❌  10  Addressing homelessness through housing-led approaches aligned wi [low_score]
+2026-03-10 10:08:09 - grant_crawler - INFO -            └ Not applicable
+2026-03-10 10:08:09 - grant_crawler - INFO -     ❌  10  Fostering generational renewal in agriculture via EU advisory net [low_score]
+2026-03-10 10:08:09 - grant_crawler - INFO -            └ Not applicable
+2026-03-10 10:08:09 - grant_crawler - INFO -     ❌  10  Strengthening strategic advice and synergies between EU and natio [low_score]
+2026-03-10 10:08:09 - grant_crawler - INFO -            └ Not applicable
+2026-03-10 10:08:09 - grant_crawler - INFO -     ❌  10  Additional activities for the European Partnership of Agriculture [low_score]
+2026-03-10 10:08:09 - grant_crawler - INFO -            └ Not applicable
+2026-03-10 10:08:09 - grant_crawler - INFO -     ❌  10  Strengthening the resilience of European farmers through improved [low_score]
+2026-03-10 10:08:09 - grant_crawler - INFO -            └ Not applicable
+2026-03-10 10:08:09 - grant_crawler - INFO -     ❌  10  Strengthened implementation of the EU Pact on Migration and Asylu [low_score]
+2026-03-10 10:08:09 - grant_crawler - INFO -            └ Not applicable
+2026-03-10 10:08:09 - grant_crawler - INFO -     ❌  10  Digital Skills Training for Health Care Professionals in Oncology [low_score]
+2026-03-10 10:08:09 - grant_crawler - INFO -            └ Not applicable
+2026-03-10 10:08:09 - grant_crawler - INFO -     ❌   5  Cross-Border Cyber Hubs [low_score]
+2026-03-10 10:08:09 - grant_crawler - INFO -            └ Not applicable
+2026-03-10 10:08:09 - grant_crawler - INFO -     ❌   0  Scientific analysis and exploitation of space data [low_score]
+2026-03-10 10:08:09 - grant_crawler - INFO -            └ Not applicable
+2026-03-10 10:08:09 - grant_crawler - INFO -     ❌   0  Towards a European network of ocean technology testing sites [low_score]
+2026-03-10 10:08:09 - grant_crawler - INFO -            └ Not applicable
+2026-03-10 10:08:09 - grant_crawler - INFO -     ❌   0  Support to European Research Area (ERA) action on accelerating Ne [low_score]
+2026-03-10 10:08:09 - grant_crawler - INFO -            └ Not applicable
+2026-03-10 10:08:09 - grant_crawler - INFO -     ❌   0  Personalised approaches to reduce risks from Adverse Drug Reactio [low_score]
+2026-03-10 10:08:09 - grant_crawler - INFO -            └ Not applicable
+2026-03-10 10:08:09 - grant_crawler - INFO -     ❌   0  Identifying and addressing low-value care in health and care syst [low_score]
+2026-03-10 10:08:09 - grant_crawler - INFO -            └ Not applicable
+2026-03-10 10:08:09 - grant_crawler - INFO - 
+2026-03-10 10:08:09 - grant_crawler - INFO - ─── Grants.gov API (api) ──────────────────────────────────────────────
+2026-03-10 10:08:09 - grant_crawler - INFO -   Time: 175.9s  |  Pages: 0 ok, 0 errors
+2026-03-10 10:08:09 - grant_crawler - INFO -   Funnel:  fetched=700  →  filtered=692  →  scored=12  →  accepted=0
+2026-03-10 10:08:09 - grant_crawler - INFO -   Acceptance rate: 0.0%  |  Avg score: 26  |  Already in DB: 0
+2026-03-10 10:08:09 - grant_crawler - INFO -   Filter breakdown: analysis_failed=4, duplicate_in_db=608, prefilter_keywords=80
+2026-03-10 10:08:09 - grant_crawler - INFO -   Scored grants (8):
+2026-03-10 10:08:09 - grant_crawler - INFO -     ❌  35  FY 2026 J. Christopher Stevens Virtual Exchange Initiative   (JCS [low_score]
+2026-03-10 10:08:09 - grant_crawler - INFO -            └ Not applicable
+2026-03-10 10:08:09 - grant_crawler - INFO -     ❌  25  FY 2026 National Security Language Initiative for Youth (NSLI-Y) [low_score]
+2026-03-10 10:08:09 - grant_crawler - INFO -            └ Not applicable
+2026-03-10 10:08:09 - grant_crawler - INFO -     ❌  25  FY 2026 Community College Administrator Program [low_score]
+2026-03-10 10:08:09 - grant_crawler - INFO -            └ Not applicable
+2026-03-10 10:08:09 - grant_crawler - INFO -     ❌  25  Pathways to Enable Secure Open-Source Ecosystems [low_score]
+2026-03-10 10:08:09 - grant_crawler - INFO -            └ Not applicable
+2026-03-10 10:08:09 - grant_crawler - INFO -     ❌  20  Cultural Property Agreements Implementation Grants [low_score]
+2026-03-10 10:08:09 - grant_crawler - INFO -            └ Not applicable
+2026-03-10 10:08:09 - grant_crawler - INFO -     ❌   0  Community Reentry Settings Initiative [low_score]
+2026-03-10 10:08:09 - grant_crawler - INFO -            └ Not applicable
+2026-03-10 10:08:09 - grant_crawler - INFO -     ❌   0  Securing Convictions from Vetted and Special Unit Operations [low_score]
+2026-03-10 10:08:09 - grant_crawler - INFO -            └ Not applicable
+2026-03-10 10:08:09 - grant_crawler - INFO -     ❌   0  Building EPSCoR-State/National Laboratory Partnerships [low_score]
+2026-03-10 10:08:09 - grant_crawler - INFO -            └ Not applicable
+2026-03-10 10:08:09 - grant_crawler - INFO - 
+2026-03-10 10:08:09 - grant_crawler - INFO - ─── Funds for NGOs (scraper) ──────────────────────────────────────────────
+2026-03-10 10:08:09 - grant_crawler - INFO -   Time: 0.0s  |  Pages: 0 ok, 0 errors
+2026-03-10 10:08:09 - grant_crawler - INFO -   Funnel:  fetched=50  →  filtered=1  →  scored=0  →  accepted=0
+2026-03-10 10:08:09 - grant_crawler - INFO -   Acceptance rate: 0.0%  |  Avg score: N/A  |  Already in DB: 0
+2026-03-10 10:08:09 - grant_crawler - INFO -   Filter breakdown: preliminary_irrelevant=1
+2026-03-10 10:08:09 - grant_crawler - INFO - 
+2026-03-10 10:08:09 - grant_crawler - INFO - ─── DevelopmentAid (playwright) ──────────────────────────────────────────────
+2026-03-10 10:08:09 - grant_crawler - INFO -   Time: 613.5s  |  Pages: 0 ok, 0 errors
+2026-03-10 10:08:09 - grant_crawler - INFO -   Funnel:  fetched=1  →  filtered=0  →  scored=0  →  accepted=0
+2026-03-10 10:08:09 - grant_crawler - INFO -   Acceptance rate: 0.0%  |  Avg score: 75  |  Already in DB: 0
+2026-03-10 10:08:09 - grant_crawler - INFO -   Scored grants (1):
+2026-03-10 10:08:09 - grant_crawler - INFO -     ❌  75  Knorr-Bremse Global Care e. V. [stale_posting]
+2026-03-10 10:08:09 - grant_crawler - INFO -            └ Apply with a proposal to fund refurbishing donated IT equipment and distributing
+2026-03-10 10:08:09 - grant_crawler - INFO - 
+2026-03-10 10:08:09 - grant_crawler - INFO - ─── Charity Excellence (playwright) ──────────────────────────────────────────
+2026-03-10 10:08:09 - grant_crawler - INFO -   Time: 46.2s  |  Pages: 0 ok, 0 errors
+2026-03-10 10:08:09 - grant_crawler - INFO -   Funnel:  fetched=0  →  filtered=0  →  scored=0  →  accepted=0
+2026-03-10 10:08:09 - grant_crawler - INFO -   Acceptance rate: N/A  |  Avg score: N/A  |  Already in DB: 0
+2026-03-10 10:08:09 - grant_crawler - INFO - 
+2026-03-10 10:08:09 - grant_crawler - INFO - ─── GlobalGiving (playwright) ────────────────────────────────────────────────
+2026-03-10 10:08:09 - grant_crawler - INFO -   Time: 2.1s  |  Pages: 0 ok, 0 errors
+2026-03-10 10:08:09 - grant_crawler - INFO -   Funnel:  fetched=0  →  filtered=0  →  scored=0  →  accepted=0
+2026-03-10 10:08:09 - grant_crawler - INFO -   Acceptance rate: N/A  |  Avg score: N/A  |  Already in DB: 0
+2026-03-10 10:08:09 - grant_crawler - INFO - 
+2026-03-10 10:08:09 - grant_crawler - INFO - ─── DevEx Funding (playwright) ───────────────────────────────────────────────
+2026-03-10 10:08:09 - grant_crawler - INFO -   Time: 77.4s  |  Pages: 0 ok, 0 errors
+2026-03-10 10:08:09 - grant_crawler - INFO -   Funnel:  fetched=0  →  filtered=0  →  scored=0  →  accepted=0
+2026-03-10 10:08:09 - grant_crawler - INFO -   Acceptance rate: N/A  |  Avg score: N/A  |  Already in DB: 0
+2026-03-10 10:08:09 - grant_crawler - INFO - 
+2026-03-10 10:08:09 - grant_crawler - INFO - ──────────────────────────────────────────────────────────────────────────────────────────
+2026-03-10 10:08:09 - grant_crawler - INFO - UTILITY VERDICT (sites ranked by value)
+2026-03-10 10:08:09 - grant_crawler - INFO - ──────────────────────────────────────────────────────────────────────────────────────────
+2026-03-10 10:08:09 - grant_crawler - INFO -   Instrumentl                     🟢 VALUABLE — producing relevant grants
+2026-03-10 10:08:09 - grant_crawler - INFO -   EC Europa Funding & Tenders     🟡 MARGINAL — few accepted grants, may need profile tuning
+2026-03-10 10:08:09 - grant_crawler - INFO -   Grants.gov API                  ⚠️  LOW VALUE — fetched grants but none passed scoring
+2026-03-10 10:08:09 - grant_crawler - INFO -   Funds for NGOs                  ⚠️  FILTERED OUT — grants fetched but all filtered pre-scoring
+2026-03-10 10:08:09 - grant_crawler - INFO -   DevelopmentAid                  ⚠️  FILTERED OUT — grants fetched but all filtered pre-scoring
+2026-03-10 10:08:09 - grant_crawler - INFO -   Charity Excellence              ⛔ NO DATA — check profile / site availability
+2026-03-10 10:08:09 - grant_crawler - INFO -   GlobalGiving                    ⛔ NO DATA — check profile / site availability
+2026-03-10 10:08:09 - grant_crawler - INFO -   DevEx Funding                   ⛔ NO DATA — check profile / site availability
+2026-03-10 10:08:09 - grant_crawler - INFO - ==========================================================================================
+2026-03-10 10:08:09 - grant_crawler - INFO - Run report saved → logs/run_2026-03-10T09-16-29.json
+2026-03-10 10:08:09 - grant_crawler - INFO - Run appended to history CSV → logs/run_history.csv
+2026-03-10 10:08:09 - GrantCrawler - INFO - Audit log saved → logs/audit/run_2026-03-10T09-16-29.jsonl

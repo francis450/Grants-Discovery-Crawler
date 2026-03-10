@@ -124,6 +124,9 @@ class DevelopmentAidProfile(BasePlaywrightProfile):
         page = await new_stealth_page(context)
         all_grants: List[dict] = []
         cookie_dismissed = False
+        # Track all scored titles (accepted + rejected) to avoid re-scoring
+        # the same grant if it appears on multiple pages or search queries
+        scored_titles: Set[str] = set()
 
         try:
             for search_idx, search_url in enumerate(SEARCH_URLS, 1):
@@ -207,9 +210,10 @@ class DevelopmentAidProfile(BasePlaywrightProfile):
                     for grant in rows:
                         if not is_complete_grant(grant, required_keys):
                             continue
-                        if is_duplicate_grant(grant.get("title"), seen_titles):
+                        title = grant.get("title", "")
+                        if is_duplicate_grant(title, seen_titles) or title in scored_titles:
                             logger.debug(
-                                f"  Duplicate: {grant.get('title')} — skip."
+                                f"  Duplicate: {title} — skip."
                             )
                             continue
 
@@ -225,6 +229,7 @@ class DevelopmentAidProfile(BasePlaywrightProfile):
                         logger.info(
                             f"  Analyzing relevance: {grant.get('title', '?')} …"
                         )
+                        scored_titles.add(title)
                         analysis = await relevance_analyzer(grant)
 
                         if analysis:

@@ -1,0 +1,678 @@
+{
+  "run_id": "2026-03-10T09:16:29",
+  "run_duration_seconds": 3100.1,
+  "generated_at": "2026-03-10T10:08:09.858260",
+  "summary": {
+    "total_sites": 8,
+    "total_fetched": 4008,
+    "total_accepted": 5,
+    "total_early_stops": 0,
+    "total_errors": 0
+  },
+  "sites": [
+    {
+      "site_name": "Grants.gov API",
+      "profile_type": "api",
+      "elapsed_seconds": 175.9,
+      "pages_crawled": 0,
+      "pages_errored": 0,
+      "grants_fetched": 700,
+      "filters": {
+        "duplicate_in_db": 608,
+        "prefilter_keywords": 80,
+        "deadline_expired": 0,
+        "analysis_failed": 4
+      },
+      "total_filtered": 692,
+      "sent_to_scoring": 12,
+      "grants_accepted": 0,
+      "grants_already_in_db": 0,
+      "acceptance_rate": "0.0%",
+      "avg_score": "26",
+      "scored_grants": [
+        {
+          "title": "Cultural Property Agreements Implementation Grants",
+          "score": 20,
+          "how_it_helps": "Not applicable",
+          "accepted": false,
+          "reason_rejected": "low_score"
+        },
+        {
+          "title": "Community Reentry Settings Initiative",
+          "score": 0,
+          "how_it_helps": "Not applicable",
+          "accepted": false,
+          "reason_rejected": "low_score"
+        },
+        {
+          "title": "FY 2026 J. Christopher Stevens Virtual Exchange Initiative   (JCSVEI) Program",
+          "score": 35,
+          "how_it_helps": "Not applicable",
+          "accepted": false,
+          "reason_rejected": "low_score"
+        },
+        {
+          "title": "FY 2026 National Security Language Initiative for Youth (NSLI-Y)",
+          "score": 25,
+          "how_it_helps": "Not applicable",
+          "accepted": false,
+          "reason_rejected": "low_score"
+        },
+        {
+          "title": "Securing Convictions from Vetted and Special Unit Operations",
+          "score": 0,
+          "how_it_helps": "Not applicable",
+          "accepted": false,
+          "reason_rejected": "low_score"
+        },
+        {
+          "title": "FY 2026 Community College Administrator Program",
+          "score": 25,
+          "how_it_helps": "Not applicable",
+          "accepted": false,
+          "reason_rejected": "low_score"
+        },
+        {
+          "title": "Pathways to Enable Secure Open-Source Ecosystems",
+          "score": 25,
+          "how_it_helps": "Not applicable",
+          "accepted": false,
+          "reason_rejected": "low_score"
+        },
+        {
+          "title": "Building EPSCoR-State/National Laboratory Partnerships",
+          "score": 0,
+          "how_it_helps": "Not applicable",
+          "accepted": false,
+          "reason_rejected": "low_score"
+        }
+      ],
+      "early_stops": [],
+      "errors": []
+    },
+    {
+      "site_name": "EC Europa Funding & Tenders",
+      "profile_type": "api",
+      "elapsed_seconds": 1119.6,
+      "pages_crawled": 0,
+      "pages_errored": 0,
+      "grants_fetched": 3250,
+      "filters": {
+        "duplicate_in_db": 1978,
+        "prefilter_keywords": 42,
+        "deadline_expired": 1166,
+        "analysis_failed": 5
+      },
+      "total_filtered": 3191,
+      "sent_to_scoring": 64,
+      "grants_accepted": 1,
+      "grants_already_in_db": 0,
+      "acceptance_rate": "0.0%",
+      "avg_score": "26",
+      "scored_grants": [
+        {
+          "title": "Digital Education Content: success factors in decision making and use by teachers, trainers and school/institution leaders",
+          "score": 45,
+          "how_it_helps": "Not applicable",
+          "accepted": false,
+          "reason_rejected": "low_score"
+        },
+        {
+          "title": "Digital Education: Public-private partnerships for ethical design, development and use of Artificial Intelligence tools in education and training",
+          "score": 40,
+          "how_it_helps": "Not applicable",
+          "accepted": false,
+          "reason_rejected": "low_score"
+        },
+        {
+          "title": "Topic 6: Digital education: Assessment of digital skills and competences",
+          "score": 45,
+          "how_it_helps": "Not applicable",
+          "accepted": false,
+          "reason_rejected": "low_score"
+        },
+        {
+          "title": "Digital Transformation of Asian Higher Education",
+          "score": 20,
+          "how_it_helps": "Not applicable",
+          "accepted": false,
+          "reason_rejected": "low_score"
+        },
+        {
+          "title": "Digital Transformation in the Western Balkans Education",
+          "score": 20,
+          "how_it_helps": "Not applicable",
+          "accepted": false,
+          "reason_rejected": "low_score"
+        },
+        {
+          "title": "Digital Competence Levels Assessment in School Education",
+          "score": 45,
+          "how_it_helps": "Not applicable",
+          "accepted": false,
+          "reason_rejected": "low_score"
+        },
+        {
+          "title": "Transforming Professional Higher Education for the Green and Digital Transitions",
+          "score": 45,
+          "how_it_helps": "Not applicable",
+          "accepted": false,
+          "reason_rejected": "low_score"
+        },
+        {
+          "title": "Capacity building in VET in South Mediterranean Countries",
+          "score": 40,
+          "how_it_helps": "Not applicable",
+          "accepted": false,
+          "reason_rejected": "low_score"
+        },
+        {
+          "title": "Towards a Europe of Bioeconomy Places",
+          "score": 10,
+          "how_it_helps": "Not applicable",
+          "accepted": false,
+          "reason_rejected": "low_score"
+        },
+        {
+          "title": "Scientific analysis and exploitation of space data",
+          "score": 0,
+          "how_it_helps": "Not applicable",
+          "accepted": false,
+          "reason_rejected": "low_score"
+        },
+        {
+          "title": "Understanding the forms of local democracy in low-income and low-middle income countries",
+          "score": 25,
+          "how_it_helps": "Not applicable",
+          "accepted": false,
+          "reason_rejected": "low_score"
+        },
+        {
+          "title": "From lab to market: Strengthening the role of Technology Transfer Offices in bringing knowledge to the market",
+          "score": 20,
+          "how_it_helps": "Not applicable",
+          "accepted": false,
+          "reason_rejected": "low_score"
+        },
+        {
+          "title": "Digital and media literacy as drivers for democratic and civic resilience",
+          "score": 40,
+          "how_it_helps": "Not applicable",
+          "accepted": false,
+          "reason_rejected": "low_score"
+        },
+        {
+          "title": "Addressing disabilities through the life course to support independent living and inclusion",
+          "score": 25,
+          "how_it_helps": "Not applicable",
+          "accepted": false,
+          "reason_rejected": "low_score"
+        },
+        {
+          "title": "Behavioural interventions as primary prevention for Non-Communicable Diseases (NCDs) among young people",
+          "score": 40,
+          "how_it_helps": "Not applicable",
+          "accepted": false,
+          "reason_rejected": "low_score"
+        },
+        {
+          "title": "Building public trust and outreach in the life sciences",
+          "score": 15,
+          "how_it_helps": "Not applicable",
+          "accepted": false,
+          "reason_rejected": "low_score"
+        },
+        {
+          "title": "School Education: STEM Education Centres",
+          "score": 75,
+          "how_it_helps": "Form partnerships with EU schools/organizations under Erasmus+ to co-develop STEM Education Centres in Kenyan schools, i",
+          "accepted": true,
+          "reason_rejected": ""
+        },
+        {
+          "title": "Demonstrating and deploying innovative collection, sorting-for-reuse and repair systems for textiles at city/region level (Circular Cities and Regions Initiative topic)",
+          "score": 15,
+          "how_it_helps": "Not applicable",
+          "accepted": false,
+          "reason_rejected": "low_score"
+        },
+        {
+          "title": "Support to the implementation of Circular Economy Strategy and Action Plan for Ukraine",
+          "score": 20,
+          "how_it_helps": "Not applicable",
+          "accepted": false,
+          "reason_rejected": "low_score"
+        },
+        {
+          "title": "EEA/SUN/25/008 - Preparation of analytical report and expert workshop on the links between circular economy and wellbeing economy in Europe",
+          "score": 20,
+          "how_it_helps": "Not applicable",
+          "accepted": false,
+          "reason_rejected": "low_score"
+        },
+        {
+          "title": "Crafting routes to a circular economy",
+          "score": 25,
+          "how_it_helps": "Not applicable",
+          "accepted": false,
+          "reason_rejected": "low_score"
+        },
+        {
+          "title": "Advanced recovery of critical raw materials from Waste from Electrical and Electronic Equipment (WEEE)",
+          "score": 40,
+          "how_it_helps": "Not applicable",
+          "accepted": false,
+          "reason_rejected": "low_score"
+        },
+        {
+          "title": "MSCA and Citizens 2027",
+          "score": 35,
+          "how_it_helps": "Not applicable",
+          "accepted": false,
+          "reason_rejected": "low_score"
+        },
+        {
+          "title": "The impact of the use of digital tools outside school and for communication on educational outcomes and mental health",
+          "score": 45,
+          "how_it_helps": "Not applicable",
+          "accepted": false,
+          "reason_rejected": "low_score"
+        },
+        {
+          "title": "Towards a European network of ocean technology testing sites",
+          "score": 0,
+          "how_it_helps": "Not applicable",
+          "accepted": false,
+          "reason_rejected": "low_score"
+        },
+        {
+          "title": "Ecosystems for Higher Education Inclusion: connecting underserved communities with higher education through participatory engagement and research methodologies (EHEI)",
+          "score": 25,
+          "how_it_helps": "Not applicable",
+          "accepted": false,
+          "reason_rejected": "low_score"
+        },
+        {
+          "title": "Virtual Human Twins (VHTs) for integrated clinical decision support in prevention and diagnosis",
+          "score": 10,
+          "how_it_helps": "Not applicable",
+          "accepted": false,
+          "reason_rejected": "low_score"
+        },
+        {
+          "title": "Towards Artificial General Intelligence (AGI) for healthcare",
+          "score": 10,
+          "how_it_helps": "Not applicable",
+          "accepted": false,
+          "reason_rejected": "low_score"
+        },
+        {
+          "title": "Support to European Research Area (ERA) action on accelerating New Approach Methodologies (NAMs) to advance biomedical research and testing of medicinal products and medical devices",
+          "score": 0,
+          "how_it_helps": "Not applicable",
+          "accepted": false,
+          "reason_rejected": "low_score"
+        },
+        {
+          "title": "Development of predictive biomarkers of disease progression and treatment response by using AI methodologies for chronic non-communicable diseases",
+          "score": 10,
+          "how_it_helps": "Not applicable",
+          "accepted": false,
+          "reason_rejected": "low_score"
+        },
+        {
+          "title": "Personalised approaches to reduce risks from Adverse Drug Reactions due to administration of multiple medications",
+          "score": 0,
+          "how_it_helps": "Not applicable",
+          "accepted": false,
+          "reason_rejected": "low_score"
+        },
+        {
+          "title": "Public procurement of innovative solutions for improving citizens' access to healthcare through integrated or personalised approaches",
+          "score": 15,
+          "how_it_helps": "Not applicable",
+          "accepted": false,
+          "reason_rejected": "low_score"
+        },
+        {
+          "title": "Identifying and addressing low-value care in health and care systems",
+          "score": 0,
+          "how_it_helps": "Not applicable",
+          "accepted": false,
+          "reason_rejected": "low_score"
+        },
+        {
+          "title": "The transformative potential of co-governance in the green transition of neighbourhoods",
+          "score": 15,
+          "how_it_helps": "Not applicable",
+          "accepted": false,
+          "reason_rejected": "low_score"
+        },
+        {
+          "title": "Intergenerational neighbourhoods and communities aligned with the New European Bauhaus",
+          "score": 10,
+          "how_it_helps": "Not applicable",
+          "accepted": false,
+          "reason_rejected": "low_score"
+        },
+        {
+          "title": "Understanding inhabitant’s experiences of neighbourhoods to support their health and well-being",
+          "score": 10,
+          "how_it_helps": "Not applicable",
+          "accepted": false,
+          "reason_rejected": "low_score"
+        },
+        {
+          "title": "Novel combinations of knowledge and research methods to address social issues and advance a fair green transition of neighbourhoods",
+          "score": 20,
+          "how_it_helps": "Not applicable",
+          "accepted": false,
+          "reason_rejected": "low_score"
+        },
+        {
+          "title": "Addressing homelessness through housing-led approaches aligned with the New European Bauhaus",
+          "score": 10,
+          "how_it_helps": "Not applicable",
+          "accepted": false,
+          "reason_rejected": "low_score"
+        },
+        {
+          "title": "AI supporting informed advice for farmers and foresters to improve competitiveness and sustainability",
+          "score": 25,
+          "how_it_helps": "Not applicable",
+          "accepted": false,
+          "reason_rejected": "low_score"
+        },
+        {
+          "title": "Fostering generational renewal in agriculture via EU advisory network",
+          "score": 10,
+          "how_it_helps": "Not applicable",
+          "accepted": false,
+          "reason_rejected": "low_score"
+        },
+        {
+          "title": "Strengthening strategic advice and synergies between EU and national Research and Innovation agendas and investments",
+          "score": 10,
+          "how_it_helps": "Not applicable",
+          "accepted": false,
+          "reason_rejected": "low_score"
+        },
+        {
+          "title": "Additional activities for the European Partnership of Agriculture of Data",
+          "score": 10,
+          "how_it_helps": "Not applicable",
+          "accepted": false,
+          "reason_rejected": "low_score"
+        },
+        {
+          "title": "International dimension of the circular bio-based economy: seeking win-win opportunities",
+          "score": 25,
+          "how_it_helps": "Not applicable",
+          "accepted": false,
+          "reason_rejected": "low_score"
+        },
+        {
+          "title": "Strengthening the resilience of European farmers through improved capacity in coping with risks and crises",
+          "score": 10,
+          "how_it_helps": "Not applicable",
+          "accepted": false,
+          "reason_rejected": "low_score"
+        },
+        {
+          "title": "Contribution of basic skills to productivity, innovation, competitiveness and economic growth",
+          "score": 45,
+          "how_it_helps": "Not applicable",
+          "accepted": false,
+          "reason_rejected": "low_score"
+        },
+        {
+          "title": "Closing the learning gap: uncovering causes and effective policy interventions for declining youth skills in mathematics, reading, and science",
+          "score": 45,
+          "how_it_helps": "Not applicable",
+          "accepted": false,
+          "reason_rejected": "low_score"
+        },
+        {
+          "title": "The effective use of artificial intelligence in learning environments in pre-primary and primary education",
+          "score": 40,
+          "how_it_helps": "Not applicable",
+          "accepted": false,
+          "reason_rejected": "low_score"
+        },
+        {
+          "title": "Impact of access to nature-positive environments in promoting social cohesion and reducing inequalities in urban and peri-urban settings",
+          "score": 25,
+          "how_it_helps": "Not applicable",
+          "accepted": false,
+          "reason_rejected": "low_score"
+        },
+        {
+          "title": "Strengthened implementation of the EU Pact on Migration and Asylum and a focus on inclusion, integration, and health",
+          "score": 10,
+          "how_it_helps": "Not applicable",
+          "accepted": false,
+          "reason_rejected": "low_score"
+        },
+        {
+          "title": "Impact of in-kind benefits on income distribution and on vulnerable populations",
+          "score": 20,
+          "how_it_helps": "Not applicable",
+          "accepted": false,
+          "reason_rejected": "low_score"
+        },
+        {
+          "title": "Capacity building in VET in Neighbourhood East",
+          "score": 40,
+          "how_it_helps": "Not applicable",
+          "accepted": false,
+          "reason_rejected": "low_score"
+        },
+        {
+          "title": "Capacity building in VET in Caribbean",
+          "score": 40,
+          "how_it_helps": "Not applicable",
+          "accepted": false,
+          "reason_rejected": "low_score"
+        },
+        {
+          "title": "Capacity building in VET in Latin America",
+          "score": 40,
+          "how_it_helps": "Not applicable",
+          "accepted": false,
+          "reason_rejected": "low_score"
+        },
+        {
+          "title": "Capacity building in VET in Western Balkans",
+          "score": 20,
+          "how_it_helps": "Not applicable",
+          "accepted": false,
+          "reason_rejected": "low_score"
+        },
+        {
+          "title": "Training and innovation networks for sustained capacity development related to ethics, regulatory, pharmacovigilance, and related digital regulatory platforms",
+          "score": 35,
+          "how_it_helps": "Not applicable",
+          "accepted": false,
+          "reason_rejected": "low_score"
+        },
+        {
+          "title": "Digital Skills Training for Health Care Professionals in Oncology",
+          "score": 10,
+          "how_it_helps": "Not applicable",
+          "accepted": false,
+          "reason_rejected": "low_score"
+        },
+        {
+          "title": "Call for proposals to provide training for health workforce, including digital skills",
+          "score": 40,
+          "how_it_helps": "Not applicable",
+          "accepted": false,
+          "reason_rejected": "low_score"
+        },
+        {
+          "title": "National Cyber Hubs",
+          "score": 20,
+          "how_it_helps": "Not applicable",
+          "accepted": false,
+          "reason_rejected": "low_score"
+        },
+        {
+          "title": "Cross-Border Cyber Hubs",
+          "score": 5,
+          "how_it_helps": "Not applicable",
+          "accepted": false,
+          "reason_rejected": "low_score"
+        }
+      ],
+      "early_stops": [],
+      "errors": []
+    },
+    {
+      "site_name": "Charity Excellence",
+      "profile_type": "playwright",
+      "elapsed_seconds": 46.2,
+      "pages_crawled": 0,
+      "pages_errored": 0,
+      "grants_fetched": 0,
+      "filters": {},
+      "total_filtered": 0,
+      "sent_to_scoring": 0,
+      "grants_accepted": 0,
+      "grants_already_in_db": 0,
+      "acceptance_rate": "N/A",
+      "avg_score": "N/A",
+      "scored_grants": [],
+      "early_stops": [],
+      "errors": []
+    },
+    {
+      "site_name": "GlobalGiving",
+      "profile_type": "playwright",
+      "elapsed_seconds": 2.1,
+      "pages_crawled": 0,
+      "pages_errored": 0,
+      "grants_fetched": 0,
+      "filters": {},
+      "total_filtered": 0,
+      "sent_to_scoring": 0,
+      "grants_accepted": 0,
+      "grants_already_in_db": 0,
+      "acceptance_rate": "N/A",
+      "avg_score": "N/A",
+      "scored_grants": [],
+      "early_stops": [],
+      "errors": []
+    },
+    {
+      "site_name": "DevEx Funding",
+      "profile_type": "playwright",
+      "elapsed_seconds": 77.4,
+      "pages_crawled": 0,
+      "pages_errored": 0,
+      "grants_fetched": 0,
+      "filters": {},
+      "total_filtered": 0,
+      "sent_to_scoring": 0,
+      "grants_accepted": 0,
+      "grants_already_in_db": 0,
+      "acceptance_rate": "N/A",
+      "avg_score": "N/A",
+      "scored_grants": [],
+      "early_stops": [],
+      "errors": []
+    },
+    {
+      "site_name": "DevelopmentAid",
+      "profile_type": "playwright",
+      "elapsed_seconds": 613.5,
+      "pages_crawled": 0,
+      "pages_errored": 0,
+      "grants_fetched": 1,
+      "filters": {},
+      "total_filtered": 0,
+      "sent_to_scoring": 0,
+      "grants_accepted": 0,
+      "grants_already_in_db": 0,
+      "acceptance_rate": "0.0%",
+      "avg_score": "75",
+      "scored_grants": [
+        {
+          "title": "Knorr-Bremse Global Care e. V.",
+          "score": 75,
+          "how_it_helps": "Apply with a proposal to fund refurbishing donated IT equipment and distributing laptops/tablets to rural Kenyan schools",
+          "accepted": false,
+          "reason_rejected": "stale_posting"
+        }
+      ],
+      "early_stops": [],
+      "errors": []
+    },
+    {
+      "site_name": "Instrumentl",
+      "profile_type": "playwright",
+      "elapsed_seconds": 958.7,
+      "pages_crawled": 0,
+      "pages_errored": 0,
+      "grants_fetched": 7,
+      "filters": {},
+      "total_filtered": 0,
+      "sent_to_scoring": 0,
+      "grants_accepted": 4,
+      "grants_already_in_db": 3,
+      "acceptance_rate": "57.1%",
+      "avg_score": "75",
+      "scored_grants": [
+        {
+          "title": "Tony Robbins Foundation Grant",
+          "score": 72,
+          "how_it_helps": "Frame application around 'Youth Development & Leadership' by emphasizing how refurbished IT equipment builds digital ski",
+          "accepted": true,
+          "reason_rejected": ""
+        },
+        {
+          "title": "Looking Out Foundation Grant",
+          "score": 75,
+          "how_it_helps": "Apply under Youth Services theme, pitching refurbishment and distribution of IT equipment to rural Kenyan schools as hum",
+          "accepted": true,
+          "reason_rejected": ""
+        },
+        {
+          "title": "The Hitchman Charitable Trust",
+          "score": 70,
+          "how_it_helps": "Frame the project as a child welfare initiative by distributing refurbished IT equipment to schools in underserved Kenya",
+          "accepted": true,
+          "reason_rejected": ""
+        },
+        {
+          "title": "Rotary Club: Global Grants",
+          "score": 82,
+          "how_it_helps": "Partner with a local Kenyan or international Rotary club/district to co-develop and submit a Global Grant proposal for r",
+          "accepted": true,
+          "reason_rejected": ""
+        }
+      ],
+      "early_stops": [],
+      "errors": []
+    },
+    {
+      "site_name": "Funds for NGOs",
+      "profile_type": "scraper",
+      "elapsed_seconds": 0.0,
+      "pages_crawled": 0,
+      "pages_errored": 0,
+      "grants_fetched": 50,
+      "filters": {
+        "preliminary_irrelevant": 1
+      },
+      "total_filtered": 1,
+      "sent_to_scoring": 0,
+      "grants_accepted": 0,
+      "grants_already_in_db": 0,
+      "acceptance_rate": "0.0%",
+      "avg_score": "N/A",
+      "scored_grants": [],
+      "early_stops": [],
+      "errors": []
+    }
+  ]
+}

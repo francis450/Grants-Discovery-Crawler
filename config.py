@@ -9,11 +9,11 @@ load_dotenv()
 # List of site profiles to crawl (profiles are defined in site_profiles/)
 # Available profiles: "fundsforngos" (more to be added)
 ENABLED_SITES = [
-    "grants_gov",  # API-based (Fast)
+    # "grants_gov",  # API-based (Fast)
     "fundsforngos",
     "eufundingportal",
     "charityexcellence",
-    "globalgiving",
+    # "globalgiving",
     "devex",
     "ictworks",  # disabled for devaid test
     "developmentaid",

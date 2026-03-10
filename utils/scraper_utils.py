@@ -16,7 +16,7 @@ from crawl4ai import (
 
 from models.grant import Grant
 from utils.data_utils import is_complete_grant, is_duplicate_grant, is_how_it_helps_valid
-from config import MIN_DEADLINE_DAYS, MIN_RELEVANCE_SCORE, MAX_POSTING_AGE_DAYS
+from config import MIN_DEADLINE_DAYS, MIN_RELEVANCE_SCORE, MAX_POSTING_AGE_DAYS, RELEVANCE_PROVIDER
 from utils.logging_utils import logger, MetricsLogger
 
 # Initialize detailed metrics logger

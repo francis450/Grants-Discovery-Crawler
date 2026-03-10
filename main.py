@@ -254,6 +254,11 @@ async def crawl_grants(sites_to_run: Optional[List[str]] = None, only_api: bool 
             st.record_error("fetch_grants", str(e))
         finally:
             st.finish()
+            # Incremental save after each API profile so CSV stays in sync with DB
+            # even if a later profile crashes mid-run.
+            if all_grants:
+                save_grants_to_csv(all_grants, "grants_output.csv")
+                save_grants_to_json(all_grants, "grants_output.json")
 
     # 2. Process Playwright Profiles (JS-heavy / anti-bot sites)
     if playwright_profiles:
@@ -438,10 +443,10 @@ async def crawl_grants(sites_to_run: Optional[List[str]] = None, only_api: bool 
                                 await asyncio.sleep(2)
                                 continue
 
-                            # Add the grants from this page to the total list
-                            all_grants.extend(grants)
-
-                            # Insert new grants into database
+                            # Insert new grants into database, then add to in-memory lists.
+                            # all_grants is only updated AFTER a successful DB insert so
+                            # CSV and DB always stay in sync — no grant can appear in one
+                            # but not the other.
                             for grant in grants:
                                 if grant_exists(
                                     grant.get("title"),
@@ -451,12 +456,18 @@ async def crawl_grants(sites_to_run: Optional[List[str]] = None, only_api: bool 
                                 ):
                                     st.record_existing()
                                 else:
-                                    insert_grant(grant, run_id)
-                                    new_grants_this_run.append(grant)
-                                    if grant.get("title"):
-                                        db_existing_titles.add(grant["title"])
-                                    if grant.get("application_url"):
-                                        db_existing_urls.add(grant["application_url"])
+                                    if insert_grant(grant, run_id):
+                                        all_grants.append(grant)
+                                        new_grants_this_run.append(grant)
+                                        if grant.get("title"):
+                                            db_existing_titles.add(grant["title"])
+                                        if grant.get("application_url"):
+                                            db_existing_urls.add(grant["application_url"])
+                                    else:
+                                        logger.warning(
+                                            f"DB insert failed — grant excluded from output: "
+                                            f"{grant.get('title')}"
+                                        )
 
                             # Save progress incrementally
                             save_grants_to_csv(all_grants, "grants_output.csv")
