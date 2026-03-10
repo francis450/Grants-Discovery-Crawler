@@ -50,7 +50,7 @@ def setup_logger(
     # File Handler
     if log_file:
         try:
-            timestamp = datetime.now().strftime("%Y-%m-%d")
+            timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M")
             filename = os.path.join(LOGS_DIR, f"{log_file}_{timestamp}.log")
             
             # Rotate: Max 10MB per file, keep last 5 backups

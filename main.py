@@ -37,6 +37,7 @@ from utils.scraper_utils import (
 from utils.xai_utils import analyze_grant_relevance_xai
 from utils.logging_utils import setup_logger, logger
 from utils.site_tracker import RunTracker
+from utils.audit_utils import AuditLog
 
 load_dotenv()
 
@@ -70,7 +71,7 @@ async def crawl_grants(sites_to_run: Optional[List[str]] = None, only_api: bool 
     """
     # Initialize logger
     setup_logger(name="grant_crawler")
-    
+
     # Initialize site performance tracker
     tracker = RunTracker()
 
@@ -79,6 +80,10 @@ async def crawl_grants(sites_to_run: Optional[List[str]] = None, only_api: bool 
     llm_strategy = get_llm_strategy()
     session_id = "grant_crawl_session"
     run_id = datetime.now().strftime("%Y-%m-%dT%H:%M:%S")
+    run_start_time = __import__("time").time()
+
+    # Per-run audit log (one JSONL file per run in logs/audit/)
+    audit = AuditLog(run_id)
 
     # Initialize database
     init_db()
@@ -131,6 +136,18 @@ async def crawl_grants(sites_to_run: Optional[List[str]] = None, only_api: bool 
     playwright_profiles = [p for p in site_profiles if isinstance(p, BasePlaywrightProfile)]
     scraper_profiles = [p for p in site_profiles if not isinstance(p, BaseAPIProfile) and not isinstance(p, BasePlaywrightProfile)]
 
+    # Audit: record run start with active config for reproducibility
+    from config import MIN_RELEVANCE_SCORE as _MRS, MIN_DEADLINE_DAYS as _MDD, MAX_POSTING_AGE_DAYS as _MPA
+    audit.log_run_start(
+        sites=site_names,
+        config={
+            "min_relevance_score": _MRS,
+            "min_deadline_days": _MDD,
+            "max_posting_age_days": _MPA,
+            "early_stop_on_all_duplicates": EARLY_STOP_ON_ALL_DUPLICATES,
+        },
+    )
+
     # 1. Process API Profiles
     for api_profile in api_profiles:
         st = tracker.site(api_profile.site_name, profile_type="api")
@@ -158,14 +175,18 @@ async def crawl_grants(sites_to_run: Optional[List[str]] = None, only_api: bool 
                     st.grants_fetched = ps["total_hits"]
             
             for grant in fetched_grants:
+                _title = grant.get("title", "")
+                _url = grant.get("application_url", "")
+
                 # Check for duplicates
                 if grant_exists(grant.get("title"), grant.get("application_url"), db_existing_titles, db_existing_urls):
-                    logger.debug(f"Duplicate found: {grant.get('title')}")
+                    logger.debug(f"Duplicate found: {_title}")
                     st.record_filtered("duplicate_in_db")
+                    audit.log_filtered(api_profile.site_name, _title, _url, "duplicate_in_db")
                     continue
-                
+
                 # Analyze relevance using xAI (with retry on transient failures)
-                logger.info(f"Analyzing: {grant.get('title')}...")
+                logger.info(f"Analyzing: {_title}...")
                 st.record_sent_to_scoring()
                 analysis = None
                 for attempt in range(3):
@@ -176,50 +197,57 @@ async def crawl_grants(sites_to_run: Optional[List[str]] = None, only_api: bool 
                         logger.warning(f"xAI attempt {attempt+1}/3 failed: {api_err}")
                         if attempt < 2:
                             await asyncio.sleep(2 ** attempt)  # Exponential backoff
-                
+
                 if analysis:
                     analysis = normalize_analysis(analysis)
                     grant.update(analysis)
-                    
+
                     # Check Score
                     score = grant.get("relevance_score", 0)
                     hih = grant.get("how_it_helps", "")
-                    
+                    reasoning = grant.get("relevance_reasoning", "")
+                    dl = grant.get("deadline", "")
+
                     if score >= MIN_RELEVANCE_SCORE:
                         # Reject if LLM admits the grant doesn't help the mission
                         if not is_how_it_helps_valid(hih):
-                            logger.info(f"🚫 Skipping ({score}): how_it_helps='Not applicable' — {grant.get('title')}")
-                            st.record_scored(grant.get("title", ""), score, hih, accepted=False, reason_rejected="how_it_helps_invalid")
+                            logger.info(f"🚫 Skipping ({score}): how_it_helps='Not applicable' — {_title}")
+                            st.record_scored(_title, score, hih, accepted=False, reason_rejected="how_it_helps_invalid")
+                            audit.log_scored(api_profile.site_name, _title, _url, score, hih, reasoning, accepted=False, reason_rejected="how_it_helps_invalid", deadline=dl)
                             continue
 
                         # Safety-net deadline check
-                        dl = grant.get("deadline", "")
                         if dl and not is_deadline_valid(dl):
-                            logger.info(f"⏰ Skipping ({score}): deadline '{dl}' past/too soon — {grant.get('title')}")
-                            st.record_scored(grant.get("title", ""), score, hih, accepted=False, reason_rejected="deadline_expired")
+                            logger.info(f"⏰ Skipping ({score}): deadline '{dl}' past/too soon — {_title}")
+                            st.record_scored(_title, score, hih, accepted=False, reason_rejected="deadline_expired")
+                            audit.log_scored(api_profile.site_name, _title, _url, score, hih, reasoning, accepted=False, reason_rejected="deadline_expired", deadline=dl)
                             continue
 
                         # Stale posting check: no deadline + posted too long ago
                         if not dl and not is_posting_fresh(grant.get("date_posted")):
-                            logger.info(f"⏰ Skipping ({score}): no deadline, posted {grant.get('date_posted')} (>{MAX_POSTING_AGE_DAYS}d ago) — {grant.get('title')}")
-                            st.record_scored(grant.get("title", ""), score, hih, accepted=False, reason_rejected="stale_posting")
+                            logger.info(f"⏰ Skipping ({score}): no deadline, posted {grant.get('date_posted')} (>{MAX_POSTING_AGE_DAYS}d ago) — {_title}")
+                            st.record_scored(_title, score, hih, accepted=False, reason_rejected="stale_posting")
+                            audit.log_scored(api_profile.site_name, _title, _url, score, hih, reasoning, accepted=False, reason_rejected="stale_posting", deadline=dl)
                             continue
 
-                        logger.info(f"✅ RELEVANT ({score}): {grant.get('title')}")
-                        st.record_scored(grant.get("title", ""), score, hih, accepted=True)
+                        logger.info(f"✅ RELEVANT ({score}): {_title}")
+                        st.record_scored(_title, score, hih, accepted=True)
+                        audit.log_scored(api_profile.site_name, _title, _url, score, hih, reasoning, accepted=True, deadline=dl)
                         insert_grant(grant, run_id)
                         new_grants_this_run.append(grant)
                         all_grants.append(grant)
-                        
+
                         # Update specific sets
                         if grant.get("title"): db_existing_titles.add(grant["title"])
                         if grant.get("application_url"): db_existing_urls.add(grant["application_url"])
                     else:
-                        logger.info(f"❌ Low Score ({score}): {grant.get('title')}")
-                        st.record_scored(grant.get("title", ""), score, hih, accepted=False, reason_rejected="low_score")
+                        logger.info(f"❌ Low Score ({score}): {_title}")
+                        st.record_scored(_title, score, hih, accepted=False, reason_rejected="low_score")
+                        audit.log_scored(api_profile.site_name, _title, _url, score, hih, reasoning, accepted=False, reason_rejected="low_score", deadline=dl)
                 else:
-                    logger.warning(f"Could not analyze relevance for {grant.get('title')}")
+                    logger.warning(f"Could not analyze relevance for {_title}")
                     st.record_filtered("analysis_failed")
+                    audit.log_filtered(api_profile.site_name, _title, _url, "analysis_failed")
 
         except Exception as e:
             logger.error(f"Error processing API {api_profile.site_name}: {e}")
@@ -271,30 +299,36 @@ async def crawl_grants(sites_to_run: Optional[List[str]] = None, only_api: bool 
                                 # double-check here for safety.
                                 score = grant.get("relevance_score", grant.get("score", 0)) or 0
                                 hih = grant.get("how_it_helps", "")
+                                reasoning = grant.get("relevance_reasoning", "")
                                 title = grant.get("title", "")
+                                _url = grant.get("application_url", "")
+                                dl = grant.get("deadline", "")
 
                                 if score < MIN_RELEVANCE_SCORE:
                                     logger.debug(f"Skipping '{title}': score {score} below {MIN_RELEVANCE_SCORE}.")
                                     st.record_scored(title, score, hih, accepted=False, reason_rejected="low_score")
+                                    audit.log_scored(pw_profile.site_name, title, _url, score, hih, reasoning, accepted=False, reason_rejected="low_score", deadline=dl)
                                     continue
 
                                 # Reject if LLM admits the grant doesn't help
                                 if not is_how_it_helps_valid(hih):
                                     logger.info(f"🚫 Skipping: how_it_helps='Not applicable' — {title}")
                                     st.record_scored(title, score, hih, accepted=False, reason_rejected="how_it_helps_invalid")
+                                    audit.log_scored(pw_profile.site_name, title, _url, score, hih, reasoning, accepted=False, reason_rejected="how_it_helps_invalid", deadline=dl)
                                     continue
 
                                 # Safety-net deadline check
-                                dl = grant.get("deadline", "")
                                 if dl and not is_deadline_valid(dl):
                                     logger.debug(f"Skipping '{title}': deadline '{dl}' past/too soon.")
                                     st.record_scored(title, score, hih, accepted=False, reason_rejected="deadline_expired")
+                                    audit.log_scored(pw_profile.site_name, title, _url, score, hih, reasoning, accepted=False, reason_rejected="deadline_expired", deadline=dl)
                                     continue
 
                                 # Stale posting check: no deadline + posted too long ago
                                 if not dl and not is_posting_fresh(grant.get("date_posted")):
                                     logger.info(f"⏰ Skipping '{title}': no deadline, posted {grant.get('date_posted')} (>{MAX_POSTING_AGE_DAYS}d ago).")
                                     st.record_scored(title, score, hih, accepted=False, reason_rejected="stale_posting")
+                                    audit.log_scored(pw_profile.site_name, title, _url, score, hih, reasoning, accepted=False, reason_rejected="stale_posting", deadline=dl)
                                     continue
 
                                 if grant_exists(
@@ -304,9 +338,11 @@ async def crawl_grants(sites_to_run: Optional[List[str]] = None, only_api: bool 
                                     db_existing_urls,
                                 ):
                                     st.record_existing()
+                                    audit.log_filtered(pw_profile.site_name, title, _url, "duplicate_in_db")
                                     continue
 
                                 st.record_scored(title, score, hih, accepted=True)
+                                audit.log_scored(pw_profile.site_name, title, _url, score, hih, reasoning, accepted=True, deadline=dl)
                                 insert_grant(grant, run_id)
                                 new_grants_this_run.append(grant)
                                 all_grants.append(grant)
@@ -391,6 +427,8 @@ async def crawl_grants(sites_to_run: Optional[List[str]] = None, only_api: bool 
                                     f"Early stop: all grants on page {page_number} of {base_url} "
                                     f"already in database. Skipping remaining pages."
                                 )
+                                st.record_early_stop(page=page_number, url=base_url)
+                                audit.log_early_stop(site_profile.site_name, base_url, page_number)
                                 break
 
                             # If grants were found but all filtered out, continue to next page
@@ -482,6 +520,14 @@ async def crawl_grants(sites_to_run: Optional[List[str]] = None, only_api: bool 
     tracker.print_report()
     tracker.save_report()
     tracker.save_csv_summary()
+
+    # ── Audit log: run end ───────────────────────────────────────────
+    audit.log_run_end(
+        total_accepted=len(new_grants_this_run),
+        total_fetched=sum(s.grants_fetched for s in tracker.all_sites),
+        duration_seconds=__import__("time").time() - run_start_time,
+    )
+    logger.info(f"Audit log saved → logs/audit/run_{run_id.replace(':', '-')}.jsonl")
 
 
 async def main():

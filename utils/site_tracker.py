@@ -29,15 +29,16 @@ logger = logging.getLogger("grant_crawler")
 
 # Filter-reason labels used across the pipeline
 FILTER_REASONS = [
-    "incomplete",           # Missing required fields (title/description)
-    "duplicate_in_run",     # Already seen in this run
-    "duplicate_in_db",      # Already exists in database
-    "deadline_expired",     # Deadline passed or too soon
+    "incomplete",              # Missing required fields (title/description)
+    "duplicate_in_run",        # Already seen in this run
+    "duplicate_in_db",         # Already exists in database
+    "deadline_expired",        # Deadline passed or too soon
+    "stale_posting",           # No deadline + posted > MAX_POSTING_AGE_DAYS ago
     "preliminary_irrelevant",  # LLM flagged is_relevant_preliminary=False on listing page
-    "prefilter_keywords",   # API keyword pre-filter (eceuropa etc.)
-    "low_score",            # Relevance score below threshold
-    "how_it_helps_invalid", # "Not applicable" how_it_helps
-    "analysis_failed",      # LLM scoring returned None after retries
+    "prefilter_keywords",      # API keyword pre-filter (eceuropa etc.)
+    "low_score",               # Relevance score below threshold
+    "how_it_helps_invalid",    # "Not applicable" how_it_helps
+    "analysis_failed",         # LLM scoring returned None after retries
     "other",
 ]
 
@@ -73,6 +74,9 @@ class SiteMetrics:
 
     # Per-grant scoring detail
     scored_grants: List[ScoredGrant] = field(default_factory=list)
+
+    # Early-stop events (page number + url where pagination was cut short)
+    early_stops: List[Dict[str, Any]] = field(default_factory=list)
 
     # Errors
     errors: List[Dict[str, str]] = field(default_factory=list)
@@ -129,6 +133,9 @@ class SiteMetrics:
     def record_existing(self, count: int = 1):
         self.grants_already_in_db += count
 
+    def record_early_stop(self, page: int, url: str, duplicate_count: int = 0):
+        self.early_stops.append({"page": page, "url": url, "duplicate_count": duplicate_count})
+
     def record_error(self, stage: str, message: str):
         self.errors.append({"stage": stage, "message": message})
 
@@ -176,6 +183,7 @@ class SiteMetrics:
                 }
                 for g in self.scored_grants
             ],
+            "early_stops": self.early_stops,
             "errors": self.errors,
         }
 
@@ -268,6 +276,14 @@ class RunTracker:
                     if hih:
                         lines.append(f"           └ {hih}")
 
+            # Early stops
+            if sm.early_stops:
+                lines.append(f"  Early stops ({len(sm.early_stops)}):")
+                for es in sm.early_stops:
+                    lines.append(
+                        f"    ⏭ page {es['page']} — {es.get('duplicate_count', 0)} dupes → stopped ({es['url'][:80]})"
+                    )
+
             # Errors
             if sm.errors:
                 lines.append(f"  Errors ({len(sm.errors)}):")
@@ -299,8 +315,12 @@ class RunTracker:
 
     # ── Report: JSON file ────────────────────────────────────────────
 
-    def save_report(self, filepath: str = "logs/site_performance.json"):
-        """Save the full report as a structured JSON file for later analysis."""
+    def save_report(self, filepath: str = None):
+        """Save the full report as a per-run JSON file for later analysis."""
+        if filepath is None:
+            safe_id = self.run_id.replace(":", "-")
+            filepath = f"logs/run_{safe_id}.json"
+
         run_elapsed = round(time.time() - self.run_start, 1)
         report = {
             "run_id": self.run_id,
@@ -310,6 +330,7 @@ class RunTracker:
                 "total_sites": len(self.all_sites),
                 "total_fetched": sum(s.grants_fetched for s in self.all_sites),
                 "total_accepted": sum(s.grants_accepted for s in self.all_sites),
+                "total_early_stops": sum(len(s.early_stops) for s in self.all_sites),
                 "total_errors": sum(len(s.errors) for s in self.all_sites),
             },
             "sites": [sm.to_dict() for sm in self.all_sites],
@@ -319,24 +340,27 @@ class RunTracker:
         with open(filepath, "w", encoding="utf-8") as f:
             json.dump(report, f, indent=2, ensure_ascii=False)
 
-        logger.info(f"Site performance report saved to {filepath}")
+        logger.info(f"Run report saved → {filepath}")
 
     # ── Report: CSV summary ──────────────────────────────────────────
 
-    def save_csv_summary(self, filepath: str = "logs/site_performance.csv"):
-        """Save a one-row-per-site CSV for easy spreadsheet comparison."""
+    def save_csv_summary(self, filepath: str = "logs/run_history.csv"):
+        """Append one row per site to a cumulative history CSV (never overwrites)."""
         import csv
+        import os as _os
 
         Path(filepath).parent.mkdir(parents=True, exist_ok=True)
         fieldnames = [
             "run_id", "site_name", "profile_type", "elapsed_seconds",
             "pages_crawled", "pages_errored", "grants_fetched",
             "total_filtered", "sent_to_scoring", "grants_accepted",
-            "already_in_db", "acceptance_rate", "avg_score", "error_count",
+            "already_in_db", "early_stops", "acceptance_rate", "avg_score", "error_count",
         ]
-        with open(filepath, "w", newline="", encoding="utf-8") as f:
+        write_header = not _os.path.exists(filepath)
+        with open(filepath, "a", newline="", encoding="utf-8") as f:
             writer = csv.DictWriter(f, fieldnames=fieldnames)
-            writer.writeheader()
+            if write_header:
+                writer.writeheader()
             for sm in self.all_sites:
                 writer.writerow({
                     "run_id": self.run_id,
@@ -350,9 +374,10 @@ class RunTracker:
                     "sent_to_scoring": sm.grants_sent_to_scoring,
                     "grants_accepted": sm.grants_accepted,
                     "already_in_db": sm.grants_already_in_db,
+                    "early_stops": len(sm.early_stops),
                     "acceptance_rate": sm.acceptance_rate,
                     "avg_score": sm.avg_score,
                     "error_count": len(sm.errors),
                 })
 
-        logger.info(f"Site performance CSV saved to {filepath}")
+        logger.info(f"Run appended to history CSV → {filepath}")
